@@ -1,0 +1,48 @@
+#match-players ul {
+	float: left;
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+
+#match-players ul li {
+	float: left;
+	width: 100%;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 0 0 1px 0;
+}
+
+#match-players ul li span {
+	display: block;
+	float: left;
+	vertical-align: top;
+	font-size: 11px;
+	line-height: 20px;
+	width: 38px;
+	padding: 0 0 1px 2px;
+	margin: 0 5px 0 0;
+}
+
+#match-players ul li.on span {
+	background: #999;
+	color: White;
+}
+
+#match-players ul li.on.gk span {
+	background: #797;
+}
+
+#match-players ul li.sub span {
+	background: #ccc;
+	color: #666;
+}
+
+#match-players ul li.yc span {
+	color: #ff6;
+}
+
+#match-players ul li.rc span {
+	color: #f00;
+}

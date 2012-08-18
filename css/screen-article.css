@@ -1,0 +1,43 @@
+/* STORY */
+
+.storyList {
+	border-top: 1px solid Black;
+}
+
+.story {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #999;
+	padding: 4px 0 5px 0;
+}
+
+/* BYLINE */
+
+.byline {
+	float: left;
+	width: 100%;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid Black;
+	margin: 0 0 14px 0;
+}
+
+.byline img {
+	float: left;
+	width: 32px;
+	height: 32px;
+	margin: 2px 8px 0 0;
+}
+
+/* SINGLE MATCH */
+
+#match {
+	float: left;
+	width: 100%;
+}
+
+#match h1 {
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 30px;
+	margin: -10px 0 30px 0;
+}

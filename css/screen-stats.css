@@ -1,0 +1,289 @@
+/* TABLE STATS */
+
+table.stats {
+	table-layout: fixed;	
+	border-collapse: collapse;
+	width: auto;
+	margin: 0 0 20px 0;
+}
+
+table.stats th,
+table.stats td {
+	vertical-align: top;
+	font-size: 11px;
+	line-height: 20px;
+}
+
+/* caption */
+
+table.stats caption {
+	border-top: 1px solid Black;
+	padding: 4px 0 0 2px;
+	width: 100%;
+	font-size: 13px;
+	line-height: 20px;
+	color: Red;
+	margin: -20px 0 0 0;
+}
+
+/* thead */
+
+table.stats thead tr th,
+table.stats thead tr td {
+	border-left: 2px solid transparent;
+}
+
+table.stats thead tr th strong,
+table.stats thead tr th a {
+	font-size: 13px;
+	font-weight: normal;
+	display: block;
+	border-left: 1px solid #ccc;
+	padding: 0 0 4px 2px;
+	color: Black;
+}
+
+table.stats thead tr th span {
+	font-size: 11px;
+	font-weight: bold;
+	display: block;
+	padding: 0 0 1px 2px;
+	color: Black;
+}
+
+/* graph */
+
+table.stats thead tr td .graph {
+	position: relative;
+	display: block;
+	height: 47px;
+	vertical-align: bottom;
+	background: #999;
+	font-weight: normal;
+}
+
+table.stats thead tr td .graph .pct {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	background: Red;
+	color: White;
+}
+
+table.stats thead tr td .graph .pct em {
+	position: absolute;
+	left: 3px;
+	font-style: normal;
+}
+
+table.stats thead tr td .graph .pct.low em {
+	top: -20px;
+}
+
+/* tbody */
+
+table.stats tbody tr th {
+	font-weight: normal;
+	border-top: 1px solid #ccc;
+	white-space: nowrap;
+	color: Black;
+}
+
+table.stats tbody tr th strong,
+table.stats tbody tr th a {
+	display: block;
+	padding: 0 0 1px 2px;
+	whitespace: nowrap;
+	font-weight: normal;
+}
+
+table.stats tbody tr td {
+	font-weight: normal;
+	border-left: 2px solid White;
+	border-top: 1px solid #ccc;
+}
+
+table.stats tbody tr td span {
+	padding: 0 0 1px 2px;
+}
+
+table.stats tbody tr:first-child th,
+table.stats tbody tr:first-child td {
+	border-top: 1px solid #999;
+}
+
+/* tfoot */
+
+table.stats tfoot tr th {
+	font-style: normal;
+	font-weight: normal;
+	border-top: 1px solid #999;
+	white-space: nowrap;
+	color: Black;
+}
+
+table.stats tfoot tr th strong,
+table.stats tfoot tr th a {
+	display: block;
+	padding: 0 0 1px 2px;
+	whitespace: nowrap;
+	font-weight: normal;
+}
+
+table.stats tfoot tr td {
+	font-style: normal;
+	font-weight: normal;
+	border-top: 1px solid #999;
+	border-left: 2px solid White;		
+}
+
+table.stats tfoot tr td span {
+	padding: 0 0 1px 2px;
+}
+
+/* HEAD 2 HEAD */
+
+table.stats#head2head .comp {
+	width: 180px;
+}
+
+table.stats#head2head .win,
+table.stats#head2head .draw,
+table.stats#head2head .loss {
+	width: 58px;
+}
+
+table.stats#head2head .pld,
+table.stats#head2head .gdf {
+	width: 58px;
+	vertical-align: bottom;
+}
+
+/* PLAYER CAREER */
+
+table.stats#career thead td.season {
+	width: 240px;
+}
+
+table.stats#career thead th.comp {
+	width: 98px;
+	border-bottom: none;
+}
+
+table.stats#career thead th.apps {
+	width: 58px;
+}
+
+table.stats#career thead th.goals {
+	border-left: none;
+	width: 40px;
+}
+
+table.stats#career thead th.apps span,
+table.stats#career thead th.goals span {
+	font-weight: normal;
+	padding: 5px 5px 0 2px;
+	text-align: right;
+	color: #999;
+}
+
+table.stats#career thead th.apps span {
+	border-left: 1px solid #ccc;
+}
+
+/* tbody */
+
+table.stats#career tbody td {
+}
+
+table.stats#career tbody td.goals {
+	border-left: none;
+}
+
+table.stats#career tbody td span {
+	display: block;
+	padding: 0 5px 1px 2px;
+	text-align: right;
+}
+
+/* tfoot */
+
+table.stats#career tfoot td {
+	border-top: 1px solid transparent;
+}
+
+table.stats#career tfoot tr:first-child td {
+	border-top: 1px solid #999;
+}
+
+table.stats#career tfoot td.goals {
+	border-left: none;
+}
+
+table.stats#career tfoot td span {
+	display: block;
+	padding: 0 5px 1px 2px;
+	background: #999;
+	color: White;
+	text-align: right;
+}
+
+/* MONTHLY */
+
+table.stats#monthly .title {
+	width: 240px;
+}
+
+table.stats#monthly .month,
+table.stats#monthly .total {
+	width: 58px;
+}
+
+table.stats#monthly tr.pts td {
+	background: #ffc;
+}
+
+/* MATRIX */
+
+table.stats#matrix .match {
+	width: 240px;
+}
+
+table.stats#matrix .player {
+	width: 38px;
+}
+
+/* body */
+
+table.stats#matrix tbody tr td.on {
+	border-top: 1px solid transparent;
+}
+
+table.stats#matrix tbody tr td.on strong,
+table.stats#matrix tbody tr td.on span {
+	display: block;
+	padding: 0 0 1px 2px;
+	background: #999;
+	font-weight: normal;
+	color: White;
+	white-space: nowrap;
+}
+
+table.stats#matrix tbody tr td.on .gk  {
+	background: #797;
+}
+
+table.stats#matrix tbody tr td.on .sub  {
+	background: #ccc;
+	color: #666;
+}
+
+table.stats#matrix tbody tr td.on .yc  {
+	color: #ff6;
+}
+
+table.stats#matrix tbody tr td.on .rc  {
+	color: #f00;
+}
+

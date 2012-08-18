@@ -1,0 +1,101 @@
+/* RESET DEFAULT BROWSER CSS */
+
+html {
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+body {
+	background: White;
+	padding: 20px;
+	margin: 0;
+}
+
+/* GRID */
+
+#grid {
+	float: left;
+	width: 100%;
+	z-index: 1;
+}
+
+/* BODY */
+
+#body {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+/* CONTENT */
+
+#content {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+/* CONTEXT */
+
+#context {
+	float: right;
+	width: 25%;
+}
+
+/* HEADER */
+
+#header {
+	float: left;
+	width: 100%;
+}
+
+#header h1 {
+	font-size: 18px;
+	line-height: 20px;
+	margin: 0;
+}
+
+#header h1 a {
+	color: Red;
+}
+
+#header h2 {
+	font-size: 18px;
+	line-height: 20px;
+	margin: 0 0 20px 0;
+}
+
+#header nav ul {
+	float: left;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+
+#header nav ul li {
+	float: left;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 0 20px 0 0;
+}
+
+#header nav ul li a {
+	color: Black;
+	text-decoration: underline;
+}
+
+/* FOOTER */
+
+#footer {
+	float: left;
+	width: 100%;
+	border-top: 1px solid Black;
+	padding: 4px 0 5px;
+}
+
+#footer .debug {
+	color: White;
+}

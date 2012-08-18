@@ -1,0 +1,217 @@
+/* DEFAULT */
+
+html {
+}
+
+body {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	background: White;
+	color: #333;
+}
+
+/* WP-EDIT */
+
+.wp-edit a {
+	color: #ccc;
+}
+
+/* LINKS */
+
+a {
+	color: Red;
+	text-decoration: none;
+}
+
+a:focus, a:hover {
+	background: transparent;
+	text-decoration: underline;
+}
+
+/* HEADERS */
+
+h1, h2, h3, h4 {
+	color: Black;
+}
+
+h1 {
+	font-size: 60px;
+	font-weight: bold;
+	line-height: 60px;
+	margin: 0 0 30px 0;
+}
+
+h1 a {
+	color: Black;
+}
+
+h2 {
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 30px;
+	margin: 0 0 10px 0;
+}
+
+h1 + h3 {
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0 0 24px 0;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 20px;
+	margin: 0;
+}
+
+h4 {
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 20px;
+	margin: 0;
+}
+
+h5 {
+	font-size: 11px;
+	line-height: 20px;
+	margin: 0 0 0;
+}
+
+h6 {
+	font-size: 10px;
+	line-height: 20px;
+	margin: 0 0 20px 0;
+}
+
+/* TEXT */
+
+p {
+	margin: 0 0 20px 0;
+}
+
+blockquote {
+	margin: 0;
+}
+
+blockquote h3 {
+	color: White;
+}
+
+blockquote p {
+	font-style: italic;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+em, dfn, i {
+	font-style: italic;
+}
+
+dfn {
+	font-weight: bold;
+}
+
+sup, sub {
+	line-height: 0;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+}
+
+address {
+	font-style: italic;
+}
+
+del {
+	color: <?php echo $nsb_grey4; ?>;
+}
+
+pre {
+	white-space: pre;
+	margin: 0 0 24px 0;
+}
+
+pre, code, tt {
+	font-family: 'andale mono', 'lucida console', monospace;
+	font-size: 13px;
+}
+
+/* IMAGES */
+
+img {
+	border: 0;
+}
+
+/* LISTS */
+
+ul,
+ol {
+	clear: both;
+	list-style: outside;
+	padding: 0 0 0 24px;
+	margin: 0 0 24px 0;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ul li, 
+ol li {
+}
+
+li ul,
+li ol {
+	margin: 0;
+}
+
+dl {
+	margin: 0 0 24px 0;
+}
+
+dl dt {
+	font-weight: normal;
+	color: Black;
+}
+
+dl dd {
+	margin: 0 0 12px 0;
+}
+
+/* TABLES */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: separate;
+	font-family: arial, sans-serif;
+	margin: 0 0 24px 0;
+}
+
+caption {
+}
+
+th {
+	font-weight: bold;
+}
+
+thead th {
+}
+
+th, td {
+}
+
+tfoot {
+	font-style: italic;
+}
+
+caption {
+}
