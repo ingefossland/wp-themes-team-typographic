@@ -1,0 +1,14 @@
+/* TABLE */
+
+table thead tr th {
+	border-top: 1px solid #353535;
+	border-bottom: 1px solid #353535;
+	padding: 4px 10px;
+	font-weight: bold;
+}
+
+table tbody tr td,
+table tbody tr th {
+	border-bottom: 1px solid #353535;
+	padding: 4px 10px;
+}

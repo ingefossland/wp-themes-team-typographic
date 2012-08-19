@@ -1,0 +1,94 @@
+/* FOOTER */
+
+#footer {
+	clear: both;
+	width: auto;
+	padding: 24px 0;
+	margin: 0;
+	border-top: 5px solid White;
+
+	h2 {
+		font-size: 12px;
+		font-weight: normal;
+		text-transform: uppercase;
+		line-height: 20px;
+		margin: 0 0 4px 0;
+	}
+	
+	ul {
+		position: relative;
+		list-style: none;
+		
+		li {
+			font-size: 14px;
+			line-height: 20px;
+			
+			strong {
+				display: none;
+			}
+			
+			a {
+				color: White;
+			}
+			
+			a:hover {
+				color: $netlife_green;
+			}
+		
+		}
+	
+	}
+
+	#netlife {
+		float: left;
+		width: 50%;
+		
+		h2 a {
+			@include hide-text;
+			background: url(../img/ident/netlife-research.png) top left no-repeat;
+			background-size: 110px 50px;
+			width: 110px;
+			height: 90px;
+			display: block;
+			margin: -2px 0 0 -4px;
+		}
+		
+	}
+	
+	#previously {
+		display: none;
+	}
+	
+	#contact {
+		float: right;
+		width: 50%;
+	}
+
+}
+
+/* SMALL */
+
+@media only screen and (max-width: 599px) {
+	
+	#footer {
+		margin: 0 10px;
+	}
+	
+}
+
+/* 600 */
+
+@media only screen and (min-width: 600px) {
+	
+	@import "screen-webdagene-footer-600"
+
+}
+
+/* 960 */
+
+@media only screen and (min-width: 980px) {
+
+	@import "screen-webdagene-footer-960"
+
+	
+}

@@ -1,0 +1,96 @@
+#content {
+	float: right;
+	width: percentage(620px / 940px);
+	min-height: 500px;
+	
+	// aside
+
+	aside {
+		position: relative;
+		clear: left;
+		display: inline; /* ie fix */
+		float: left;
+		width: percentage(280px / 620px);
+		margin: 0 0 0 percentage(-320px / 620px);
+	}
+
+	// sections
+	
+	section {
+		clear: both;
+		position: relative;
+		display: inline; /* ie fix */
+		float: left;
+		width: percentage(960px / 620px);
+		margin: 0 0 0 percentage(-330px / 620px);
+
+		.c1 {
+			float: left;
+			width: percentage(320px / 960px);
+			padding: 0 percentage(10px / 960px);
+		}
+
+		.c2 {
+			float: left;
+			width: percentage(640px / 960px);
+			padding: 0 percentage(10px / 960px);
+		}
+
+		.c3 {
+			float: left;
+			width: percentage(960px / 960px);
+			padding: 0 percentage(10px / 960px);
+		}
+
+	}
+	
+	// images
+	
+	figure {
+
+		// large images
+
+		&.large {
+			float: none;
+		
+			img {
+				position: relative;
+				float: left;
+				width: percentage(940px / 620px);
+				max-width: 940px;
+				height: auto;
+				margin: 0 0 24px percentage(-320px / 620px);	
+			}
+			
+			figcaption {
+				clear: both;
+				float: left;
+				width: percentage(280px / 620px);
+				margin: 0 0 24px percentage(-320px / 620px);
+			}
+		
+		}
+		
+		// small images
+		
+		&.small {
+			float: left;
+			width: percentage(280px / 620px);
+			margin: 0 0 24px percentage(-320px / 620px);
+		
+			img {
+				width: 100%;
+				height: auto;
+				margin: 8px 0 4px 0;	
+			}
+			
+			figcaption {
+				width: 100%;
+				padding: 0;
+			}
+		
+		}		
+		
+	}
+	
+}

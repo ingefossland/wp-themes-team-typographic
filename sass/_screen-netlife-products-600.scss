@@ -1,0 +1,28 @@
+// PRODUCTLIST
+
+#productlist {
+
+	.product {
+		float: left;
+		width: percentage(320px / 960px);
+		padding: 0 percentage(10px / 960px);
+		
+		&:nth-child(3n+4) {
+			clear: both;
+		}
+		
+		a {
+			margin: 0 0 36px 0;
+		}
+
+		// primary
+		
+		&#product-nettsted a,
+		&#product-intranett a,
+		&#product-mobil a {
+			margin: 0 0 48px 0;
+		}
+
+	}
+
+}

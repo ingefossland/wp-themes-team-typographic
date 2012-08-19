@@ -1,0 +1,32 @@
+// HEADER 600
+
+#header {
+	float: left;
+	width: 100%;
+	height: 160px;
+	padding: 60px 0 0 0;
+	
+	#ident {
+		display: block;
+		float: left;
+		width: percentage(300px / 940px);
+		z-index: 100;
+	}
+
+	#menu {
+		position: relative;
+		
+		float: right;
+		width: percentage(620px / 940px);
+	
+		h4 {
+			display: none;
+		}
+		
+		ul {
+			display: block !important;
+		}
+	
+	}
+	
+}

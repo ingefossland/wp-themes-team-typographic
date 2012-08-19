@@ -1,0 +1,77 @@
+// HEADER
+
+#header {
+	position: relative;
+	z-index: 1000;
+	float: left;
+	width: 100%;
+	height: 160px;
+	padding: 60px 0 0 0;
+	
+	#ident {
+		display: block;
+		float: left;
+		width: percentage(300px / 940px);
+		z-index: 100;
+
+		h2 a {
+			margin: -4px 0 0 -4px;
+
+			background: url(../img/ident/netlife-research.png) no-repeat;
+			width: 110px;
+			height: 50px;
+			display: block;
+			line-height: 1000px;
+			overflow: hidden;
+
+		}
+		
+		p {
+			display: none;
+		}
+
+	}
+
+	#languages {
+		position: absolute;
+		z-index: -10;
+		right: 0;
+		top: 10px;
+	}
+	
+}
+
+html.svg {
+
+	#header #ident h2 a {
+		background: url(../img/ident/netlife-research.svg) no-repeat;
+	}
+
+}
+
+// mobile
+
+@media only screen and (max-width: 599px) {
+	@import "screen-netlife-header-mobile";
+}
+
+// 600
+
+@media only screen and (min-width: 600px) {
+	@import "screen-netlife-header-600";
+}
+
+// 960
+
+@media only screen and (min-width: 980px) {
+	@import "screen-netlife-header-960";
+}
+
+// select menu
+
+body.single-product #menu ul li#menu-item-494 a,
+body.single-project #menu ul li#menu-item-493 a,
+body.single-event #menu ul li#menu-item-492 a,
+body.single-person #menu ul li#menu-item-496 a {
+	color: $menu_on;
+}

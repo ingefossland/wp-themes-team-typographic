@@ -1,0 +1,126 @@
+// project
+
+.project {
+	float: left;
+	width: 100%;
+	margin: 0 0 24px 0;
+	
+	a {
+
+		text-decoration: none;
+	
+		img {
+			float: left;
+			width: 120px;
+			margin: 5px 10px 0 0;
+		}
+		
+		h3 {
+			text-decoration: underline;
+		}
+		
+		p {
+			margin: 0;
+		}
+	
+	}
+	
+}
+
+// featured case
+
+#case {
+
+	float: left;
+	width: 100%;
+	margin: 0 0 36px 0;
+	
+	a {
+
+		float: left;
+		width: 100%;
+
+		text-decoration: none;
+		
+		figure {
+			float: left;
+			width: 100%;
+			
+			img {
+				float: left;
+				width: 100%;
+				margin: 0 0 8px 0;
+			}
+			
+		}
+
+		hgroup {
+
+			h2 {
+				font-size: 12px;
+				line-height: 20px;
+				color: White;
+				text-transform: uppercase;
+				letter-spacing: normal;
+				margin: 0 0 4px 0;
+				color: Black;
+			}	
+		
+			h3 {
+				font-family: "georgia", serif;
+				font-size: 16px;
+				line-height: 24px;
+				color: $meta;
+				text-decoration: none;
+				margin: 0;
+			}
+			
+		}
+
+		&:hover h3 {
+			text-decoration: underline;
+		}
+		
+	}
+	
+}
+
+// CLIENT LIST
+
+#clientlist  {
+	
+	ul {
+		float: left;
+		width: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0 0 24px 0;
+		
+		li {
+			float: left;
+			width: percentage(1/3);
+			padding: 0 5px;
+			
+			img {
+				width: 100%;
+
+			}
+
+		}
+
+	}
+
+}
+
+// 600
+
+@media only screen and (min-width: 600px) {
+	@import "screen-netlife-projects-600";
+}
+
+// 960
+
+@media only screen and (min-width: 980px) {
+	@import "screen-netlife-projects-960";
+}
+

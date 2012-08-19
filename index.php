@@ -34,5 +34,5 @@ $fixtures = $teamdata->get_matches(array(
 
 	<?php twentyeleven_content_nav( 'nav-below' ); ?>
 
-<?php //get_sidebar(); ?>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

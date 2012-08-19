@@ -1,0 +1,108 @@
+// LANGUAGES
+
+#languages {
+
+	ul {
+		list-style: none;
+		padding: 0;
+
+		li a {
+			@include hide-text;
+			display: block;
+			width: 100px;
+			height: 40px;
+			background: url(../img/menu/english-black.png) no-repeat;
+			background-size: 100px 40px;
+
+			&:hover {
+				background: url(../img/menu/english-black-over.png) no-repeat;
+			}
+
+		}
+
+		li.current-menu-item a,
+		li.current-menu-ancestor a,
+		li.current-page-ancestor a {
+			background: url(../img/menu/english-black.png) no-repeat;
+			
+			&::hover {
+				background: url(../img/menu/english-black-over.png) no-repeat;
+			}
+			
+		}
+	}
+
+}
+
+html.svg {
+
+	#languages {
+
+		ul {
+
+			li a {
+				background: url(../img/menu/english-black.svg) no-repeat;
+
+				&:hover {
+					background: url(../img/menu/english-black-over.svg) no-repeat;
+				}
+
+			}
+
+			li.current-menu-item a,
+			li.current-menu-ancestor a,
+			li.current-page-ancestor a {
+				background: url(../img/menu/english-black-over.svg) no-repeat;
+				
+				&:hover {
+					background: url(../img/menu/english-black-over.svg) no-repeat;
+				}
+				
+			}
+
+		}
+
+	}
+
+
+}
+
+// MENU
+
+#menu {
+	position: absolute;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		
+		li {
+			font-family: "Avant Garde";
+			font-size: 18px;
+			line-height: 20px;
+			display: inline;
+			margin: 0 15px 0 0;
+		
+			a {
+				text-decoration: none;
+				color: $menu_link;
+				white-space: nowrap;
+			}
+			
+			a:hover {
+				text-decoration: underline;
+				color: $menu_hover;
+			}
+		
+		}
+		
+		li strong a,
+		li.current-menu-item a,
+		li.current-menu-ancestor a,
+		li.current-page-ancestor a  {
+			color: $menu_on;
+		}
+
+	}
+
+}

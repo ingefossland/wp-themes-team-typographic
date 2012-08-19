@@ -1,0 +1,167 @@
+// COMMENTS
+
+#comments {
+	border-top: 1px dotted Black;
+	float: left;
+	width: 100%;
+	padding: 20px 0 0 0;
+
+	h2 {
+		margin: 0 0 12px 0;
+	}
+	
+	ol,
+	ul {
+		float: left;
+		width: 100%;
+		
+		li {
+			float: left;
+			width: 100%;
+			color: $netlife_medium_green;
+
+			h5 {
+				color: $netlife_medium_green;
+				
+				a {
+					color: $meta_link;
+					&:hover {
+						color: $meta_hover;
+					}
+				}
+				
+			}
+
+			&.comment {
+
+				min-height: 4 * 24px;
+				
+				.body {
+					color: $text;
+					
+					.avatar {
+						background: $netlife_dark_grey;
+						width: 36px;
+						height: 36px;
+						margin: 6px 10px 0 0;
+					}
+					
+				}
+				
+			}
+			
+		}
+
+	}
+
+}
+
+// RESPOND
+
+#respond {
+	float: left;
+	width: 100%;
+	margin: 0 0 24px 0;
+
+
+	h2 {
+		margin: 0 0 6px 0;
+	}
+
+	ul {
+		float: left;
+		width: 100%;
+		margin: 0 0 24px 0;
+		
+		li {
+			float: left;
+			width: 100%;
+			position: relative;
+			list-style: none;
+			padding: 0;
+			margin: 6px 0 0 0;
+			
+			strong {
+				display: inline-block;
+				font-family: georgia, serif;
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: normal;
+				text-transform: none;
+				margin: -5px 0 0 0;
+			}
+
+			em {
+				font-size: 14px;
+			}
+			
+			&.url {
+				display: none;
+			}
+
+		}
+		
+	}
+
+	form {
+
+		label {
+			color: Black;
+		}
+		
+		input[type=text],
+		input[type=password],
+		textarea {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	
+		input#author,
+		input#email {
+			float: left;
+			margin: 0 10px 0 0;
+		}
+
+		input#url {
+			float: left;
+			margin: 0 10px 0 0;
+		}
+
+		textarea {
+			float: left;
+			width: 100%;
+		}
+		
+	}
+	
+	h4 {
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 20px;
+		margin: 0 0 4px 0;
+	}
+	
+	p {
+		margin: 0 0 12px 0;
+	}
+	
+	h5 {
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 20px;
+		margin: 0 0 24px 0;
+	}
+
+}
+
+/* 600 */
+
+@media only screen and (min-width: 600px) {
+	@import "screen-blog-comments-600";
+}
+
+/* 980 */
+
+@media only screen and (min-width: 980px) {
+	@import "screen-blog-comments-960";
+}

@@ -1,0 +1,107 @@
+// PRODUCT LIST
+
+#productlist {
+
+	.product {
+		position: relative;
+		float: left;
+		width: 100%;
+		
+		.wp-edit {
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+			a {
+				padding: 0;
+				width: auto;
+			}
+			
+		}
+		
+		a {
+			background: url(../img/product/product-small.png) top left no-repeat;
+			float: left;
+			width: 100%;
+			text-decoration: none;
+
+			margin: 0 0 24px 0;
+
+			img {
+				float: left;
+				width: 45px;
+				height: auto;
+				border: 0;
+				margin: 0 15px 0 0;
+			}
+
+			h2 {
+				font-size: 18px;
+				font-weight: normal;
+				line-height: 24px;
+				text-decoration: underline;
+				margin: 0 0 0 0;
+			}
+	
+			p {
+
+				font-size: 14px;
+				line-height: 24px;
+				margin: 0;
+				color: $text;
+				
+				em {
+					font-style: normal;
+					text-decoration: underline;
+				}
+	
+			}
+			
+			&:hover {
+				
+				p em {
+					color: $link_hover;
+				}
+				
+			}
+
+		}
+		
+		// primary
+		
+		&#product-nettsted a,
+		&#product-intranett a,
+		&#product-mobil a {
+		
+			margin: 0 0 36px 0;
+			
+			h2 {
+				font-size: 24px;
+				font-weight: normal;
+				line-height: 30px;
+				margin: 0 0 2px 0;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 24px;
+			}
+
+		}
+		
+	}
+
+}
+
+// 600
+
+@media only screen and (min-width: 600px) {
+	@import "screen-netlife-products-600";
+}
+
+// 960
+
+@media only screen and (min-width: 980px) {
+	@import "screen-netlife-products-960";
+}
+

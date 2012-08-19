@@ -1,0 +1,128 @@
+// EVENTS
+
+#eventlist {
+	clear: none !important;
+	float: left;
+	width: 100% !important;
+	margin: 0 !important;
+	
+	.event  {
+		position: relative;
+		float: left;
+		width: 100%;
+		
+		a {
+			display: block;
+			text-decoration: none;
+			min-height: 90px;
+			margin: 0 0 24px 0;
+			
+			h2 {
+				font-size: 20px;
+				line-height: 24px;
+				text-decoration: underline;
+				margin: 0;
+			}
+			
+			h5 {
+				font-size: 14px;
+				line-height: 24px;
+			}
+	
+			p {
+				font-size: 16px;
+				line-height: 24px;
+				margin: 0;
+			}
+
+			// calendar
+	
+			.cal {
+				float: left;
+				position: relative;
+				background: White; // url(../img/icon/calendar.png) top left no-repeat;
+				color: White;
+				width: 58px;
+				height: 84px;
+				padding: 0;
+				margin: 4px 20px 0 0;
+				
+				.month {
+					position: absolute;
+					top: 4px;
+					left: 5px;
+				
+					font-family: "Avant Garde", georgia, serif;
+					font-size: 18px;
+					line-height: 20px;
+					text-transform: capitalize;
+					color: $text;
+					
+				}
+	
+				.day {
+					position: absolute;
+					top: 24px;
+					left: 5px;
+					
+					font-family: "Avant Garde", georgia, serif;
+					font-size: 30px;
+					line-height: 30px;
+					letter-spacing: -2px;
+					color: $text;;
+					
+					// kerning
+	
+					.k-1,
+					.k-10,
+					.k-11,
+					.k-12,
+					.k-13,
+					.k-14,
+					.k-15,
+					.k-16,
+					.k-17,
+					.k-18,
+					.k-19 {
+						margin: 0 0 0 -2px;
+						letter-spacing: -5px;
+					}
+	
+				}
+	
+			}
+
+		}
+		
+
+		
+	}
+
+	
+}
+
+/* BANNERE */
+
+#banner-conference {
+	position: relative;
+	
+	img {
+		position: absolute;
+		left: -230px;
+		top: -200px;
+		border: 0;
+		z-index: -100;
+	}
+	
+	h2 {
+		font-size: 20px;
+		line-height: 24px;
+		margin: 0;
+	}
+	
+	.year .k-1 {
+		letter-spacing: -3px;
+	}
+
+
+}

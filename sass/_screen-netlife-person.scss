@@ -1,0 +1,195 @@
+// ILLUSTRATION
+
+#illustration {
+	float: left;
+	width: 50%;
+	padding: 0 10px;
+	margin: 0 0 0 -50%;
+	
+	img {
+		width: 100%;
+	}
+	
+}
+
+// adjustments
+
+#anders #illustration img {
+	margin: 0 0 0 10%;
+}
+
+#audun #illustration img {
+	margin: 0 0 0 32.5%;
+}
+
+#are #illustration img {
+	margin: -5% 0 0 10%;
+}
+
+#beth #illustration img {
+	margin: -5% 0 0 21%;
+}
+
+#bjorn #illustration img {
+	margin: 0 0 0 17%;
+}
+
+#eidar #illustration img {
+	margin: 0 0 0 24%;
+}
+
+#eirik #illustration img {
+	margin: 0 0 0 24%;
+}
+
+#elisabet #illustration img {
+	margin: 0 0 0 20%;
+}
+
+.error404 #illustration img,
+#even #illustration img {
+	margin: -15% 0 0 2.5%;
+}
+
+#gjermund #illustration img {
+	margin: 0 0 0 21%;
+}
+
+#gustav #illustration img {
+	margin: 0 0 0 9%;
+}
+
+#ida #illustration img {
+	margin: 0 0 0 24%;
+}
+
+#inge #illustration img {
+	margin: 0 0 0 22%;
+}
+
+#jostein #illustration img {
+	margin: 0 0 0 12.5%;
+}
+
+#kari #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#kjellmorten #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#kristin #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#lillian #illustration img {
+	margin: 0 0 0 25%;
+}
+
+#linn #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#martha #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#martin #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#mona #illustration img {
+	margin: 0 0 0 25%;
+}
+
+#nikolai #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#ove #illustration img {
+	margin: 0 0 0 30%;
+}
+
+#renata #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#sesilie #illustration img {
+	margin: 0 0 0 15%;
+}
+
+#silje #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#synve #illustration img {
+	width: 125% !important;
+	max-width: 125% !important;
+	margin: 0 0 0 -10%;
+}
+
+#synove #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#thor #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#thord #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#veronica #illustration img {
+	margin: 0 0 0 20%;
+}
+
+#will #illustration img {
+	margin: 5% 0 0 20%;
+}
+
+#oyvind #illustration img {
+	margin: 0 0 0 20%;
+}
+
+// EXPERIENCE
+
+#experience {
+
+	h2 {
+		margin: 0 0 20px 0;
+	}
+
+	dl {
+		
+		dt {
+			border-top: 1px dotted Black;
+			padding: 12px 0 0 0;
+
+			font-family: "Avant Garde", georgia, serif;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		
+		dd {
+			font-size: 16px;
+			line-height: 24px;
+			margin: 0 0 12px 0;
+		}
+		
+	}
+
+}
+
+// 600
+
+@media only screen and (min-width: 600px) {
+	@import "screen-netlife-person-600";
+}
+
+// 960
+
+@media only screen and (min-width: 980px) {
+	@import "screen-netlife-person-960";
+}

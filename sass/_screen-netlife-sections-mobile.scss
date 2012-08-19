@@ -1,0 +1,34 @@
+// SECTIONS MOBILE
+
+#services {
+
+	ul {
+
+		float: left;
+		width: 100%;
+	
+		border-bottom: 1px dotted Black;
+		
+		li {
+
+			float: left;
+			width: 100%;
+		
+			border-top: 1px dotted Black;
+		
+			a {
+				float: left;
+				width: 100%;
+				padding: 10px 0px 10px 30px;
+				
+				&:hover {
+					text-decoration: underline;
+				}
+	
+			}
+			
+		}
+		
+	}
+	
+}

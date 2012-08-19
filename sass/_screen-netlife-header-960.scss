@@ -1,0 +1,29 @@
+// HEADER 960
+
+#header {
+	float: left;
+	width: 960px;
+	padding: 60px 0 0 0;
+
+	#ident {
+		width: 320px;
+		padding: 0 10px;
+	}
+		
+	#menu {
+		width: 640px;
+		padding: 0 10px;
+
+		h2 {
+			left: -65px;
+		}
+		
+	}
+	
+	#languages {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	
+}

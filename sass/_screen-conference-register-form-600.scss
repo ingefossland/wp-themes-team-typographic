@@ -1,0 +1,25 @@
+fieldset#register-options {
+	clear: both;
+	position: relative;
+	display: inline; /* ie fix */
+	float: left;
+	width: percentage(960px / 620px);
+	margin: 0 0 24px percentage(-330px / 620px);
+	
+	ul li label {
+		width: percentage(620px / 960px);
+		padding: 0;
+		margin: 0 0 0 percentage(330px / 960px);
+
+		input {
+			left: -30px;
+		}
+
+	}
+
+	ul li .select-ws h4 {
+		width: percentage(620px / 960px);
+		margin: 0 0 10px percentage(330px / 960px);
+	}
+	
+}

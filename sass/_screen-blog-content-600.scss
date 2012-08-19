@@ -1,0 +1,150 @@
+// STORY
+
+.story {
+
+	// feature
+
+	&.feature {
+		position: relative; 
+		float: left;
+		width: 940px;
+		margin: 0 0 30px -320px;
+
+		width: percentage(940px / 620px);
+		//padding: 20px 0 0 percentage(320px / 620px);
+		margin: 0 0 30px percentage(-320px / 620px);
+
+		figure {
+			float: left;
+			width: 100%;
+			
+			img {
+				float: left;
+				width: 100%;
+				margin: 0 0 12px 0;
+			}
+			
+		}
+		
+		h1 {
+			font-size: 46px;
+			line-height: 54px;
+			margin: 0 0 24px 0;
+
+			em {
+				position: relative;
+				margin: 0;
+				
+				a {
+					position: absolute;
+					display: block;
+					left: 0;
+					top: 8px;
+					background: url(../img/comments/comments-large.png) left no-repeat;
+					color: Black;
+					font-size: 24px;
+					line-height: 20px;
+					font-style: normal;
+					width: 32px;
+					text-align: center;
+					text-decoration: none;
+					padding: 14px 0 20px 0;
+				}
+				
+			}
+
+		}
+
+		img.avatar {
+			width: 90px;
+			height: 90px;
+			margin: -4px 10px 0 0;
+		}
+		
+		h5 {
+			padding: 0;
+			font-size: 20px;
+			line-height: 30px;
+			margin: 0;
+		}
+		
+		p {
+			min-height: 60px;
+			padding: 0;
+			font-size: 20px;
+			line-height: 30px;
+			margin: 0;
+		}
+		
+	}
+
+}
+
+// AVATAR
+
+img.avatar {
+	float: left;
+	display: block;
+	background-color: $netlife_green;
+	width: 90px;
+	height: 90px;
+	margin: 0 10px 0 0;
+	border: 0;
+}
+
+// BYLINE
+
+.byline {
+
+	h5 {
+		color: $meta;
+	
+		a {
+			color: $meta_link;
+		
+			&:hover {
+				color: $meta_hover;
+			}
+		}
+	}	
+
+	img {
+		float: left;
+		margin: -8px 10px 0 0;
+	}
+
+}
+
+// BIOGRAPHY
+
+#biography {
+	float: left;
+	width: 100%;
+	margin: 0 0 24px 0;
+
+	img.avatar {
+	}
+	
+	p {
+		font-size: 14px;
+		margin: 0;
+	}
+
+	h5 {
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+}
+
+// FACEBOOK
+
+#facebook_like {
+	float: left;
+	width: 100%;
+	margin: 0 0 24px 0;
+
+	* {
+		width: 100%;
+	}
+}

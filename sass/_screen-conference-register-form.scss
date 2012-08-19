@@ -1,0 +1,110 @@
+/* REGISTER FORM */
+
+fieldset#register-options {
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 0;
+	border-bottom: 1px solid Black;
+	margin: 0 0 24px 0;
+	
+	ul {
+		float: left;
+		width: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		
+		li {
+			float: left;
+			width: 100%;
+			border-top: 1px solid Black;
+			padding: 10px 0;
+			
+			label {
+				float: left;
+				position: relative;
+				padding: 0 0 0 30px;
+
+				input {
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+			
+			strong {
+				font-size: 16px;
+				line-height: 24px;
+				text-transform: none;
+				color: $text;
+			}
+			
+			em {
+				white-space: nowrap;
+			}
+			
+			.select-ws {
+				float: left;
+				display: none;
+				padding: 10px 0;
+				
+				h4 {
+					margin: 0 0 10px 0;
+				}
+				
+				ul {
+					
+					li {
+						padding: 5px 0;
+						border-top: 0;
+						
+						strong {
+							font-size: 14px;
+							color: White;
+						}
+
+					}
+					
+					li.on,
+					li.on strong {
+						color: $netlife_green;
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+		li.on {
+		}
+		
+		li.on strong,
+		li.on span {
+			color: $netlife_green;
+		}
+		
+		li.on .select-ws {
+			display: block;
+		}
+
+	}
+
+}
+
+/* 600 */
+
+@media only screen and (min-width: 600px) {
+
+	@import "screen-conference-register-form-600";
+	
+}
+
+/* 960 */
+
+@media only screen and (min-width: 980px) {
+
+	@import "screen-conference-register-form-960";
+
+}

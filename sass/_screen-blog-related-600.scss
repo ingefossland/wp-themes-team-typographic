@@ -1,0 +1,50 @@
+#related {
+	width: 100%;
+	margin: 0;
+	
+	#archive {
+		float: left;
+		display: block;
+		width: percentage(310px / 940px);
+		padding: 0 percentage(10px / 940px) 0 0;
+	}
+
+	#categories {
+	
+		ul {
+	
+			li {
+				float: left;
+				width: 100%;
+				margin: 0;
+
+				font-size: 16px;
+				line-height: 24px;
+				margin: 0 0 6px 0;
+				
+				a {
+					font-size: 20px;
+				}
+				
+			}
+	
+		}
+		
+	}
+
+	#popular_posts {
+		float: left;
+		display: block;
+		width: percentage(320px / 940px);
+		padding: 0 percentage(10px / 940px);
+	}
+
+	#active_posts {
+		float: left;
+		display: block;
+		width: percentage(310px / 940px);
+		padding: 0 0 0 percentage(10px / 940px);
+	}	
+
+
+}

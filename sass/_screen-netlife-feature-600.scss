@@ -1,0 +1,47 @@
+// FEATURE 600
+
+#feature {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 300px;
+	margin: 0 0 0 percentage(-330px / 620px);
+	padding: 0 10px;
+	
+	figure {
+		position: absolute;
+		top: -60px;
+		right: 10px;
+
+		width: 100%;
+		height: 320px;
+
+		img {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: auto;
+			max-width: none;
+			height: 100%;
+			margin: 0;
+		}
+		
+	}
+	
+	h1 {
+		position: relative;
+		width: 60px * 5;
+		font-size: 60px;
+		line-height: 60px;
+		letter-spacing: -2px;
+		margin: 24px 0 24px 0;
+	}
+	
+	p {
+		width: 320px;
+		font-size: 20px;
+		line-height: 30px;
+		margin: 0 0 30px 0;
+	}
+	
+}

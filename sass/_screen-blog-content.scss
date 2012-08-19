@@ -1,0 +1,220 @@
+// LOOP
+
+.loop {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+// ARTICLE
+
+h1 {
+	
+	em {
+		position: relative;
+	
+		a {
+			position: absolute;
+			display: block;
+			left: 0;
+			top: 5px;
+			background: url(../img/comments/comments-medium.png) right no-repeat;
+			color: Black;
+			font-size: 16px;
+			line-height: 20px;
+			font-style: normal;
+			width: 20px;
+			text-align: center;
+			text-decoration: none;
+			padding: 6px 0 10px 0;
+		}
+	
+	}
+	
+}
+
+// byline
+
+.byline {
+
+	h5 {
+		color: $meta;
+	
+		a {
+			color: $meta_link;
+		
+			&:hover {
+				color: $meta_hover;
+			}
+		}
+	}	
+
+	img {
+		float: left;
+		margin: -8px 10px 0 0;
+	}
+
+}
+
+// biography
+
+#biography {
+	float: left;
+	width: 100%;
+	margin: 0 0 24px 0;
+
+	img.avatar {
+		width: 60px;
+		height: 60px;
+		margin: 5px 10px 0 0;
+	}		
+	
+	p {
+		font-size: 14px;
+		margin: 0;
+	}
+
+	h5 {
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+}
+
+// facebook
+
+#facebook_like {
+	float: left;
+	width: 100% !important;
+	margin: 0 0 24px 0;
+	
+	* {
+		width: auto !important;
+	}
+	
+}
+
+// STORY
+
+.story {
+	position: relative;
+	float: left;
+	width: 100%;
+
+	h2 {
+	
+		em {
+			position: relative;
+			
+			a {
+				position: absolute;
+				display: block;
+				left: 0;
+				top: 4px;
+				background: url(../img/comments/comments-small.png) right no-repeat;
+				color: Black;
+				font-size: 12px;
+				line-height: 20px;
+				font-style: normal;
+				width: 14px;
+				text-align: center;
+				text-decoration: none;
+				padding: 0 0 4px 0;
+			}
+			
+		}
+
+	}
+	
+	h3 {
+	
+		em {
+			position: relative;
+			
+			a {
+				position: absolute;
+				display: block;
+				left: 0;
+				top: 4px;
+				background: url(../img/comments/comments-small.png) right no-repeat;
+				color: Black;
+				font-size: 11px;
+				line-height: 20px;
+				font-style: normal;
+				width: 14px;
+				text-align: center;
+				text-decoration: none;
+				padding: 2px 0 2px 0;
+			}
+		
+		}
+	
+	}
+	
+	h5 {
+		color: $netlife_medium_green;
+	}
+
+	img.avatar {
+		width: 36px;
+		height: 36px;
+		margin: 5px 10px 0 0;
+	}		
+	
+	p {
+		min-height: 24px * 2;
+	}
+
+	// feature
+
+	&.feature {
+
+		figure {
+			float: left;
+			width: 100%;
+			
+			img {
+				float: left;
+				width: 100%;
+				margin: 0 0 12px 0;
+			}
+			
+		}
+		
+		h1 {
+		}
+
+		img.avatar {
+			width: 60px;
+			height: 60px;
+			margin: 5px 10px 0 0;
+		}		
+
+	}
+
+
+}
+
+// AVATAR
+
+img.avatar {
+	float: left;
+	display: block;
+	background-color: $netlife_green;
+	width: 90px;
+	height: 90px;
+	margin: 0 10px 0 0;
+	border: 0;
+}
+
+// 600
+
+@media only screen and (min-width: 600px) {
+	@import "screen-blog-content-600";
+}
+
+// 960
+
+@media only screen and (min-width: 980px) {
+	@import "screen-blog-content-960";
+}

@@ -1,0 +1,37 @@
+#header {
+	height: 360px;
+	
+	#ident {
+		position: absolute;
+		top: 60px;
+		left: percentage(10px / 960px);
+		width: percentage(300px / 960px);
+	}
+	
+	#menu {
+		display: block;
+		background: none;
+
+		top: 60px;
+		left: percentage(330px / 960px);
+		width: percentage(620px / 960px);
+
+		h2 {
+			display: none;
+		}
+		
+		ul {
+			display: block !important;
+		}
+	}
+
+	#languages {
+		top: 10px;
+	}
+
+}
+
+#content {
+	float: right;
+	margin-top: 0;
+}

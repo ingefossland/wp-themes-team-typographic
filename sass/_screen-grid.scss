@@ -1,0 +1,48 @@
+/* HTML+BODY */
+
+html {
+//	position: relative;
+	overflow-y: scroll;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: $background;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	@include box-sizing(border-box);
+}
+
+/* DEFAULT */
+
+#grid {
+	z-index: 1000;
+	width: 100%;
+	padding: 0 15px;
+	margin: 0;
+}
+
+/* 600 */
+
+@media only screen and (min-width: 600px) {
+
+	#grid {
+	}
+
+}
+
+/* 960 */
+
+@media only screen and (min-width: 980px) {
+
+	#grid {
+		width: 960px;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+}

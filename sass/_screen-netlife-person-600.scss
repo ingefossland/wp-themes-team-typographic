@@ -1,0 +1,206 @@
+// ILLUSTRATION
+
+#illustration {
+	position: absolute;
+	z-index: -100;
+	top: 0;
+	left: -100%;
+
+	width: 100%;
+	padding: 0 20px;
+	margin: 0;
+	
+	img {
+		float: left;
+		width: 100%;
+		margin: 0 !important;
+	}
+	
+}
+
+// adjustments
+
+#anders #illustration {
+	top: -2.5%;
+	left: -87.5%;
+}
+
+#audun #illustration {
+	top: 0;
+	left: -65%;
+}
+
+#are #illustration {
+	top: -4%;
+	left: -90%;
+}
+
+#beth #illustration {
+	top: -2%;
+	left: -80%;
+}
+
+#bjorn #illustration {
+	left: -85%;
+}
+
+#eidar #illustration {
+	top: 9.5%;
+	left: -80%;
+}
+
+#eirik #illustration {
+	left: -80%;
+}
+
+#elisabet #illustration {
+	left: -82.5%;
+}
+
+.error404 #illustration,
+#even #illustration {
+	top: -6%;
+	left: -97.5%;
+}
+
+#gjermund #illustration {
+	left: -82.5%;
+}
+
+#gustav #illustration {
+	left: -91%;
+}
+
+#ida #illustration {
+	left: -80%;
+}
+
+#inge #illustration {
+	left: -82.5%;
+}
+
+#jostein #illustration {
+	left: -90%;
+}
+
+#kari #illustration {
+	top: 2%;
+	left: -82.5%;
+}
+
+#kjellmorten #illustration {
+	top: -7.5%;
+	left: -73%;
+}
+
+#kristin #illustration {
+	left: -82%;
+}
+
+#lillian #illustration {
+	left: -75%;
+}
+
+#linn #illustration {
+	top: -5%;
+	left: -80%;
+}
+
+#martha #illustration {
+	top: -2.5%;
+	left: -85%;
+}
+
+#martin #illustration {
+	left: -90%;
+}
+
+#mona #illustration {
+	top: 7.5%;
+	left: -80%;
+}
+
+#nikolai #illustration {
+	left: -90%;
+}
+
+#ove #illustration {
+	left: -75%;
+}
+
+#renata #illustration {
+	top: 5%;
+	left: -85%;
+}
+
+#sesilie #illustration {
+	left: -90%;
+}
+
+#silje #illustration {
+	top: -5%;
+	left: -82.5%;
+}
+
+#synve #illustration {
+	top: 2.5%;
+	left: -115%;
+	
+	img {
+		width: 125% !important;
+		max-width: 125% !important;
+	}
+	
+}
+
+#synove #illustration {
+	top: -5%;
+	left: -82.5%;
+}
+
+#thor #illustration {
+	top: 2.5%;
+	left: -82.5%;
+}
+
+#thord #illustration {
+	left: -82.5%;
+}
+
+#veronica #illustration {
+	top: -2.5%;
+	left: -82.5%;
+}
+
+#will #illustration {
+	top: 20%;
+	left: -80%;
+}
+
+#oyvind #illustration {
+	top: 10%;
+	left: -80%;
+}
+
+// EXPERIENCE
+
+#experience {
+	padding: 0 10px;
+
+	h2 {
+		padding: 0 0 0 percentage(320px/940px);
+	}
+
+	dl {
+		
+		dt {
+			padding: 12px 0 0 percentage(320px/940px);
+		}
+		
+		dd {
+			padding: 0 0 0 percentage(320px/940px);
+		}
+		
+	}
+
+}

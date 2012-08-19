@@ -1,0 +1,21 @@
+/* REPORTS */
+
+#reports table {
+	position: relative;
+	float: left;
+	width: 940px;
+	margin: 0 0 24px -320px;	
+}
+
+#reports table thead tr th {
+	background: Black;
+	background: rgba(0, 0, 0, 0.25);
+	color: White;
+	border-top: 1px solid $netlife_green;
+}
+
+#reports table tbody tr td {
+	background: White;
+	background: rgba(255, 255, 255, 0.50);
+	border-top: 1px solid $netlife_green;
+}

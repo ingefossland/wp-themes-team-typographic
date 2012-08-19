@@ -1,0 +1,34 @@
+// SECTIONS 600
+
+#sections {
+	
+	#services,
+	#calendar,
+	#blog {
+		float: left;
+		display: block;
+		width: percentage(320px / 960px);
+		padding: 0 percentage(10px / 960px);
+		margin: 0 0 40px 0;
+	}	
+
+}
+
+
+// CASE STUDY
+
+#projects {
+	float: left;
+	width: 100%;
+	position: relative;
+
+	h5 {
+		position: absolute;
+		bottom: 0;
+		float: left;
+		width: percentage(320px / 960px);
+		padding: 0 percentage(10px / 960px);
+		margin: 0 0 48px 0;
+	}
+
+}
