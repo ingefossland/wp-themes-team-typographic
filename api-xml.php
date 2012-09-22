@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: XML api
+ * Template Name: API xml
  * Description: A page that loads xml stats
  */
  

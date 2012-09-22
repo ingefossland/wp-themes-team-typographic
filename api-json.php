@@ -1,8 +1,12 @@
 <?php
 /**
- * Template Name: Json api
+ * Template Name: API json
  * Description: A page that interprets jso
  */
+
+echo '<pre>';
+print_r($wp_query);
+echo '</pre>';
 
 global $post, $teamdata;
 

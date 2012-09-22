@@ -13,4 +13,5 @@ $index = $teamdata->get_players();
 
 <?php include("inc/archive-index.php"); ?>
         
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
