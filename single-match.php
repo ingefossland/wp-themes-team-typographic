@@ -36,20 +36,21 @@ $stats = $teamdata->get_stats(array(
 
 <article id="match">
 
-<h2><a href="#"><?php the_time('d.m.Y'); ?></a></h2>
-<h1><?php echo $matchfacts->hometeam->name; ?>&ndash;<?php echo $matchfacts->awayteam->name; ?> <?php echo $matchfacts->result; ?></h1>
+  <h1><?php echo $matchfacts->hometeam->name; ?>&ndash;<?php echo $matchfacts->awayteam->name; ?> <?php echo $matchfacts->result; ?></h1>
+  
+  <ul>
+  <li><a href="<?php echo $matchfacts->season->link; ?>"><?php echo $matchfacts->competition->name; ?> <?php echo $matchfacts->season->name; ?></a>, <?php the_time('d.m.Y'); ?>  <?php the_time('H:i'); ?></li>
+  <li><a href="<?php echo $matchfacts->ground->link; ?>"><?php the_ground(); ?></a>, <?php echo $matchfacts->attendance; ?> tilskuere.</li>
+  </ul>
+  
+<?php the_hometeam_players(); ?>
 
-<div class="byline">
-  <h4><a href="<?php echo $matchfacts->season->link; ?>"><?php echo $matchfacts->competition->name; ?> <?php echo $matchfacts->season->name; ?></a></h4>
-  <h5><?php the_ground(); ?> <?php the_time('H:i'); ?>. Attendance: <?php echo $matchfacts->attendance; ?>.</h5>
-</div>
+<?php //include("inc/match-players.php"); ?>
 
 </article>
 
-<?php include("inc/match-players.php"); ?>
 <?php //include("inc/team-resfix.php"); ?>
 
-<?php //the_hometeam_players(); ?>
 
 <?php //the_awayteam_players(); ?>
 

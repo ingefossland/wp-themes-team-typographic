@@ -1,4 +1,4 @@
-<?php if ($seasons) { ?>
+<?php if ($seasons && !$season_id) { ?>
 <nav>
 <ul>
 <?php foreach ($seasons as $s) { ?>

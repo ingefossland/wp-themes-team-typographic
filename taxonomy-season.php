@@ -53,11 +53,14 @@ if ($competition_id) {
 <h1>Season / <?php single_term_title(); ?></h1>
 
 
-<?php include("inc/season-nav-seasons.php"); ?>
-<?php include("inc/season-nav-competitions.php"); ?>
+<?php include("inc/season-nav.php"); ?>
+
+<?php include("inc/season-playerStats.php"); ?>
+
+<?php //include("inc/season-playersByGoals.php"); ?>
+<?php //include("inc/season-playersByApps.php"); ?>
 
 <?php include("inc/season-matrix.php"); ?>
-<?php include("inc/season-goalscorers.php"); ?>
 <?php include("inc/season-leaguePerformance.php"); ?>
 
 </section>

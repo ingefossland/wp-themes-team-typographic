@@ -1,308 +1,40 @@
-/* DEFAULT */
-
-html {
-}
+// headers
 
 body {
-	font-family: georgia, serif;
+	font-family: 'Droid Serif';
 	font-size: 16px;
 	line-height: 24px;
-	color: $text;
+	color: #444;
 }
 
-/* WP-EDIT */
-
-* .wp-edit {
-	font-family: georgia, serif !important;
-	font-weight: normal !important;
-	display: none;
-}
-
-* .wp-edit a {
-	color: rgba(0, 0, 0, 0.25) !important; 
-}
-
-/* LINKS */
-
-a {
-	text-decoration: underline; 
-	color: $link;
-}
-
-a:focus, a:hover, a:active {
-	color: $link_hover;
-}
-
-/* TITLE COLORS */
-
-h1, h2, h3 {
-	color: $title;
-}
-
-h1 a, h2 a, h3 a {
-	color: $title_link;
-	text-decoration: none;
-}
-
-h1 a:hover, h2 a:hover, h3 a:hover {
-	color: $title_link;
-	text-decoration: underline;
-}
-
-/* TITLES */
 
 h1 {
-	font-family: "Avant Garde", georgia, serif;
-	font-size: 36px;
+	font-size: 40px;
 	line-height: 48px;
-	font-weight: normal;
-	letter-spacing: -1px;
-	margin: 0 0 24px 0;
-}
-
-h1 + h3,
-h1 + div + h3, 
-h1 + aside + h3,
-h1 + figure + h3 {
-	font-family: georgia, serif;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 30px;
-	margin: 0 0 24px 0;
-	color: $text;
 }
 
 h2 {
-	font-family: "Avant Garde", georgia, serif;
-	font-size: 24px;
-	font-weight: normal;
-	line-height: 30px;
-	margin: 0;
-}
-
-h2 + h3 {
-	margin: 14px 0 0 0;
+	font-size: 20px;
 }
 
 h3 {
-	font-family: "Avant Garde", georgia, serif;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0;
+	font-size: 20px;
 }
 
 h4 {
 	font-size: 16px;
-	font-weight: bold;
-	line-height: 24px;
-	margin: 0;
 }
 
-h5,
-figcaption {
-	font-size: 14px;
-	font-weight: normal;
-	font-style: italic;
-	line-height: 24px;
-	margin: 0 0 0;
-}
-
-h6 {
-	font-size: 12px;
-	line-height: 18px;
-	margin: 0 0 18px 0;
-}
-
-blockquote {
-	margin: 0 0 24px 0;
-	
-	h3 {
-		font-family: "georgia", serif;
-		font-size: 24px;
-		line-height: 32px;
-		color: $meta;
-	}
-	
-	h5 {
-		font-family: "Avant Garde", georgia, serif;
-		font-size: 12px;
-		line-height: 18px;
-		font-style: normal;
-		text-transform: uppercase;
-		margin: 16px 0 0 0;
-	}
-	
-}
-
-/* SMALL */
-
-@media only screen and (max-width: 599px) {
-	
-	h1 {
- 		font-size: 36px;
-		line-height: 40px;
-		margin: 0 0 20px 0;
-	}
-	
-	h1 + h3,
-	h1 + div + h3, 
-	h1 + aside + h3 {
-		font-size: 16px;
-		line-height: 24px;
-		margin: 0 0 24px 0;
-	}
-
-	h2 {
-		font-size: 20px;
-		line-height: 24px;
-		margin: 0 0 2px 0;
-	}
-
-	h3 {
-		font-size: 16px;
-		line-height: 24px;
-		margin: 0;
-	}
-
-}
-
-/* TEXT */
-
-p {
-	font-size: 16px;
-	line-height: 24px;
-	margin: 0 0 24px 0;
-}
-
-p small,
-ul li small,
-ol li small {
-	font-size: 12px;
-}
-
-p strong,
-ul li strong,
-ol li strong {
-	font-family: "Avant Garde";
-	font-size: 12px;
-	font-weight: normal;
-	text-transform: uppercase;
-	color: $text_strong;
-}
-
-q {
-	font-style: italic;
-}
-
-q:before,
-q:after {
-	content: none;
-}
-
-cite {
-	font-style: normal;
-}
-
-strong, b {
+strong {
 	font-weight: bold;
 }
 
-em, dfn, i {
-	font-style: italic;
-}
-
-dfn {
-	font-weight: bold;
-}
-
-sup, sub {
-	line-height: 0;
-}
-
-abbr, acronym {
-	border-bottom: 1px dotted $text;
-}
-
-address {
-	font-style: italic;
-}
-
-del {
-	color: $text_light;
-}
-
-pre {
-	white-space: pre;
-	margin: 0 0 24px 0;
-}
-
-pre, code, tt {
-	font-family: 'andale mono', 'lucida console', monospace;
-	font-size: 13px;
-}
-
-/* LISTS */
-
-li ul, li ol {
-}
-
-ul, ol {
-	list-style: outside;
-	margin: 0 0 24px 0;
-}
-
-@media only screen and (max-width: 599px) {
-	ul, ol {
-		list-style: inside;
-	}
-}
-
-ul {
-	list-style-type: disc;
-}
-
+ul,
 ol {
-	list-style-type: decimal;
+	margin: 0 0 24px 0;	
 }
 
-dl {
-	margin: 0 0 24px 0;
-}
-
-dl dt {
-	font-weight: normal;
-	color: Black;
-}
-
-dl dd {
-	margin: 0 0 12px 0;
-}
-
-/* TABLES */
 
 table {
 	width: 100%;
-	margin: 0 0 24px 0;
-}
-
-th,
-td {
-	font-size: 16px;
-	line-height: 24px;
-	vertical-align: top;
-}
-
-th, td, caption {
-	padding: 4px 10px;
-}
-
-tr.even td {
-}
-
-tfoot {
-	font-style: italic;
-}
-
-caption {
 }

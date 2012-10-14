@@ -1,110 +1,13 @@
-// NETLIFE SCREEN.CSS
+// RESET
 
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/layout/grid-background";
 
-// netlife global
+// VARIABLES
 
-@import "netlife-colours";
-@import "netlife-fonts";
+// TYPOGRAPHY + GRID
 
-/* mixins */
-
-@mixin hide-text {
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-/* background */
-
-$background: #a4c921 url(../img/bg.png);
-
-/* menu */
-
-$menu_link: White;
-$menu_hover: White;
-$menu_on: Black;
-
-/* text */
-
-$text: #1e2908;
-$text_strong: Black;
-$text_light: #769700;
-
-/* link */
-
-$link: Black;
-$link_hover: $netlife_dark_green;
-
-/* title */
-
-$title: Black;
-$title_link: Black;
-$title_hover: $netlife_dark_green;
-
-/* meta */
-
-$meta: White;
-$meta_link: White;
-$meta_hover: $netlife_dark_green;
-
-/* tabmenu */
-
-$tabmenu_link: White;
-$tabmenu_over: White;
-$tabmenu_on: Black;
-
-/* buttons */
-
-$button_background: Black;
-$button_text: White;
-
-// COMMON STYLES
-
+@import "screen-fonts";
 @import "screen-typography";
-@import "screen-navigation";
-@import "screen-grid";
 
-@import "screen-content";
-@import "screen-content-images";
-@import "screen-content-metadata";
-@import "screen-content-forms";
-@import "screen-content-layers";
-
-// NETLIFE STYLES
-
-@import "screen-netlife-header";
-@import "screen-netlife-footer";
-
-// people
-
-@import "screen-netlife-people";
-@import "screen-netlife-person";
-
-// events
-
-@import "screen-netlife-events";
-
-// products
-
-@import "screen-netlife-products";
-
-// projects
-
-@import "screen-netlife-projects";
-
-// frontpage
-
-@import "screen-netlife-feature";
-@import "screen-netlife-sections";
-@import "screen-netlife-elsewhere";
-
-// map
-
-@import "screen-netlife-map";
-
-// REPORTS
-
-@import "screen-netlife-reports";
