@@ -26,4 +26,5 @@ $stats = $teamdata->get_stats(array(
 
 <?php endwhile; ?>
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

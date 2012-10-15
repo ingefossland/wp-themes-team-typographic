@@ -1,7 +1,5 @@
-<table class="stats" id="career">
-  <caption>
-  Player career
-  </caption>
+<table class="stats" id="player-stats">
+  <caption>Karriere i Brann</caption>
   <thead>
     <tr>
       <td rowspan="2" class="season"></td>

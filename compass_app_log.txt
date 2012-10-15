@@ -1332,3 +1332,79 @@ Load paths:
 2012-10-14 12:15:19 overwrite css/screen.css 
 2012-10-14 12:15:39 identical css/screen.css 
 2012-10-14 12:15:55 overwrite css/screen.css 
+2012-10-15 20:02:06 identical css/screen.css 
+2012-10-15 20:05:04     error sass/screen.scss (Line 13: File to import not found or unreadable: screen-grid.
+Load paths:
+  /Users/inge/Sites/wp-metadata/wp-content/themes/team-typographic/sass
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-2.1.0.1/vendor/assets/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.1/sass
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_common/sassy-math-1.2/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_common/modular-scale-1.0.2/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-3.1.1/scss
+  Compass::SpriteImporter)
+2012-10-15 20:05:04 overwrite css/screen.css 
+2012-10-15 20:05:11 overwrite css/screen.css 
+2012-10-15 20:05:26 overwrite css/screen.css 
+2012-10-15 20:05:34 overwrite css/screen.css 
+2012-10-15 20:06:04     error sass/screen.scss (Line 17: File to import not found or unreadable: player-stats.
+Load paths:
+  /Users/inge/Sites/wp-metadata/wp-content/themes/team-typographic/sass
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-2.1.0.1/vendor/assets/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.1/sass
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_common/sassy-math-1.2/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_common/modular-scale-1.0.2/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-3.1.1/scss
+  Compass::SpriteImporter)
+2012-10-15 20:06:04 overwrite css/screen.css 
+2012-10-15 20:06:04     error sass/screen.scss (Line 17: File to import not found or unreadable: player-stats.
+Load paths:
+  /Users/inge/Sites/wp-metadata/wp-content/themes/team-typographic/sass
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-2.1.0.1/vendor/assets/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.1/sass
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_common/sassy-math-1.2/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_common/modular-scale-1.0.2/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-3.1.1/scss
+  Compass::SpriteImporter)
+2012-10-15 20:06:04 overwrite css/screen.css 
+2012-10-15 20:06:11 overwrite css/screen.css 
+2012-10-15 20:06:14 identical css/screen.css 
+2012-10-15 20:10:22 overwrite css/screen.css 
+2012-10-15 20:10:38 overwrite css/screen.css 
+2012-10-15 20:11:01 overwrite css/screen.css 
+2012-10-15 20:11:23 overwrite css/screen.css 
+2012-10-15 20:11:49 overwrite css/screen.css 
+2012-10-15 20:13:11 overwrite css/screen.css 
+2012-10-15 20:13:41 overwrite css/screen.css 
+2012-10-15 20:14:07 overwrite css/screen.css 
+2012-10-15 20:14:13 overwrite css/screen.css 
+2012-10-15 20:14:31 overwrite css/screen.css 
+2012-10-15 20:14:41 overwrite css/screen.css 
+2012-10-15 20:14:52 overwrite css/screen.css 
+2012-10-15 20:14:59 overwrite css/screen.css 
+2012-10-15 20:15:41 overwrite css/screen.css 
+2012-10-15 20:15:59 overwrite css/screen.css 
+2012-10-15 20:22:29 overwrite css/screen.css 
+2012-10-15 20:22:40 overwrite css/screen.css 
+2012-10-15 20:23:05 overwrite css/screen.css 
+2012-10-15 20:23:17 overwrite css/screen.css 
+2012-10-15 20:23:25 overwrite css/screen.css 
+2012-10-15 20:25:17 overwrite css/screen.css 
+2012-10-15 20:25:25 overwrite css/screen.css 
+2012-10-15 20:30:34 overwrite css/screen.css 
+2012-10-15 20:31:19 overwrite css/screen.css 
+2012-10-15 20:31:23 overwrite css/screen.css 

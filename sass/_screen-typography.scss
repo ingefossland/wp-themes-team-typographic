@@ -7,10 +7,17 @@ body {
 	color: #444;
 }
 
+a {
+	color: Red;
+}
+
 
 h1 {
-	font-size: 40px;
+	font-family: 'Ostrich';
+	font-size: 48px;
+//	font-weight: bold;
 	line-height: 48px;
+//	text-transform: uppercase;
 }
 
 h2 {
@@ -25,6 +32,10 @@ h4 {
 	font-size: 16px;
 }
 
+p {
+	margin: 0 0 24px 0;
+}
+
 strong {
 	font-weight: bold;
 }
@@ -37,4 +48,13 @@ ol {
 
 table {
 	width: 100%;
+
+	th {
+		font-family: 'Droid Sans';
+	}
+
+	thead {
+		
+	}
+
 }
