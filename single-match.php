@@ -36,21 +36,17 @@ $stats = $teamdata->get_stats(array(
 
 <article id="match">
 
+	<hgroup>
   <h1><?php echo $matchfacts->hometeam->name; ?>&ndash;<?php echo $matchfacts->awayteam->name; ?> <?php echo $matchfacts->result; ?></h1>
+  <h3><a href="<?php echo $matchfacts->season->link; ?>"><?php echo $matchfacts->competition->name; ?> <?php echo $matchfacts->season->name; ?></a>, <?php the_time('d.m.Y'); ?>  <?php the_time('H:i'); ?></h3>
+  <h3><a href="<?php echo $matchfacts->ground->link; ?>"><?php the_ground(); ?></a>, <?php echo $matchfacts->attendance; ?> tilskuere.</h3>
+	</hgroup>
   
-  <ul>
-  <li><a href="<?php echo $matchfacts->season->link; ?>"><?php echo $matchfacts->competition->name; ?> <?php echo $matchfacts->season->name; ?></a>, <?php the_time('d.m.Y'); ?>  <?php the_time('H:i'); ?></li>
-  <li><a href="<?php echo $matchfacts->ground->link; ?>"><?php the_ground(); ?></a>, <?php echo $matchfacts->attendance; ?> tilskuere.</li>
-  </ul>
-  
-<?php the_hometeam_players(); ?>
-
-<?php //include("inc/match-players.php"); ?>
+<?php include("inc/match-players.php"); ?>
 
 </article>
 
 <?php //include("inc/team-resfix.php"); ?>
-
 
 <?php //the_awayteam_players(); ?>
 

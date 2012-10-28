@@ -3,28 +3,23 @@
 function get_player($player) {
 
 	if ($player->shirt > 0) {
-		$check = $player->shirt;
+		$shirt = $player->shirt;
 	} else {
-		$check = "+";
+		$shirt = "-";
 	}
 
-	if ($player->position == 1) {
-		$class = 'on gk';
-	} else if ($player->position < 5) {
-		$class = 'on';
+	if ($player->position < 5) {
+		$class = 'on pos-' . $player->position;
 	} else if ($player->position == 5) {
 		$class = 'sub';
 	} else if ($player->position == 6) {
-		$check = ''; 
 		$class = '';
 	}
 
 	if ($player->rc > 0) {
-		$class .= " rc";
-		$check .= " r";
+		$cards = "rc";
 	} else if ($player->yc > 0) {
-		$class .= " yc";
-		$check .= " y"; 
+		$cards = "yc"; 
 	}
 		
 	if ($player->sub_on && $player->sub_off) {
@@ -44,7 +39,7 @@ function get_player($player) {
 		$goals;
 	}
 	
-	return array($class, $check, $subs, $goals);
+	return array($class, $shirt, $subs, $goals, $cards);
 
 }
 
@@ -52,17 +47,21 @@ function get_player($player) {
 
 <?php if ($matchfacts_players->players) { ?>
 
-<div id="match-players">
+<section id="match-players">
 
 	<ul>
 
 	<?php foreach ($matchfacts_players->players as $player) { ?>
-		<?php list($class, $check, $subs, $goals) = get_player($player); ?>
-		<li class="<?php echo $class; ?>"><a href="<?php echo get_permalink($player->player_id); ?>"><span><?php echo $check; ?></span> <?php echo $player->player->name; ?> <?php echo $subs; ?> <?php echo $goals; ?></a></li>
+		<?php list($class, $shirt, $subs, $goals, $cards) = get_player($player); ?>
+		<?php if ($class != 'sub') { ?>
+		<li class="<?php echo $class; ?>"><a href="<?php echo get_permalink($player->player_id); ?>"><span><?php echo $shirt; ?></span> <strong><?php echo $player->player->name; ?></strong> <?php echo $subs; ?> <?php echo $goals; ?></a></li>
+		<?php } else { ?>
+		<li class="<?php echo $class; ?>"><a href="<?php echo get_permalink($player->player_id); ?>"><span><?php echo $shirt; ?></span> <?php echo $player->player->name; ?> <?php echo $subs; ?> <?php echo $cards; ?> <?php echo $goals; ?></a></li>
+		<?php } ?>
 	<?php } ?>
 
 	</ul>
 
-</div>
+</section>
 
 <?php } ?>
