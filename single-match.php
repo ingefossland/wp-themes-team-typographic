@@ -42,7 +42,7 @@ $stats = $teamdata->get_stats(array(
   <h3><a href="<?php echo $matchfacts->ground->link; ?>"><?php the_ground(); ?></a>, <?php echo $matchfacts->attendance; ?> tilskuere.</h3>
 	</hgroup>
   
-<?php include("inc/match-players.php"); ?>
+<?php include("single-match-players.php"); ?>
 
 </article>
 

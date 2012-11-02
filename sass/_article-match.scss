@@ -9,31 +9,219 @@
 	
 	section {
 		
+		h2 {
+			font-size: 16px;
+			color: #999;
+		}
+		
 		ul {
+			display: block;
+			float: left;
+			width: 100%;
+
+			border-bottom: 1px solid #ccc;
+			margin: 12px 0;
 			
 			li {
-				
+
+				display: block;
+				float: left;
+				width: 100%;
+				border-top: 1px solid #ccc;
+
 				a {
+					
 					display: block;
-					border-top: 1px solid #ccc;
+					float: left;
+					width: 100%;
+
 					padding: 12px 0 13px;
 
+					font-weight: bold;
 					text-decoration: none;
 				}
 				
 				// gk
 				
 				&.gk a {
+					color: Green;
 				}
 				
 				// sub
 				
 				&.sub a {
+					//color: #999;
+				}
+				
+				.shirt {
+					float: left;
+					width: 30px;
+
+					font-weight: normal;
+					text-align: right;
+					margin: 0 10px 0 0;
+				}
+				
+				.card {
+					
+					display: inline-block;
+
+					width: 14px;
+					height: 14px;
+					@include border-radius(7px);
+
+					margin: 0 2px 3px 2px;
+					font-size: 9px;
+
+					overflow: hidden;
+					vertical-align: middle;
+					
+					&.yc {
+						background: darken(Yellow, 5%);
+						color: darken(Yellow, 5%);
+					}
+
+					&.rc {
+						background: Red;
+						color: Red;
+					}
+
+				}
+				
+				.subs {
+					font-weight: normal;
+				}
+
+				.goals {
+					float: right;
+
+					font-weight: bold;
+					text-align: center;
+					
+											
+					&:before {
+						content: '+';
+						display: inline-block;
+
+						vertical-align: middle;
+						
+						font-size: 14px;
+						line-height: 12px;
+
+						background: White;
+						color: White;
+
+						width: 14px;
+						height: 14px;
+						
+						@include border-radius(7px);
+
+						margin: 0 4px 3px 4px;
+					}
+					
 				}
 				
 			}
 			
 		}
+
+		// formations
+		
+		@include respond-to('wide-screens') {
+		
+			h2 {
+				// text-align: center;
+			}
+		
+			// team
+		
+			ul.team {
+				
+				li {
+				
+					text-align: center;
+					
+					.shirt {
+						float: none;
+						display: block;
+						width: auto;
+						text-align: center;
+						font-size: 24px;
+						font-weight: bold;
+					}
+
+					.goals {
+						float: none;
+					}
+					
+				}
+
+				// 4-5-1
+
+				&.formation-4-5-1 {
+	
+					li.def {
+						width: percentage(1/4);
+					}
+					
+					li.mid {
+						width: percentage(1/5);
+					}
+	
+				}
+				
+			}
+			
+			// subs
+			
+			ul.subs {
+
+				border-top: 1px solid #ccc;
+			
+				li {
+					//text-align: center;
+
+					.shirt {
+						float: none;
+						width: auto;
+						margin: 0;
+					}
+
+					.goals {
+						float: none;
+					}
+					
+				}
+				
+				li {
+					border-top: none;
+					width: auto;
+
+					padding: 12px 0 13px;
+					
+					a {
+						display: inline;
+						padding: 0;
+						float: none;
+					}
+
+						
+					&:after {
+						content: ',';
+						margin: 0 5px 0 0;
+					}
+
+					&:last-child:after {
+						content: '';
+						margin: 0;
+					}
+
+				}
+				
+			}
+		
+		}
+		
 		
 	}
 	

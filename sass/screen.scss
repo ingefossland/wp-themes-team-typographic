@@ -4,7 +4,9 @@
 @import "compass/css3";
 @import "compass/layout/grid-background";
 
-// VARIABLES
+// VARIABLES & MIXINS
+
+@import "mixins-responsive";
 
 // TYPOGRAPHY + GRID
 

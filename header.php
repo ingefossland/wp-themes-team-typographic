@@ -24,11 +24,9 @@
 <div id="grid">
 
 <header id="header">
-	<hgroup>
+	<hgroup id="ident">
     	<h1><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
         <h2><?php bloginfo('description'); ?></h2>
     </hgroup>
-	<nav>
-<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-    </nav>
+	<nav><?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></nav>
 </header>
