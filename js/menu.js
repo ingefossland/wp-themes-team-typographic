@@ -108,6 +108,7 @@ jQuery(document).ready(function($) {
 			'right' : '-=' + slideWidth,
 		}, 'fast', '', function() {
 			$('#filter').hide();
+			$('#grid').css('position', '');
 		});
 	    
     }
@@ -163,6 +164,7 @@ jQuery(document).ready(function($) {
 			'left' : '-=' + slideWidth,
 		}, 'fast', '', function() {
 			$('#menu').hide();
+			$('#grid').css('position', '');
 		});
 	    
     }
