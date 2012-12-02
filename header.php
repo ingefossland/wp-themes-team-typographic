@@ -25,8 +25,40 @@
 
 <header id="header">
 	<hgroup id="ident">
-    	<h1><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+    	<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
         <h2><?php bloginfo('description'); ?></h2>
+        
     </hgroup>
-	<nav><?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></nav>
+
+    <nav id="toolbar">
+        <ul>
+        	<li class="menu"><a href="#menu">Vis meny</a></li>
+        	<li class="search"><a href="#search">Vis søk</a></li>
+        </ul>
+    </nav>
+
+	<nav id="menu">
+	
+		<h2>Meny</h2>
+
+		<ul>
+			<li><a href="<?php bloginfo('url'); ?>/players/">Players</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/matches/">Matches</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/teams/">Teams</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/grounds/">Grounds</a></li>
+		</ul>
+	
+	</nav>
+	
+	<nav id="search">
+
+		<h2>Søk</h2>
+	
+		<form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+			<input type="text" class="field" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'twentyeleven' ); ?>" />
+			<input type="submit" class="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'twentyeleven' ); ?>" />
+		</form>
+
+	</nav>
+	
 </header>

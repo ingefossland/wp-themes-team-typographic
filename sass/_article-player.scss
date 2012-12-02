@@ -1,0 +1,217 @@
+// ARTICLE
+
+#player {
+
+	hgroup {
+		text-align: center;
+		margin: 25px 0;
+	}
+	
+	// career
+	
+	table {
+		display: block;
+		float: left;
+		width: 100%;
+
+		@include respond-to('medium') {
+			float: none;
+			display: table;
+		}
+
+		border-bottom: 1px solid #ccc;
+		margin: 12px 0;
+		
+		// caption
+		
+		caption {
+			font-size: 16px;
+			font-weight: bold;
+			padding: 10px 0;			
+		}
+		
+		// rows and cols
+		
+		tr {
+			display: block;
+			float: left;
+			width: 100%;
+
+			@include respond-to('medium') {
+			float: none;
+				display: table-row;
+			}
+			
+			th,
+			td {
+				display: block;
+				float: left;
+				width: percentage(1/5);
+
+				border-top: 1px solid #ccc;
+				padding: 10px 0;
+
+				font-size: 14px;
+
+				@include respond-to('medium') {
+					float: none;
+					display: table-cell;
+					width: auto;
+
+					font-size: 16px;
+				}
+
+			}
+
+		}
+		
+		// head
+		
+		thead {
+		
+			tr {
+			
+				&:nth-child(1) th,
+				&:nth-child(1) td {
+
+					@include respond-to('medium') {
+						padding: 10px 0 0 0;
+					}
+
+				}
+				
+				&:nth-child(2) th,
+				&:nth-child(2) td {
+					display: none;
+
+					@include respond-to('medium') {
+						display: table-cell;
+						border-top: none;
+						padding: 0 0 10px 0;
+
+						font-size: 12px;
+					}
+
+				}
+				
+				
+			}
+			
+		}
+		
+		// body + foot
+		
+		tbody,
+		tfoot {
+		
+			tr {
+				
+				th {
+					width: percentage(1/5);
+				}
+				
+				td {
+					width: percentage(1/5);
+
+					@include respond-to('medium') {
+						width: percentage(1/10);
+					}
+
+				}
+				
+			}
+			
+		}
+		
+		// foot
+
+		tfoot {
+		
+			tr {
+
+				&:nth-child(1) th,
+				&:nth-child(1) td {
+					padding: 10px 0 0 0;
+				}
+
+				&:nth-child(2) th,
+				&:nth-child(2) td {
+					border-top: none;
+					padding: 0 0 10px 0;
+					margin-top: -10px;
+					font-size: 12px;
+					color: $link;
+				}
+				
+				&:nth-child(2) td {
+
+					&:after {
+						content: ' m/k';
+
+						@include respond-to('medium') {
+							content: ' mål/kamp';
+						}
+
+					}
+
+				}
+				
+			}
+			
+		}			
+
+		// apps + goals
+
+		.apps {
+			height: 45px + 25px;
+			white-space: nowrap;
+			
+			@include respond-to('medium') {
+				height: auto;
+			}
+
+		}
+		
+		.goals {
+			position: relative;
+			margin-left: -20%;
+			top: 25px;
+
+			border-top: none;
+			color: $link;
+
+			@include respond-to('medium') {
+				margin-left: auto;
+				top: auto;
+
+				border-top: 1px solid #ccc;
+			}
+			
+			span:after {
+
+				content: '+';
+				display: inline-block;
+
+				vertical-align: middle;
+				
+				font-size: 14px;
+				line-height: 12px;
+
+				background: White;
+				color: White;
+
+				width: 14px;
+				height: 14px;
+				
+				@include border-radius(7px);
+
+				margin: 0 4px 3px 4px;
+				
+			}
+
+		}
+		
+		
+	}		
+
+}

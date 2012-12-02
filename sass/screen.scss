@@ -6,6 +6,9 @@
 
 // VARIABLES & MIXINS
 
+$text: #444;
+$link: #e40011;
+
 @import "mixins-responsive";
 
 // TYPOGRAPHY + GRID
@@ -14,9 +17,15 @@
 @import "screen-typography";
 @import "screen-grid";
 
+// HEADER + FOOTER
+
+@import "screen-header";
+@import "screen-footer";
+
 // TEMPLATES
 
 @import "article-match";
+@import "article-player";
 
 // STATS
 

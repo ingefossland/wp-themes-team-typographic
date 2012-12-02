@@ -1,6 +1,19 @@
+* {
+	@include box-sizing(border-box);
+}
+
 // grid
 
 body {
 	background: #eee;
+	padding: 0;
+	margin: 0;
+}
+
+#grid {
+	position: relative;
+	z-index: 9999;
+	width: 100%;
 	padding: 0 20px;
+	margin: 0 auto;
 }

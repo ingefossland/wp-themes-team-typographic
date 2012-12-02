@@ -23,16 +23,12 @@ $fixtures = $teamdata->get_matches(array(
 
 <?php get_header(); ?>
 
-	<h1>Welcome</h1>
 
-	<?php include("inc/frontpage-fixtures.php"); ?>
-	<?php include("inc/frontpage-results.php"); ?>
+	<?php //include("inc/frontpage-fixtures.php"); ?>
+	<?php //include("inc/frontpage-results.php"); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
-	    <?php get_template_part('story', get_post_type()); ?>
+	    <?php //get_template_part('story', get_post_type()); ?>
     <?php endwhile; ?>
 
-	<?php twentyeleven_content_nav( 'nav-below' ); ?>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

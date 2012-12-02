@@ -35,7 +35,7 @@
 					float: left;
 					width: 100%;
 
-					padding: 12px 0 13px;
+					padding: 10px 0;
 
 					font-weight: bold;
 					text-decoration: none;
@@ -53,6 +53,8 @@
 					//color: #999;
 				}
 				
+				// shirt
+				
 				.shirt {
 					float: left;
 					width: 30px;
@@ -61,6 +63,8 @@
 					text-align: right;
 					margin: 0 10px 0 0;
 				}
+
+				// card
 				
 				.card {
 					
@@ -87,10 +91,14 @@
 					}
 
 				}
+
+				// subs
 				
 				.subs {
 					font-weight: normal;
 				}
+
+				// goals
 
 				.goals {
 					float: right;
@@ -98,7 +106,6 @@
 					font-weight: bold;
 					text-align: center;
 					
-											
 					&:before {
 						content: '+';
 						display: inline-block;
@@ -127,8 +134,8 @@
 
 		// formations
 		
-		@include respond-to('wide-screens') {
-		
+		@include respond-to('large') {
+
 			h2 {
 				// text-align: center;
 			}
@@ -158,14 +165,33 @@
 
 				// 4-5-1
 
-				&.formation-4-5-1 {
+				&.formation-4-5-1,
+				&.formation-4-4-1-1 {
+	
+					li.def {
+						width: percentage(1/4);
+					}
+
+					li.mid {
+						width: percentage(1/5);
+					}
+					
+				}
+
+				// 4-4-2
+
+				&.formation-4-4-2 {
 	
 					li.def {
 						width: percentage(1/4);
 					}
 					
 					li.mid {
-						width: percentage(1/5);
+						width: percentage(1/4);
+					}
+
+					li.att {
+						width: percentage(1/2);
 					}
 	
 				}

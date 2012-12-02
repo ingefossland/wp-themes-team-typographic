@@ -41,13 +41,13 @@ function get_player_stats($player) {
 	
 	// apps
 	if (isset($player->totalAppsStart) && isset($player->totalAppsSub)) {
-		$player->apps = $player->totalAppsStart . ' (' . $player->totalAppsSub . ')';
+		$player->apps = $player->totalAppsStart . '<em>+' . $player->totalAppsSub . '</em>';
 	} else if (isset($player->totalAppsStart)) {	
-		$player->apps = $player->totalAppsStart . ' (0)';
+		$player->apps = $player->totalAppsStart . '<em>+0</em>';
 	} else if (isset($player->totalAppsSub)) {
-		$player->apps = '0 (' . $player->totalAppsSub . ')';
+		$player->apps = '0<em>+' . $player->totalAppsSub . '</em>';
 	} else {
-		$player->apps = '0 (0)';
+		$player->apps = '0<em>+0</em>';
 	}
 
 	// goals
