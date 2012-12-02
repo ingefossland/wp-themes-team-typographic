@@ -1,0 +1,42 @@
+// MATCH
+
+#resfix {
+
+	h3 {
+		font-size: 16px;
+		font-weight: bold;
+//		text-transform: uppercase;
+//		text-align: center;
+		padding: 10px 0;			
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		border-bottom: 1px solid #ccc;
+		margin: 0;
+
+		li {
+			border-top: 1px solid #ccc;
+			padding: 10px 0;		
+
+			text-align: center;
+			
+			a {
+				text-decoration: none;
+			}
+			
+			em {
+				display: block;
+				font-size: 12px;
+			}
+
+			strong {
+				display: block;
+			}	
+				
+		}
+
+	}
+	
+}

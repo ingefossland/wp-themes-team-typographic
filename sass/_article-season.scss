@@ -1,0 +1,103 @@
+// SEASON
+
+#season {
+
+	hgroup {
+		text-align: center;
+		margin: 25px 0;
+	}
+
+	// season
+	
+	table#season-player-stats {
+
+		tbody {
+
+			a {
+
+				display: block;
+				float: left;
+				
+				@include respond-to('medium') {
+				
+					span {
+						display: none;
+					}
+					
+					&:after {
+						content: attr(title);
+					}
+					
+				}
+				
+			}
+			
+		}
+
+	}
+	
+	// competition
+	
+	table#competition-player-stats {
+
+		// rows and cols
+		
+		tr {
+			
+			th {
+				width: percentage(4/5);
+			}
+
+			@include respond-to('medium') {
+
+				th {
+					width: auto;
+				}
+
+			}
+						
+		}
+		
+		// body
+		
+		tbody {
+			
+			a {
+
+				span {
+					display: none;
+				}
+				
+				&:after {
+					content: attr(title);
+				}
+				
+			}
+			
+		}
+
+		// head
+		
+		thead {
+		
+			tr {
+			
+				th {
+					display: none;
+	
+					@include respond-to('medium') {
+						display: table-cell;
+						font-size: 12px;
+						padding: 10px 0;
+					}
+	
+				}
+				
+				
+			}
+			
+		}
+	
+	}
+	
+}

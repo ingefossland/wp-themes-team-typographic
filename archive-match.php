@@ -10,7 +10,9 @@ $comps = $teamdata->get_competitions();
 
 <?php get_header(); ?>
 
+<hgroup id="title">
 <h1>Matches archive</h1>
+</hgroup>
 
 <?php if ($seasons) { ?>
 <nav>

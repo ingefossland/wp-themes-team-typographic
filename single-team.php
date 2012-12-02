@@ -20,11 +20,15 @@ $stats = $teamdata->get_stats(array(
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h1><?php the_title(); ?></h1>
+
+<hgroup id="title">
+<h1>Brann mot <?php the_title(); ?></h1>
+</hgroup>
+
 <?php the_content(); ?>
 <?php endwhile; ?>
 
+<?php include("inc/matches-bySeason.php"); ?>
 <?php include("inc/team-head2head.php"); ?>
-<?php include("inc/team-resfix.php"); ?>
 
 <?php get_footer(); ?>

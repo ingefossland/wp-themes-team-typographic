@@ -16,7 +16,15 @@ $stats = $teamdata->get_stats(array(
 
 <?php get_header(); ?>
 
+<section id="competition">
+
+<hgroup id="title">
 <h1><?php single_term_title(); ?></h1>
-<?php include("inc/season-matrix.php"); ?>
+</hgroup>
+
+<?php include("inc/matches-bySeason.php"); ?>
+
+
+</section>
 
 <?php get_footer(); ?>

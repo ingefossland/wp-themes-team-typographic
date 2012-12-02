@@ -26,7 +26,10 @@ $link: #e40011;
 
 @import "article-match";
 @import "article-player";
+@import "article-season";
 
-// STATS
+// SECTIONS
 
-@import "stats-player";
+@import "section-resfix";
+@import "section-player_stats";
+

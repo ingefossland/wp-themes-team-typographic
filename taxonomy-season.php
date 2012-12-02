@@ -49,19 +49,33 @@ if ($competition_id) {
 
 <section id="season">
 
+<hgroup id="title">
 
-<h1>Season / <?php single_term_title(); ?></h1>
+<?php if ($competition_id) { ?>
+	<h1><?php echo $competition->name; ?> <?php single_term_title(); ?></h1>
+<?php } else if ($season_id) { ?>
+	<h1><?php single_term_title(); ?></h1>
+<?php } else { ?>
+	<h1>Sesongstatistikk</h1>
+<?php } ?>
 
+</hgroup>
 
 <?php include("inc/season-nav.php"); ?>
 
-<?php include("inc/season-playerStats.php"); ?>
+<?php if ($competition_id) { ?>
+	<?php include("inc/matches-byMonth.php"); ?>
+	<?php include("inc/playerStats-competition.php"); ?>
+<?php } else if ($season_id) { ?>
+	<?php include("inc/matches-byMonth.php"); ?>
+	<?php include("inc/playerStats-season.php"); ?>
+<?php } ?>
 
 <?php //include("inc/season-playersByGoals.php"); ?>
 <?php //include("inc/season-playersByApps.php"); ?>
 
-<?php include("inc/season-matrix.php"); ?>
-<?php include("inc/season-leaguePerformance.php"); ?>
+<?php //include("inc/season-matrix.php"); ?>
+<?php //include("inc/season-leaguePerformance.php"); ?>
 
 </section>
 
