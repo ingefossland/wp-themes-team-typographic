@@ -2,6 +2,22 @@
 
 #resfix {
 
+	float: left;
+	width: 100%;
+	margin: 0 0 20px 0;
+
+	h2 {
+		display: block;
+		float: left;
+		width: 100%;
+		
+		font-size: 14px;
+		font-weight: bold;
+		color: $link;
+
+		padding: 10px 0;			
+	}
+
 	h3 {
 		font-size: 16px;
 		font-weight: bold;

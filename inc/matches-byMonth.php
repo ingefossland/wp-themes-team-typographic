@@ -2,6 +2,8 @@
 
 	<section id="resfix">
 
+		<h2>Måned for måned</h2>
+
     <?php foreach ($stats->matches as $match) { ?>
     
 		<?php $month = date('y-m', strtotime($match->match_date)); ?>

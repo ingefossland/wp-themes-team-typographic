@@ -1,12 +1,12 @@
 // stats table
 
-table.player-stats {
+table.playerStats {
 	display: block;
 	float: left;
 	width: 100%;
 
 	border-bottom: 1px solid #ccc;
-	margin: 12px 0;
+	margin: 0 0 20px 0;
 
 	@include respond-to('medium') {
 		display: table;
@@ -19,8 +19,10 @@ table.player-stats {
 		float: left;
 		width: 100%;
 		
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: bold;
+		color: $link;
+
 		padding: 10px 0;			
 
 		@include respond-to('medium') {
@@ -29,7 +31,40 @@ table.player-stats {
 		}
 
 	}
+
+	// table groups
 	
+	thead,
+	tbody,
+	tfoot {
+		float: left;
+		width: 100%;
+	}
+	
+	tfoot {
+		float: right;
+		width: 100%;
+	}
+
+	@include respond-to('medium') {
+
+		thead {
+			float: none;
+			display: table-header-group;
+		}
+
+		tbody {
+			float: none;
+			display: table-row-group;
+		}
+
+		tfoot {
+			float: none;
+			display: table-footer-group;
+		}
+
+	}
+		
 	// rows and cols
 	
 	tr {

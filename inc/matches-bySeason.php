@@ -2,6 +2,8 @@
 
 	<section id="resfix">
 
+		<h2>Sesong for sesong</h2>
+
     <?php foreach ($stats->matches as $match) { ?>
 
 		<?php if ($season && $season != $match->season) { ?>

@@ -1,4 +1,5 @@
-<table class="player-stats" id="career">
+<table class="playerStats" id="playerStats-career">
+<caption>Karriere i Brann</caption>
   <thead>
     <tr>
       <td rowspan="2" class="season"></td>
@@ -16,6 +17,29 @@
       <th scope="col" class="total goals">Mål</th>
     </tr>
   </thead>
+  <tbody>
+    <?php foreach ($stats->seasons as $season) { ?>
+    <tr>
+      <th scope="row"><a href="<?php echo get_term_link($season->slug, 'season'); ?>"><?php echo $season->name; ?></a></th>
+      <?php foreach ($stats->comps as $comp) { ?>
+	      <?php $comp = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}->comp->{$comp->competition_id}); ?>
+	      <td class="apps"><span><?php echo $comp->apps; ?></span></td>
+	      <?php if ($comp->goals > 0) { ?>
+	      <td class="goals"><span><?php echo $comp->goals; ?></span></td>
+	      <?php } else { ?>
+	      <td class="goals"></td>
+	      <?php } ?>
+      <?php } ?>
+      <?php $total = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}); ?>
+      <td class="apps"><span><?php echo $total->apps; ?></span></td>
+      <?php if ($total->goals > 0) { ?>
+      <td class="goals"><span><?php echo $total->goals; ?></span></td>
+      <?php } else { ?>
+	  <td class="goals"></td>
+      <?php } ?>
+    </tr>
+    <?php } ?>
+  </tbody>
   <tfoot>
     <tr>
       <th scope="row"><strong>Totalt</strong></th>
@@ -46,27 +70,4 @@
       <td colspan="2"><span><?php echo $total->goal_average; ?></span></td>
     </tr>
   </tfoot>
-  <tbody>
-    <?php foreach ($stats->seasons as $season) { ?>
-    <tr>
-      <th scope="row"><a href="<?php echo get_term_link($season->slug, 'season'); ?>"><?php echo $season->name; ?></a></th>
-      <?php foreach ($stats->comps as $comp) { ?>
-	      <?php $comp = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}->comp->{$comp->competition_id}); ?>
-	      <td class="apps"><span><?php echo $comp->apps; ?></span></td>
-	      <?php if ($comp->goals > 0) { ?>
-	      <td class="goals"><span><?php echo $comp->goals; ?></span></td>
-	      <?php } else { ?>
-	      <td class="goals"></td>
-	      <?php } ?>
-      <?php } ?>
-      <?php $total = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}); ?>
-      <td class="apps"><span><?php echo $total->apps; ?></span></td>
-      <?php if ($total->goals > 0) { ?>
-      <td class="goals"><span><?php echo $total->goals; ?></span></td>
-      <?php } else { ?>
-	  <td class="goals"></td>
-      <?php } ?>
-    </tr>
-    <?php } ?>
-  </tbody>
 </table>

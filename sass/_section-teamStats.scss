@@ -1,0 +1,199 @@
+// stats table
+
+table.teamStats {
+	display: block;
+	float: left;
+	width: 100%;
+
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 20px 0;
+
+	@include respond-to('medium') {
+		display: table;
+	}
+
+	// caption
+	
+	caption {
+		display: block;
+		float: left;
+		width: 100%;
+		
+		font-size: 14px;
+		font-weight: bold;
+		color: $link;
+
+		padding: 10px 0;			
+
+		@include respond-to('medium') {
+			float: none;
+			display: table-caption;
+		}
+
+	}
+	
+	// table groups
+	
+	thead,
+	tbody,
+	tfoot {
+		float: left;
+		width: 100%;
+	}
+
+	@include respond-to('medium') {
+
+		thead {
+			float: none;
+			display: table-header-group;
+		}
+
+		tbody {
+			float: none;
+			display: table-row-group;
+		}
+
+		tfoot {
+			float: none;
+			display: table-footer-group;
+		}
+
+	}
+
+	// rows and cols
+	
+	tr {
+		display: block;
+		float: left;
+		width: 100%;
+
+		@include respond-to('medium') {
+			float: none;
+			display: table-row;
+		}
+		
+		th,
+		td {
+			display: block;
+			float: left;
+			width: percentage(1/5);
+
+			border-top: 1px solid #ccc;
+			padding: 10px 0;
+
+			font-size: 14px;
+
+			width: percentage(1/5);
+		
+			&:nth-child(3),
+			&:nth-child(4),
+			&:nth-child(5) {
+				width: percentage(1/10);
+			}
+
+			&:nth-child(6) {
+				width: percentage(3/10);
+			}
+
+			&:nth-child(7) {
+				display: none;
+			}
+
+			@include respond-to('medium') {
+				float: none;
+				display: table-cell;
+				font-size: 16px;
+				
+				&:nth-child(6) {
+					width: percentage(1/5);
+				}
+
+				&:nth-child(7) {
+					display: table-cell;
+					width: percentage(1/10);
+				}
+				
+			}
+
+		}
+
+	}
+	
+	// head
+	
+	thead {
+
+		tr {
+		
+			&:nth-child(1) th,
+			&:nth-child(1) td {
+
+				padding: 10px 0 0 0;
+
+			}
+			
+			&:nth-child(2) th,
+			&:nth-child(2) td {
+
+				border-top: none;
+				padding: 0 0 10px 0;
+
+				font-size: 12px;
+
+				@include respond-to('medium') {
+					display: table-cell;
+				}
+
+			}
+			
+		}
+
+		.graph {
+			display: block;
+			float: left;
+			width: 90%;
+			position: relative;
+			padding: 0 20px 0 0;
+			height: 50px;
+			background: #ccc;
+
+
+			.pct {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				display: block;
+
+				background: White;
+				
+				em {
+					position: absolute;
+					font-size: 12px;
+					line-height: 20px;
+					padding: 0 4px;
+				}
+				
+				&.low em {
+					top: -20px;
+					color: White;
+				}
+
+				&.high em {
+					bottom: 0;
+				}
+				
+			}
+
+		}
+
+		
+	}
+	
+	// body + foot
+	
+	tbody,
+	tfoot {
+		
+	}
+	
+}

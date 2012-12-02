@@ -22,6 +22,7 @@ $stats = $teamdata->get_stats(array(
 <h1><?php single_term_title(); ?></h1>
 </hgroup>
 
+<?php include("inc/teamStats.php"); ?>
 <?php include("inc/matches-bySeason.php"); ?>
 
 

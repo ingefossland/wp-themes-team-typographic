@@ -5,7 +5,8 @@ usort($players, sort_players_by_apps);
 
 ?>
 
-<table class="player-stats" id="season-player-stats">
+<table class="playerStats" id="playerStats-season">
+<caption>Spillerstatistikk</caption>
   <thead>
     <tr>
       <th rowspan="2"></th>
