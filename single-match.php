@@ -39,7 +39,7 @@ $stats = $teamdata->get_stats(array(
       <?php the_time('d.m.Y'); ?>
       <?php the_time('H:i'); ?>
     </h2>
-    <h3><a href="<?php echo $matchfacts->ground->link; ?>">
+    <h3><a href="<?php echo get_permalink($matchfacts->ground->ID); ?>">
       <?php the_ground(); ?>
       </a>, <?php echo $matchfacts->attendance; ?> tilskuere.</h3>
   </hgroup>

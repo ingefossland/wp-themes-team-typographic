@@ -6,8 +6,8 @@ global $post, $teamdata;
 $index = $teamdata->get_grounds();
 
 ?>
+<?php get_header(); ?>
 <section id="index">
-  <?php get_header(); ?>
   <hgroup id="title">
     <h1>Baner a&mdash;å</h1>
   </hgroup>
