@@ -4,13 +4,18 @@
 
 <section id="searchresults">
 
+		<hgroup id="title">
+
+  <form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+    <input type="text" class="field" name="s" id="s" placeholder="Søk etter hva som helst" value="<?php echo $_REQUEST['s']; ?>"/> <input type="submit" class="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'twentyeleven' ); ?>" />
+  </form>
+
+		</hgroup>
+
+
 	<?php if (have_posts()) : ?>
 
-		<header class="page-header">
-			<h1 class="page-title"><?php printf( __( 'Søk: %s', 'twentyeleven' ), '<span>&laquo;' . get_search_query() . '&raquo;</span>' ); ?></h1>
-		</header>
-
-		<?php /* Start the Loop */ ?>
+	<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php
@@ -26,14 +31,8 @@
 	<?php else : ?>
 
 		<article id="post-0" class="post no-results not-found">
-			<header class="entry-header">
-				<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
-			</header><!-- .entry-header -->
-
-			<div class="entry-content">
-				<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyeleven' ); ?></p>
-				<?php get_search_form(); ?>
-			</div><!-- .entry-content -->
+				<h1 class="entry-title">Ingen treff</h1>
+                <p>Fant ingenting. Prøv igjen.</p>
 		</article><!-- #post-0 -->
 
 	<?php endif; ?>
