@@ -25,8 +25,9 @@ $stats = $teamdata->get_stats(array(
 
 <?php the_content(); ?>
 
+<?php include("inc/playerStats-career.php"); ?>
+<?php include("inc/teamStats.php"); ?>
 <?php include("inc/matches-bySeason.php"); ?>
-<?php include("inc/player-career.php"); ?>
 
 <?php endwhile; ?>
 

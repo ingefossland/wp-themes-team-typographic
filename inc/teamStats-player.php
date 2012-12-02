@@ -1,7 +1,4 @@
-<table class="stats" id="head2head">
-  <caption>
-  <?php echo $team->name; ?> v <?php echo $opponent->name; ?>
-  </caption>
+<table class="teamStats">
   <thead>
     <tr>
       <td scope="col" class="comp" rowspan="2"></td>

@@ -64,9 +64,11 @@ if ($competition_id) {
 <?php include("inc/season-nav.php"); ?>
 
 <?php if ($competition_id) { ?>
+	<?php include("inc/teamStats.php"); ?>
 	<?php include("inc/matches-byMonth.php"); ?>
 	<?php include("inc/playerStats-competition.php"); ?>
 <?php } else if ($season_id) { ?>
+	<?php include("inc/teamStats.php"); ?>
 	<?php include("inc/matches-byMonth.php"); ?>
 	<?php include("inc/playerStats-season.php"); ?>
 <?php } ?>

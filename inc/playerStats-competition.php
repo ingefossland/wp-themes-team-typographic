@@ -6,7 +6,6 @@ usort($players, sort_players_by_apps);
 ?>
 
 <table class="player-stats" id="competition-player-stats">
-  <caption>Spillerstatistikk</caption>
   <thead>
   	<tr>
   	  <th></th>
