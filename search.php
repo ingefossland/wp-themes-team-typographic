@@ -23,8 +23,6 @@
 
 		<?php endwhile; ?>
 
-		<?php twentyeleven_content_nav( 'nav-below' ); ?>
-
 	<?php else : ?>
 
 		<article id="post-0" class="post no-results not-found">
@@ -39,6 +37,6 @@
 		</article><!-- #post-0 -->
 
 	<?php endif; ?>
-
+</section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -14,76 +14,40 @@ jQuery(document).ready(function($) {
         }       
 
     });
+   
+	// Don't let clicks to the pageslide close the window
+    $('#menu').click(function(e) {
+        e.stopPropagation();
+    });
     
-	// show search
-    $('a[href="#search"]').click(function(e) {
+	// show filter
+    $('a[href="#filter"]').click(function(e) {
 
         // Prevent the default behavior and stop propagation
         e.preventDefault();
         e.stopPropagation();
         
-        if ($('#search').is(':visible')) {
-            hide_search();
+        if ($('#filter').is(':visible')) {
+            hide_filter();
         } else {
-            show_search();
+            show_filter();
         }       
 
     });
     
-    // extend search when clicking search input
-    $('#search input[type=text]').focus(function(e) {
-    
-    	$('#search').addClass('focus');
-
-	    /*
-
-		var searchWidth = $('#search').outerWidth(true);
-		var documentWidth = $('body').outerWidth(true);
-
-
-		// animate search
-		$('#search').animate({
-			'width' : '+=' + 20
-		}, 'fast');
-		
-		*/
-		
-
-    });
-    
-    $('#search input[type=text]').blur(function(e) {
-    
-    	$('#search').removeClass('focus');
-
-	    /*
-
-		var searchWidth = $('#search').outerWidth(true);
-		var documentWidth = $('body').outerWidth(true);
-
-
-		// animate search
-		$('#search').animate({
-			'width' : '+=' + 20
-		}, 'fast');
-		
-		*/
-		
-
-    });    
-    
 	// Don't let clicks to the pageslide close the window
-    $('#search').click(function(e) {
+    $('#filter').click(function(e) {
         e.stopPropagation();
     });
 
-	// close search or menu if visible and click outsid
+	// close filter or menu if visible and click outsid
 	$(document).bind('click keyup', function(e) {
 	    // If this is a keyup event, let's see if it's an ESC key
         if ( e.type == "keyup" && e.keyCode != 27) return;
 	    
 	    // Make sure it's visible, and we're not modal	    
-	    if ($('#search').is(':visible')) {	        
-	       hide_search();
+	    if ($('#filter').is(':visible')) {	        
+	       hide_filter();
 	    }
 
 	    // Make sure it's visible, and we're not modal	    
@@ -93,19 +57,19 @@ jQuery(document).ready(function($) {
 
 	});
     
-    // show search
-    function show_search() {
+    // show filter
+    function show_filter() {
     
-		var slideWidth = $('#search').outerWidth(true);
+		var slideWidth = $('#filter').outerWidth(true);
 		var _sliding = false;
 		
 		// If the slide is open or opening, just ignore the call
-		if($('#search').is(':visible') || _sliding ) return;	        
+		if($('#filter').is(':visible') || _sliding ) return;	        
 		_sliding = true;
 		
-		// position search
-		$('#search').css({ right: '-' + slideWidth + 'px' }); 
-		$('#search').show();
+		// position filter
+		$('#filter').css({ right: '-' + slideWidth + 'px' }); 
+		$('#filter').show();
 
 		// set grid to fixed
 	    $('#grid').css('position', 'fixed');
@@ -116,21 +80,21 @@ jQuery(document).ready(function($) {
 			'padding-right' : '+=' + slideWidth
 		}, 'fast');
 
-		// animate search
-		$('#search').animate({
+		// animate filter
+		$('#filter').animate({
 			'right' : '+=' + slideWidth,
 		}, 'fast');
 	    
     }
     
-    // hide search
-    function hide_search() {
+    // hide filter
+    function hide_filter() {
 	    
-       var slideWidth = $('#search').outerWidth(true);
+       var slideWidth = $('#filter').outerWidth(true);
        var _sliding = false;
        
        // If the slide is open or opening, just ignore the call
-       if($('#search').is(':hidden') || _sliding ) return;	        
+       if($('#filter').is(':hidden') || _sliding ) return;	        
        _sliding = true;
                                                                     
 		// animate grid
@@ -139,11 +103,11 @@ jQuery(document).ready(function($) {
 			'padding-right' : '-=' + slideWidth
 		}, 'fast');
 
-		// animate search
-		$('#search').animate({
+		// animate filter
+		$('#filter').animate({
 			'right' : '-=' + slideWidth,
 		}, 'fast', '', function() {
-			$('#search').hide();
+			$('#filter').hide();
 		});
 	    
     }

@@ -11,26 +11,20 @@ $stats = $teamdata->get_stats(array(
 ));
 
 ?>
-
-
 <?php get_header(); ?>
-
 <article id="player">
-
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-<hgroup>
-<h1><?php the_title(); ?></h1>
-</hgroup>
-
-<?php the_content(); ?>
-
-<?php include("inc/playerStats-career.php"); ?>
-<?php include("inc/teamStats.php"); ?>
-<?php include("inc/matches-bySeason.php"); ?>
-
-<?php endwhile; ?>
-
+  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+  <hgroup>
+    <h1>
+      <?php the_title(); ?>
+    </h1>
+  </hgroup>
+  <?php the_content(); ?>
+  <?php include("inc/playerStats-career.php"); ?>
+  <?php include("inc/teamStats.php"); ?>
+  <?php include("inc/matches-bySeason.php"); ?>
+  <?php endwhile; ?>
 </article>
-
+<?php get_sidebar(); ?>
+<?php include("inc/filter-players.php"); ?>
 <?php get_footer(); ?>

@@ -23,7 +23,6 @@ $fixtures = $teamdata->get_matches(array(
 
 <?php get_header(); ?>
 
-
 	<?php //include("inc/frontpage-fixtures.php"); ?>
 	<?php //include("inc/frontpage-results.php"); ?>
 
@@ -31,4 +30,5 @@ $fixtures = $teamdata->get_matches(array(
 	    <?php //get_template_part('story', get_post_type()); ?>
     <?php endwhile; ?>
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

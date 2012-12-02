@@ -27,7 +27,9 @@ usort($players, sort_players_by_apps);
 
   <tbody>
     <?php foreach ($players as $p) { ?>
-    <tr>
+    <?php $total = get_player_stats($p); ?>
+    <?php if ($total->goals > 0) { $class = 'goalscorer'; } else { $class = ''; } ?>
+    <tr class="<?php echo $class; ?>">
       <th scope="row"><a href="<?php echo get_permalink($p->ID); ?>" title="<?php echo $p->name; ?>"><span><?php echo $p->initials; ?></span></a></th>
       <?php foreach ($stats->comps as $comp) { ?>
 	      <?php $comp = get_player_stats($p->comp->{$comp->competition_id}); ?>
@@ -38,7 +40,6 @@ usort($players, sort_players_by_apps);
 	      <td class="goals"></td>
 	      <?php } ?>
       <?php } ?>
-      <?php $total = get_player_stats($p); ?>
       <td class="apps"><span><?php echo $total->apps; ?></span></td>
       <?php if ($total->goals > 0) { ?>
       <td class="goals"><span><?php echo $total->goals; ?></span></td>

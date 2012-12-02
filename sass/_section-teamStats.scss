@@ -84,15 +84,26 @@ table.teamStats {
 			font-size: 14px;
 
 			width: percentage(1/5);
+
+			&:nth-child(2) {
+				width: percentage(10/50);
+			}
 		
 			&:nth-child(3),
 			&:nth-child(4),
 			&:nth-child(5) {
-				width: percentage(1/10);
+				width: percentage(9/50);
+				width: percentage(1/5);
 			}
 
 			&:nth-child(6) {
-				width: percentage(3/10);
+				width: percentage(1/5);
+				position: relative;
+				top: 0;
+				margin-left: -20%;
+				text-align: right;
+				font-size: 12px;
+				color: $link;
 			}
 
 			&:nth-child(7) {
@@ -103,14 +114,29 @@ table.teamStats {
 				float: none;
 				display: table-cell;
 				font-size: 16px;
+
+				&:nth-child(2) {
+					width: percentage(1/5);
+				}
+
+				&:nth-child(3),
+				&:nth-child(4),
+				&:nth-child(5) {
+					width: percentage(1/10);
+				}
 				
 				&:nth-child(6) {
-					width: percentage(1/5);
+					display: table-cell;
+					width: percentage(1/10);
+					margin-left: 0;
+					text-align: left;
+					font-size: 14px;
 				}
 
 				&:nth-child(7) {
 					display: table-cell;
-					width: percentage(1/10);
+					width: percentage(1/5);
+					color: $link;
 				}
 				
 			}
@@ -127,22 +153,43 @@ table.teamStats {
 		
 			&:nth-child(1) th,
 			&:nth-child(1) td {
-
 				padding: 10px 0 0 0;
-
 			}
 			
 			&:nth-child(2) th,
 			&:nth-child(2) td {
+				
+				vertical-align: bottom;
 
 				border-top: none;
 				padding: 0 0 10px 0;
-
-				font-size: 12px;
+				
+				&.pld {
+					padding: 25px 0 10px 0;
+				}
 
 				@include respond-to('medium') {
 					display: table-cell;
 				}
+
+			}
+			
+			.pld, .w, .d, .l {
+
+				font-size: 12px;
+				font-weight: normal;
+
+//				@include respond-to('medium') {
+
+					span {
+						display: none;
+					}
+	
+					&:before {
+						content: attr(title);
+					}				
+
+//				}
 
 			}
 			

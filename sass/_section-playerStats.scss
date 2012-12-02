@@ -125,6 +125,7 @@ table.playerStats {
 					padding: 0 0 10px 0;
 
 					font-size: 12px;
+					font-weight: normal;
 				}
 
 			}
@@ -163,23 +164,28 @@ table.playerStats {
 	tfoot {
 	
 		tr {
-
-			&:nth-child(1) th,
-			&:nth-child(1) td {
-				padding: 10px 0 0 0;
+		
+			&.goalscorer {
+				
+				&:nth-child(1) th,
+				&:nth-child(1) td {
+					padding: 10px 0 0 0;
+				}
+	
 			}
 
-			&:nth-child(2) th,
-			&:nth-child(2) td {
-				border-top: none;
-				padding: 0 0 10px 0;
-				margin-top: -10px;
-				font-size: 12px;
-				color: $link;
+			&:nth-child(2) {
+			
+				th, td {
+					border-top: none;
+					padding: 0 0 10px 0;
+					font-size: 12px;
+					color: $link;
+				}
 			}
 			
-			&:nth-child(2) td {
-
+			.average {
+			
 				&:after {
 
 					@include respond-to('medium') {
@@ -195,15 +201,19 @@ table.playerStats {
 	}			
 
 	// apps + goals
+	
+	.goalscorer {
 
-	.apps {
-		height: 45px + 25px;
-		white-space: nowrap;
-		
-		@include respond-to('medium') {
-			height: auto;
+		.apps {
+			height: 45px + 25px;
+			white-space: nowrap;
+			
+			@include respond-to('medium') {
+				height: auto;
+			}
+	
 		}
-
+		
 	}
 	
 	.goals {
@@ -278,27 +288,21 @@ table.playerStats {
 	
 	&#playerStats-competition {
 
-		// rows and cols
-		
-		tr {
-			
-			th {
-				width: percentage(4/5);
-			}
-
-			@include respond-to('medium') {
-
-				th {
-					width: auto;
-				}
-
-			}
-						
-		}
-		
 		// body
 		
 		tbody {
+
+			tr {
+				
+				th {
+					width: percentage(3/5);
+				}
+				
+				td {
+					width: percentage(1/5);
+				}
+							
+			}
 			
 			a {
 
@@ -317,6 +321,21 @@ table.playerStats {
 			
 		}
 
+		.goalscorer {
+	
+			.apps {
+				height: auto;
+			}
+
+		}
+
+		.goals {
+			margin-left: auto;
+			top: auto;
+	
+			border-top: 1px solid #ccc;
+		}
+		
 		// head
 		
 		thead {
@@ -329,6 +348,7 @@ table.playerStats {
 					@include respond-to('medium') {
 						display: table-cell;
 						font-size: 12px;
+						font-weight: normal;
 						padding: 10px 0;
 					}
 	

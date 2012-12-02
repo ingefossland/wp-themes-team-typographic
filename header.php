@@ -33,32 +33,8 @@
     <nav id="toolbar">
         <ul>
         	<li class="menu"><a href="#menu">Vis meny</a></li>
-        	<li class="search"><a href="#search">Vis søk</a></li>
+        	<li class="filter"><a href="#filter">Vis filter</a></li>
         </ul>
     </nav>
-
-	<nav id="menu">
-	
-		<h2>Meny</h2>
-
-		<ul>
-			<li><a href="<?php bloginfo('url'); ?>/matches/">Sesonger</a></li>
-			<li><a href="<?php bloginfo('url'); ?>/players/">Spillere</a></li>
-			<li><a href="<?php bloginfo('url'); ?>/teams/">Motstandere</a></li>
-			<li><a href="<?php bloginfo('url'); ?>/grounds/">Baner</a></li>
-		</ul>
-	
-	</nav>
-	
-	<nav id="search">
-
-		<h2>Søk</h2>
-	
-		<form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-			<input type="text" class="field" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'twentyeleven' ); ?>" />
-			<input type="submit" class="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'twentyeleven' ); ?>" />
-		</form>
-
-	</nav>
 	
 </header>

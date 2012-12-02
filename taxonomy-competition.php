@@ -13,19 +13,15 @@ $stats = $teamdata->get_stats(array(
 ));
 
 ?>
-
 <?php get_header(); ?>
-
 <section id="competition">
-
-<hgroup id="title">
-<h1><?php single_term_title(); ?></h1>
-</hgroup>
-
-<?php include("inc/teamStats.php"); ?>
-<?php include("inc/matches-bySeason.php"); ?>
-
-
+  <hgroup id="title">
+    <h1>
+      <?php single_term_title(); ?>
+    </h1>
+  </hgroup>
+  <?php include("inc/teamStats.php"); ?>
+  <?php include("inc/matches-bySeason.php"); ?>
 </section>
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

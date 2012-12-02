@@ -63,7 +63,7 @@
 
 				}
 
-				&.search {
+				&.filter {
 					float: right;
 					margin-right: -15px;
 					
@@ -99,19 +99,56 @@
     z-index: -999999;
 
     width: 260px;
-    padding: 0 20px;
+    padding: 0 15px;
 
-    background: Black;
+    background: $link;
     color: White;
+    
+    // search
+    
+    form {
+	    
+	    
+	    
+    }
+    
+    // menu
+    
+    ul {
+	    
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    
+	    float: left;
+	    width: 100%;
+	    
+	    li {
+
+		    float: left;
+		    width: 100%;
+		    
+		    a {
+			    padding: 10px 0;
+			    float: left;
+			    width: 100%;
+			    color: White;
+		    }
+		    
+	    }
+	    
+    }
 
 }
 
-// SEARCH
+// FILTER
 
-#search {
+#filter {
     display: none;
     position: absolute;
     position: fixed;
+    
+    overflow: scroll;
 
     top: 0;
     height: 100%;
