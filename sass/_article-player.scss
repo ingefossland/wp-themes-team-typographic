@@ -146,7 +146,6 @@
 				&:nth-child(2) td {
 
 					&:after {
-						content: ' m/k';
 
 						@include respond-to('medium') {
 							content: ' mål/kamp';
