@@ -30,5 +30,6 @@ $stats = $teamdata->get_stats(array(
 
 <?php include("inc/teamStats.php"); ?>
 <?php include("inc/matches-bySeason.php"); ?>
-
+<?php include("inc/playerStats-season.php"); ?>
+	
 <?php get_footer(); ?>

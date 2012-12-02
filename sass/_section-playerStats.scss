@@ -244,5 +244,101 @@ table.playerStats {
 		}
 
 	}
+
+	// season
+
+	&#playerStats-season {
+
+		tbody {
+
+			a {
+
+				display: block;
+				float: left;
+				
+				@include respond-to('medium') {
+				
+					span {
+						display: none;
+					}
+					
+					&:after {
+						content: attr(title);
+					}
+					
+				}
+				
+			}
+			
+		}
+
+	}
+	
+	// competition
+	
+	&#playerStats-competition {
+
+		// rows and cols
+		
+		tr {
+			
+			th {
+				width: percentage(4/5);
+			}
+
+			@include respond-to('medium') {
+
+				th {
+					width: auto;
+				}
+
+			}
+						
+		}
+		
+		// body
+		
+		tbody {
+			
+			a {
+
+				display: block;
+				float: left;
+
+				span {
+					display: none;
+				}
+				
+				&:after {
+					content: attr(title);
+				}
+				
+			}
+			
+		}
+
+		// head
+		
+		thead {
+		
+			tr {
+			
+				th {
+					display: none;
+	
+					@include respond-to('medium') {
+						display: table-cell;
+						font-size: 12px;
+						padding: 10px 0;
+					}
+	
+				}
+				
+				
+			}
+			
+		}
+	
+	}
 	
 }
