@@ -1,16 +1,17 @@
 <?php
 
+$season = $matchfacts->season;
+
 // get seasons & competitions
 $seasons = $teamdata->get_seasons();
 $comps = $teamdata->get_competitions();
 
-?>
-<nav id="filter">
+?><nav id="filter">
   <form action="#">
     <p>
       <select onchange="window.location=this.value;">
         <?php foreach ($seasons as $s) { ?>
-        <?php if ($s->season_id == $season_id) { ?>
+        <?php if ($s->season_id == $season->term_id) { ?>
         <option value="<?php echo $s->link; ?>" selected="selected"><?php echo $s->name; ?></option>
         <?php } else { ?>
         <option value="<?php echo $s->link; ?>"><?php echo $s->name; ?></option>

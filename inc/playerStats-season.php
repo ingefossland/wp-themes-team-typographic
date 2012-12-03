@@ -11,7 +11,12 @@ usort($players, sort_players_by_apps);
     <tr>
       <th rowspan="2"></th>
       <?php foreach ($stats->comps as $comp) { ?>
-      <th colspan="2" scope="col" class="comp"><a href="<?php echo $comp->link; ?>" title="<?php echo $comp->name; ?>"><?php echo $comp->name; ?></a></th>
+      <?php if ($comp->totalApps > 0) { ?>
+      <th colspan="2" scope="col" class="comp"><a href="<?php echo get_term_link($season->slug, 'season') . $comp->slug . '/'; ?>" title="<?php echo $comp->name; ?>"><?php echo $comp->name; ?></a></th>
+		<?php } else { ?>
+      <th colspan="2" scope="col" class="comp"><?php echo $comp->name; ?></th>
+        <?php } ?>
+        
       <?php } ?>
       <th colspan="2" scope="col" class="total comp">Total</th>
     </tr>

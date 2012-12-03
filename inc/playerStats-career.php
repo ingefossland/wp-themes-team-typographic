@@ -4,7 +4,7 @@
     <tr>
       <td rowspan="2" class="season"></td>
       <?php foreach ($stats->comps as $comp) { ?>
-	      <th colspan="2" scope="col" class="comp"><a href="<?php echo $comp->link; ?>"><?php echo $comp->name; ?></a></th>
+	      <th colspan="2" scope="col" class="comp"><?php echo $comp->name; ?></th>
       <?php } ?>
       <th colspan="2" scope="col" class="total comp"><span>Alle</span></th>
     </tr>

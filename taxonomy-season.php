@@ -15,10 +15,6 @@ $league_id = get_option('teamdata_competition_id');
 $season = get_queried_object();
 $season_id = $season->term_id;
 
-// get seasons & competitions
-$seasons = $teamdata->get_seasons();
-$comps = $teamdata->get_competitions();
-
 // get queried comp
 $competition = $wp_query->query_vars['comp_name'];
 $competition = get_term_by('slug', $competition, 'competition');

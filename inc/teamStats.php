@@ -23,12 +23,17 @@
       <th scope="col" class="gdf" title="Målforskjell">+/-</th>
     </tr>
   </thead>
+	<?php if (!$competition_id) { ?>
   <tbody>
     <?php foreach ($stats->comps as $comp) { ?>
     <?php if ($comp->totalApps) { ?>
     <?php $gdf = $comp->totalGF-$comp->totalGA; ?>
     <tr>
-      <th scope="row"><a href="<?php echo get_term_link($comp->slug, 'competition'); ?>"><?php echo $comp->name; ?></a></th>
+    	<?php if ($season_id) { ?>
+      <th scope="row"><a href="<?php echo get_term_link($season->slug, 'season') . $comp->slug . '/'; ?>"><?php echo $comp->name; ?></a></th>
+		<?php } else { ?>
+         <th scope="row"><?php echo $comp->name; ?></th>
+	     <?php } ?>
       <td><span><?php echo $comp->totalApps; ?></span></td>
       <td><span><?php echo $comp->totalWins; ?></span></td>
       <td><span><?php echo $comp->totalDraws; ?></span></td>
@@ -39,6 +44,7 @@
     <?php } ?>
     <?php } ?>
   </tbody>
+   <?php } ?>
   <tfoot>
   <th><strong>Total</strong></th>
     <?php $gdf = $stats->totals->totalGF-$stats->totals->totalGA; ?>

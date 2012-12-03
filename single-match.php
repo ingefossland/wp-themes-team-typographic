@@ -49,4 +49,5 @@ $stats = $teamdata->get_stats(array(
   <?php //the_table(); ?>
 </article>
 <?php get_sidebar(); ?>
+<?php include("inc/filter-matches.php"); ?>
 <?php get_footer(); ?>
