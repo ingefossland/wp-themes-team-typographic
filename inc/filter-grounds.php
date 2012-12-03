@@ -2,13 +2,13 @@
 
 global $post, $teamdata;
 
-$index = $teamdata->get_players();
+$index = $teamdata->get_grounds();
 
 ?>
 <nav id="filter">
 
 <form action="#">
-	<p><input type="text" class="search" placeholder="Finn spiller" /></p>
+	<p><input type="text" class="search" placeholder="Finn bane" /></p>
 </form>
 
 <?php if ($index) { ?>

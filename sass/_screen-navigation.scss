@@ -1,0 +1,164 @@
+// MENU
+
+#menu {
+    display: none;
+    position: absolute;
+    position: fixed;
+
+    top: 0;
+    height: 100%;
+    z-index: -999999;
+
+    width: 260px;
+
+    background: $link;
+    color: White;
+    
+    // search form
+
+	form {
+	    position: relative;
+		z-index: 200;
+
+		background: $link;
+	
+		padding: 10px;
+		height: 50px;
+		border-bottom: 1px solid rgba(0,0,0,0.25);
+		
+		p {
+			margin: 0;
+		}
+		
+		input {
+			
+		}
+		
+	}
+    
+    // menu
+    
+	ul {
+		z-index: 100;
+
+		float: left;
+		width: 260px;
+		height: 100%;
+
+	    position: fixed;
+
+	    top: 0;
+	    padding: 50px 0 0 0;
+	    
+	    overflow: scroll;
+		
+		li {
+
+			float: left;
+			width: 100%;
+		
+			border-top: 1px solid rgba(255,255,255,0.25);
+			border-bottom: 1px solid rgba(0,0,0,0.25);
+			
+			a {
+				display: block;
+				float: left;
+				width: 100%;
+
+				padding: 5px 15px;
+				color: rgba(255,255,255,0.75);
+				text-decoration: none;
+			}
+			
+		}
+		
+	}
+
+}
+
+// FILTER
+
+#filter {
+    display: none;
+    position: absolute;
+    position: fixed;
+    
+    top: 0;
+    height: 100%;
+    z-index: -999999;
+
+    width: 260px;
+
+    background: Black;
+    background: #999;
+	background: $text;
+    color: White;
+    
+    // filter form
+
+	form {
+	    position: relative;
+		z-index: 200;
+
+		background: $text;
+	
+		padding: 10px;
+		height: 50px;
+		border-bottom: 1px solid rgba(0,0,0,0.25);
+		
+		p {
+			margin: 0;
+		}
+		
+		input {
+			
+		}
+		
+	}
+
+	// index
+	
+	ul {
+		z-index: 100;
+
+		float: left;
+		width: 260px;
+		height: 100%;
+
+	    position: fixed;
+
+	    top: 0;
+	    padding: 50px 0 0 0;
+	    
+	    overflow: scroll;
+		
+		li {
+
+			float: left;
+			width: 100%;
+		
+			border-top: 1px solid rgba(255,255,255,0.25);
+			border-bottom: 1px solid rgba(0,0,0,0.25);
+			
+			a {
+				display: block;
+				float: left;
+				width: 100%;
+
+				padding: 5px 15px;
+				color: rgba(255,255,255,0.75);
+				text-decoration: none;
+			}
+			
+		}
+		
+	}
+		
+	
+	// states
+	
+	&.focus {
+		background: $link;
+	}
+
+}

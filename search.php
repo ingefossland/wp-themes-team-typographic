@@ -7,7 +7,7 @@
 		<hgroup id="title">
 
   <form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-    <input type="text" class="field" name="s" id="s" placeholder="Søk etter hva som helst" value="<?php echo $_REQUEST['s']; ?>"/> <input type="submit" class="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'twentyeleven' ); ?>" />
+    <p><input type="text" class="search" name="s" id="s" placeholder="Søk etter hva som helst" value="<?php echo $_REQUEST['s']; ?>"/></p>
   </form>
 
 		</hgroup>

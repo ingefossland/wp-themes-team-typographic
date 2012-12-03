@@ -1,8 +1,18 @@
+<?php
+
+// get results
+$results = $teamdata->get_matches(array(
+	'team_id' => $team_id,
+	'type' => 'results',
+	'limit' => '3'
+));
+
+?>
 <?php if ($results) { ?>
 
-	<div class="resfix">
+	<div id="resfix">
     
-    <h2>Latest results</h2>
+    <h2>Siste resultater</h2>
     
     <ul>
 

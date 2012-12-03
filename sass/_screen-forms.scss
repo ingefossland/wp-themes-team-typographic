@@ -1,0 +1,108 @@
+// turn off default safari stuff
+
+textarea,
+input[type=text],
+input[type=password],
+input[type=submit],
+input[type=button] {
+	-webkit-appearance: none;
+	-webkit-border-radius:0px;
+    border-radius: 0;
+    outline: none;
+}
+
+// text input
+
+textarea,
+input[type=text],
+input[type=password] {
+	display: block;
+	width: 100%;
+
+//	border: 1px solid #666;
+	@include single-box-shadow(rgba(0,0,0,0.75), 1px, 1px, 1px, 0, true);
+	@include single-box-shadow(rgba(0,0,0,1), 0, 0, 2px, 0, true);
+
+	padding: 5px;
+	border: none;
+
+	font-family: 'Droid serif';
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+
+	width: 100%;
+	height: 30px;
+	margin: 0;
+
+}
+
+textarea:focus,
+input[type=text]:focus,
+input[type=password]:focus {
+//	@include single-box-shadow(rgba(0,0,0,0.75), 0, 0, 10px, 0, false);
+}
+
+input::-webkit-input-placeholder {
+	font-weight: normal;
+	color: #999;
+}
+
+input:-moz-placeholder {
+	font-weight: normal;
+	color: #999;
+}
+
+// special
+
+input {
+	
+	&.search {
+		background: White url(../img/forms/input-search.svg) left no-repeat;
+		padding: 5px 10px 5px 30px;
+		@include border-radius(15px);
+		
+		&:focus {
+			background-image: url(../img/forms/input-search-focus.svg);
+		}
+		
+	}
+	
+}
+
+// sizes
+
+input[type=text],
+input[type=password],
+input[type=button],
+input[type=submit],
+textarea {
+
+	&.large {
+		width: 100%;
+		//max-width: 640px;
+	}
+
+	&.medium {
+		width: 75%;
+		//max-width: 640px * 0.75;
+	}
+
+	&.small {
+		width: 50%;
+		//max-width: 640px * 0.5;
+	}
+	
+}
+
+
+// buttons
+
+input[type=submit],
+input[type=button] {
+
+	display: block;
+	width: 100%;
+
+	padding: 10px 0;
+}

@@ -2,7 +2,7 @@
 
 global $post, $teamdata;
 
-$index = $teamdata->get_players();
+$index = $teamdata->get_teams();
 
 ?>
 <nav id="filter">
@@ -19,9 +19,6 @@ $index = $teamdata->get_players();
     <?php } ?>
 	</ul>
 
-
 <?php } ?>
-
-
 
 </nav>

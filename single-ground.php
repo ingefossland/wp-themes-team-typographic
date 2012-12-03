@@ -33,4 +33,5 @@ $stats = $teamdata->get_stats(array(
   <?php include("inc/playerStats-season.php"); ?>
 </article>
 <?php get_sidebar(); ?>
+<?php include("inc/filter-grounds.php"); ?>
 <?php get_footer(); ?>
