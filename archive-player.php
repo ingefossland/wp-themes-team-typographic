@@ -11,7 +11,7 @@ $index = $teamdata->get_players();
 	<hgroup id="title">
   <h1>Spillere a&mdash;å</h1>
 	</hgroup>
-  <?php include("inc/archive-index.php"); ?>
+  <?php include("inc/index-players.php"); ?>
 </section>
 <?php get_sidebar(); ?>
 <?php include("inc/filter-players.php"); ?>

@@ -5,15 +5,6 @@ global $post, $teamdata;
 $team_id = get_option('teamdata_team_id');
 $league_id = get_option('teamdata_competition_id');
 
-
-
-// get fixtures
-$fixtures = $teamdata->get_matches(array(
-	'team_id' => $team_id,
-	'type' => 'fixtures',
-	'limit' => '3'
-));
-
 ?>
 
 <?php get_header(); ?>

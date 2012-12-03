@@ -1,8 +1,8 @@
 <?php if ($stats->matches) { ?>
 
-	<section id="resfix">
+<section class="resfix">
 
-		<h2>Måned for måned</h2>
+    <h2>Måned for måned</h2>
 
     <?php foreach ($stats->matches as $match) { ?>
     

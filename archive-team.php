@@ -11,7 +11,7 @@ $index = $teamdata->get_teams();
 	<hgroup id="title">
   <h1>Motstandere a&mdash;å</h1>
 	</hgroup>
-  <?php include("inc/archive-index.php"); ?>
+  <?php include("inc/index-teams.php"); ?>
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

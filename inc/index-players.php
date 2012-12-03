@@ -4,7 +4,7 @@
 
     <?php foreach ($index as $item) { ?>
 
-	  <?php $letter = utf8_encode(substr(utf8_decode($item->name),0,1));	?>
+	  <?php $letter = utf8_encode(substr(utf8_decode($item->name_last),0,1));	?>
 
 		<?php if ($letter && $letter != $last_letter) { ?>
 			</ul>
@@ -15,7 +15,7 @@
 			<ul>
     	<?php } ?>
    
-      <li><a href="<?php echo get_permalink($item->ID); ?>"><?php echo $item->name; ?></a></li>
+      <li><a href="<?php echo get_permalink($item->ID); ?>"><?php echo $item->name_first; ?> <strong><?php echo $item->name_last; ?></strong></a></li>
 
 		<?php $last_letter = $letter; ?>
 

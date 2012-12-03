@@ -15,7 +15,7 @@ $index = $teamdata->get_players();
 
 	<ul class="index">
     <?php foreach ($index as $item) { ?>
-      <li><a href="<?php echo get_permalink($item->ID); ?>"><?php echo $item->name; ?></a></li>
+      <li><a href="<?php echo get_permalink($item->ID); ?>"><?php echo $item->name_first; ?> <strong><?php echo $item->name_last; ?></strong></a></li>
     <?php } ?>
 	</ul>
 
