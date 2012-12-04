@@ -1,7 +1,18 @@
 // FOOTER
 
 #footer {
+	float: left;
+	width: 100%;
 
+	h5 {
+		font-size: 12px;
+		margin: 0 0 20px 0;
+//		display: block;
+//		background: url(../img/fussballburo/fussballburo.svg);
+	}
 
+	.debug {
+		display: none;
+	}
 	
 }

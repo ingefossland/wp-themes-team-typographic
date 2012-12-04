@@ -6,6 +6,7 @@ setlocale(LC_ALL, "no_NO");
 // scripts
 wp_enqueue_script('team-toolbar', get_bloginfo('template_url') . '/js/team-toolbar.js', array('jquery'));
 wp_enqueue_script('team-filter', get_bloginfo('template_url') . '/js/team-filter.js', array('jquery'));
+wp_enqueue_script('team-filter', get_bloginfo('template_url') . '/js/team-iOs.js', array('jquery'));
 
 /**
  * Makes some changes to the <title> tag, by filtering the output of wp_title().
