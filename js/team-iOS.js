@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 	function iOSswipeLeft() {
-//		alert("Swipe left");
+		alert("Swipe left");
 
 		// hide menu if visible, else open filter
         if ($('#menu').is(':visible')) {
@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 	}
 
 	function iOSswipeRight() {
-//		alert("Swipe right");
+		alert("Swipe right");
 
 		// hide filter if visible, else open menu
         if ($('#filter').is(':visible')) {
