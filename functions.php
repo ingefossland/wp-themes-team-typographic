@@ -85,6 +85,7 @@ add_filter('wp_title', 'team_wp_title', 10, 2 );
 
 // additional functions
 
+include("functions-team.php");
 include("functions-stats.php");
 
 ?>

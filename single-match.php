@@ -35,13 +35,10 @@ $stats = $teamdata->get_stats(array(
 <article id="match">
   <hgroup>
     <h1><?php echo $matchfacts->hometeam->name; ?>&ndash;<?php echo $matchfacts->awayteam->name; ?> <?php echo $matchfacts->result; ?></h1>
-    <h2><a href="<?php echo $matchfacts->season->link; ?>"><?php echo $matchfacts->competition->name; ?> <?php echo $matchfacts->season->name; ?></a>,
-      <?php the_time('d.m.Y'); ?>
-      <?php the_time('H:i'); ?>
-    </h2>
-    <h3><a href="<?php echo get_permalink($matchfacts->ground->ID); ?>">
-      <?php the_ground(); ?>
-      </a>, <?php echo $matchfacts->attendance; ?> tilskuere.</h3>
+    <h2><a href="<?php echo $matchfacts->season->link; ?>"><?php echo $matchfacts->competition->name; ?></a>,
+      <?php echo strftime('%e. %B %Y', strtotime($post->post_date)); ?>
+      <?php the_time('H:i'); ?><br />
+      <a href="<?php echo get_permalink($matchfacts->ground->ID); ?>"><?php the_ground(); ?></a>, <?php echo $matchfacts->attendance; ?> tilskuere</h2>
   </hgroup>
   <?php include("single-match-players.php"); ?>
   <?php //include("inc/team-resfix.php"); ?>
