@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+//jQuery(document).ready(function($) {
 
 	function iOSswipeLeft() {
 		alert("Swipe left");
@@ -8,4 +8,4 @@ jQuery(document).ready(function($) {
 		alert("Swipe right");
 	}
 
-});
+//});
