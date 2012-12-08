@@ -76,11 +76,11 @@ function get_player_stats($player) {
 	}
 	
 	// class
-	if ($player->goals > 0 && ($player->totalYC > 0 || $player->totalRC > 0)) {
+	if ($player->goals && $player->cards) {
 		$player->class = 'goals cards';
-	} else if ($player->goals > 0) {
+	} else if ($player->goals) {
 		$player->class = 'goals';
-	} else if  ($player->totalYC > 0 || $player->totalRC > 0) {
+	} else if ($player->cards) {
 		$player->class = 'cards';
 	} else {
 		$player->class = '';

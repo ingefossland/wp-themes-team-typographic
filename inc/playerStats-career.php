@@ -21,23 +21,6 @@
       <th scope="col">Kort</th>
     </tr>
   </thead>
-  <tbody>
-    <?php foreach ($stats->seasons as $season) { ?>
-    <?php $total = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}); ?>
-    <tr class="<?php echo $total->class; ?>">
-      <th scope="row"><a href="<?php echo get_term_link($season->slug, 'season'); ?>"><?php echo $season->name; ?></a></th>
-      <?php foreach ($stats->comps as $comp) { ?>
-      <?php $comp = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}->comp->{$comp->competition_id}); ?>
-      <td class="apps"><?php echo $comp->apps; ?></td>
-      <td class="goals"><?php echo $comp->goals; ?></td>
-      <td class="cards"><?php echo $comp->cards; ?></td>
-      <?php } ?>
-      <td class="apps"><?php echo $total->apps; ?></td>
-      <td class="goals"><?php echo $total->goals; ?></td>
-      <td class="cards"><?php echo $total->cards; ?></td>
-    </tr>
-    <?php } ?>
-  </tbody>
   <tfoot>
     <?php $total = get_player_stats($stats->players->{$player_id}); ?>
     <tr class="<?php echo $total->class; ?>">
@@ -66,4 +49,21 @@
     </tr>
     <?php } ?>
   </tfoot>
+  <tbody>
+    <?php foreach ($stats->seasons as $season) { ?>
+    <?php $total = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}); ?>
+    <tr class="<?php echo $total->class; ?>">
+      <th scope="row"><a href="<?php echo get_term_link($season->slug, 'season'); ?>"><?php echo $season->name; ?></a></th>
+      <?php foreach ($stats->comps as $comp) { ?>
+      <?php $comp = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}->comp->{$comp->competition_id}); ?>
+      <td class="apps"><?php echo $comp->apps; ?></td>
+      <td class="goals"><?php echo $comp->goals; ?></td>
+      <td class="cards"><?php echo $comp->cards; ?></td>
+      <?php } ?>
+      <td class="apps"><?php echo $total->apps; ?></td>
+      <td class="goals"><?php echo $total->goals; ?></td>
+      <td class="cards"><?php echo $total->cards; ?></td>
+    </tr>
+    <?php } ?>
+  </tbody>
 </table>

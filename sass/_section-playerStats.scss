@@ -54,6 +54,16 @@ table.playerStats {
 		}
 		
 	}
+	
+	// tfoot
+	
+	tfoot tr {
+		
+		th,
+		td {
+		}
+		
+	}
 
 	// goals and cards
 
@@ -202,13 +212,9 @@ table.playerStats {
 						}
 						
 						width: 25%;
-						font-size: 14px;
-						font-weight: normal;
 	
 						@include respond-to('medium') {
 	
-							font-size: 16px;
-							font-weight: bold;
 							width: percentage(1/5);
 	
 						}
@@ -244,9 +250,10 @@ table.playerStats {
 			
 		}
 		
-		// body
+		// body + foot
 
-		tbody {
+		tbody,
+		tfoot {
 
 			tr {
 				
@@ -345,34 +352,17 @@ table.playerStats {
 					
 					td.cards {
 						top: 50px;
+
+						@include respond-to('medium') {
+							top: auto;
+						}
+
+
 					}
 					
 				}
 							
 			}
-			
-			/*
-
-			a {
-
-				display: block;
-				float: left;
-				
-				@include respond-to('medium') {
-				
-					span {
-						display: none;
-					}
-					
-					&:after {
-						content: attr(title);
-					}
-					
-				}
-				
-			}
-			
-			*/
 			
 		}
 
