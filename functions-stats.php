@@ -91,22 +91,6 @@ function get_player_stats($player) {
 	
 }
 
-// sort players by apps
-
-function sort_players_by_apps($a, $b) {
-
-	if ($a->totalApps == $b->totalApps) {
-		if ($a->totalAppsStart < $b->totalAppsStart) { return 1; }
-		if ($a->totalAppsStart > $b->totalAppsStart) { return -1; }
-	}
-
-	if ($a->totalApps < $b->totalApps) { return 1; }
-	if ($a->totalApps > $b->totalApps) { return -1; }
-
-	return 0;
-
-}
-
 // get match player
 
 function get_match_player($player) {
