@@ -9,9 +9,13 @@ usort($players, sort_players_by_apps);
 <caption>Spillerstatistikk</caption>
   <thead>
   	<tr>
-  	  <th></th>
+      <th rowspan="2"></th>
+      <th colspan="3"><?php echo $competition->name; ?></th>
+    </tr>
+  	<tr>
       <th scope="col">Kamper</th>
       <th scope="col">Mål</th>
+      <th scope="col">Kort</th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +29,17 @@ usort($players, sort_players_by_apps);
       <td class="goals"><span><?php echo $total->goals; ?></span></td>
       <?php } else { ?>
 	  <td class="goals"></td>
+      <?php } ?>
+      <?php if ($total->cards > 0) { ?>
+      <td class="cards">
+	    <?php if ($total->totalRC > 0) { ?>
+    	  	<span class="rc"><?php echo $total->totalRC; ?></span>
+        <?php } ?>
+	    <?php if ($total->totalYC > 0) { ?>
+	      	<span class="yc"><?php echo $total->totalYC; ?></span>
+        <?php } ?>
+      <?php } else { ?>
+	  <td class="cards"></td>
       <?php } ?>
     </tr>
     <?php } ?>

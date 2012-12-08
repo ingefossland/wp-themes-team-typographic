@@ -57,12 +57,12 @@ if ($competition_id) {
   </hgroup>
   <?php if ($competition_id) { ?>
   <?php include("inc/teamStats.php"); ?>
-  <?php include("inc/matches-byMonth.php"); ?>
   <?php include("inc/playerStats-competition.php"); ?>
+  <?php include("inc/matches-byMonth.php"); ?>
   <?php } else if ($season_id) { ?>
   <?php include("inc/teamStats.php"); ?>
-  <?php include("inc/matches-byMonth.php"); ?>
   <?php include("inc/playerStats-season.php"); ?>
+  <?php include("inc/matches-byMonth.php"); ?>
   <?php } ?>
   <?php //include("inc/season-playersByGoals.php"); ?>
   <?php //include("inc/season-playersByApps.php"); ?>

@@ -8,10 +8,6 @@ table.playerStats {
 	border-bottom: 1px solid #ccc;
 	margin: 0 0 20px 0;
 
-	@include respond-to('medium') {
-		display: table;
-	}
-
 	// caption
 	
 	caption {
@@ -32,21 +28,118 @@ table.playerStats {
 
 	}
 
-	// table groups
+	// groups, rows and columns
 	
 	thead,
 	tbody,
 	tfoot {
+
 		float: left;
 		width: 100%;
-	}
 	
-	tfoot {
-		float: right;
-		width: 100%;
+		tr {
+
+			float: left;
+			width: 100%;
+			
+			th,
+			td {
+				float: left;
+				width: 100%;
+
+				border-top: 1px solid #ccc;
+				padding: 10px 0;
+			}
+			
+		}
+		
 	}
 
+	// goals and cards
+
+	tbody tr td,
+	tfoot tr td {
+
+		// goals
+		
+		&.goals {
+			
+			span:after {
+	
+				content: 'gls';
+				display: inline-block;
+	
+				vertical-align: middle;
+				
+				font-size: 14px;
+				line-height: 12px;
+	
+				background: White;
+				color: White;
+	
+				width: 14px;
+				height: 14px;
+				
+				@include border-radius(7px);
+				overflow: hidden;
+	
+				margin: 0 4px 3px 4px;
+				
+			}
+	
+		}
+	
+		// cards
+		
+		&.cards {
+		
+			span:after {
+	
+				display: inline-block;
+	
+				vertical-align: middle;
+				
+				font-size: 14px;
+				line-height: 12px;
+	
+				background: Black;
+				color: Black;
+	
+				width: 14px;
+				height: 14px;
+				
+				@include border-radius(7px);
+				overflow: hidden;
+	
+				margin: 0 4px 3px 4px;
+				
+			}
+	
+			// yellow
+	
+			span.yc:after {
+				content: 'yc';
+				background: $card_yellow;
+				color: $card_yellow;
+			}
+	
+			// red
+	
+			span.rc:after {
+				content: 'rc';
+				background: $card_red;
+				color: $card_red;
+			}
+	
+		}
+
+	}
+	
+	// reset table layout
+	
 	@include respond-to('medium') {
+
+		display: table;
 
 		thead {
 			float: none;
@@ -62,204 +155,203 @@ table.playerStats {
 			float: none;
 			display: table-footer-group;
 		}
-
-	}
 		
-	// rows and cols
-	
-	tr {
-		display: block;
-		float: left;
-		width: 100%;
-
-		@include respond-to('medium') {
+		thead tr,
+		tbody tr,
+		tfoot tr {
 			float: none;
 			display: table-row;
-		}
-		
-		th,
-		td {
-			display: block;
-			float: left;
-			width: percentage(1/5);
-
-			border-top: 1px solid #ccc;
-			padding: 10px 0;
-
-			font-size: 14px;
-
-			@include respond-to('medium') {
+			width: auto;
+			
+			th,
+			td {
 				float: none;
 				display: table-cell;
 				width: auto;
-
-				font-size: 16px;
 			}
 
 		}
+		
 
 	}
-	
-	// head
-	
-	thead {
-	
-		tr {
 		
-			&:nth-child(1) th,
-			&:nth-child(1) td {
+	// SEASON + CAREER
 
-				@include respond-to('medium') {
-					padding: 10px 0 0 0;
+	&#playerStats-season,
+	&#playerStats-career {
+	
+		// head
+	
+		thead {
+			
+			tr {
+
+				// first header
+
+				&:first-child {
+
+					th {
+					
+						&:first-child {
+							display: none;
+	
+							@include respond-to('medium') {
+								display: table-cell;
+							}
+	
+						}
+						
+						width: 25%;
+						font-size: 14px;
+						font-weight: normal;
+	
+						@include respond-to('medium') {
+	
+							font-size: 16px;
+							font-weight: bold;
+							width: percentage(1/5);
+	
+						}
+						
+					}
+					
 				}
 
-			}
-			
-			&:nth-child(2) th,
-			&:nth-child(2) td {
-				display: none;
+				// second header
 
-				@include respond-to('medium') {
-					display: table-cell;
-					border-top: none;
-					padding: 0 0 10px 0;
-
-					font-size: 12px;
-					font-weight: normal;
-				}
-
-			}
-			
-			
-		}
-		
-	}
-	
-	// body + foot
-	
-	tbody,
-	tfoot {
-	
-		tr {
-			
-			th {
-				width: percentage(1/5);
-			}
-			
-			td {
-				width: percentage(1/5);
-
-				@include respond-to('medium') {
-					width: percentage(1/10);
-				}
-
-			}
-			
-		}
-		
-	}
-	
-	// foot
-
-	tfoot {
-	
-		tr {
-		
-			&.goalscorer {
-				
-				&:nth-child(1) th,
-				&:nth-child(1) td {
-					padding: 10px 0 0 0;
-				}
-	
-			}
-
-			&:nth-child(2) {
-			
-				th, td {
-					border-top: none;
-					padding: 0 0 10px 0;
-					font-size: 12px;
-					color: $link;
-				}
-			}
-			
-			.average {
-			
-				&:after {
+				&:nth-child(2) {
+					display: none;
 
 					@include respond-to('medium') {
-						content: ' mål/kamp';
+
+						display: table-row;
+
+						th {
+
+							border-top: none;
+							padding: 0 0 10px 0;						
+	
+							font-size: 12px;
+							font-weight: normal;
+							
+						}
+
+					}
+
+				}
+				
+			}
+			
+		}
+		
+		// body
+
+		tbody {
+
+			tr {
+				
+				th {
+					width: percentage(1/5);
+					width: 100%;
+					padding: 10px 0 0 0;
+
+					@include respond-to('medium') {
+
+						width: percentage(3/15);
+						padding: 10px 0;
+
+					}					
+
+				}
+				
+				td {
+					width: 25%;
+					border-top: none;
+					padding: 0 0 10px 0;
+
+					font-size: 14px;
+					
+					@include respond-to('medium') {
+						width: percentage(1/15);
+						border-top: 1px solid #ccc;
+						padding: 10px 0;
+
+						font-size: 14px;
+
+						&.apps {
+							width: percentage(3/60);
+						}
+						
+						&.goals {
+							width: percentage(3/60);
+						}
+
+						&.cards {
+							width: percentage(6/60);
+						}
+
+					}					
+
+					&.goals,
+					&.cards {
+
+						position: relative;
+						margin-left: -25%;
+						top: 25px;
+				
+						border-top: none;
+				
+						@include respond-to('medium') {
+							margin-left: auto;
+							top: auto;
+				
+							border-top: 1px solid #ccc;
+						}
+
 					}
 
 				}
 
+				// player has goals or cards
+
+				&.goals,
+				&.cards {
+
+					td.apps {
+						height: 45px + 25px;
+						white-space: nowrap;
+						
+						@include respond-to('medium') {
+							height: auto;
+						}
+				
+					}
+					
+				}
+
+				// player has goals and cards
+
+				&.goals.cards {
+
+					td.apps {
+						height: 45px + 25px + 25px;
+						white-space: nowrap;
+						
+						@include respond-to('medium') {
+							height: auto;
+						}
+				
+					}
+					
+					td.cards {
+						top: 50px;
+					}
+					
+				}
+							
 			}
 			
-		}
-		
-	}			
-
-	// apps + goals
-	
-	.goalscorer {
-
-		.apps {
-			height: 45px + 25px;
-			white-space: nowrap;
-			
-			@include respond-to('medium') {
-				height: auto;
-			}
-	
-		}
-		
-	}
-	
-	.goals {
-		position: relative;
-		margin-left: -20%;
-		top: 25px;
-
-		border-top: none;
-		color: $link;
-
-		@include respond-to('medium') {
-			margin-left: auto;
-			top: auto;
-
-			border-top: 1px solid #ccc;
-		}
-		
-		span:after {
-
-			content: '+';
-			display: inline-block;
-
-			vertical-align: middle;
-			
-			font-size: 14px;
-			line-height: 12px;
-
-			background: White;
-			color: White;
-
-			width: 14px;
-			height: 14px;
-			
-			@include border-radius(7px);
-
-			margin: 0 4px 3px 4px;
-			
-		}
-
-	}
-
-	// season
-
-	&#playerStats-season {
-
-		tbody {
+			/*
 
 			a {
 
@@ -280,6 +372,8 @@ table.playerStats {
 				
 			}
 			
+			*/
+			
 		}
 
 	}
@@ -295,7 +389,8 @@ table.playerStats {
 			tr {
 				
 				th {
-					width: percentage(3/5);
+					width: percentage(6/10);
+					width: percentage(2/5);
 				}
 				
 				td {
@@ -316,44 +411,6 @@ table.playerStats {
 				&:after {
 					content: attr(title);
 				}
-				
-			}
-			
-		}
-
-		.goalscorer {
-	
-			.apps {
-				height: auto;
-			}
-
-		}
-
-		.goals {
-			margin-left: auto;
-			top: auto;
-	
-			border-top: 1px solid #ccc;
-		}
-		
-		// head
-		
-		thead {
-		
-			tr {
-			
-				th {
-					display: none;
-	
-					@include respond-to('medium') {
-						display: table-cell;
-						font-size: 12px;
-						font-weight: normal;
-						padding: 10px 0;
-					}
-	
-				}
-				
 				
 			}
 			

@@ -6,51 +6,46 @@ usort($players, sort_players_by_apps);
 ?>
 
 <table class="playerStats" id="playerStats-season">
-<caption>Spillerstatistikk</caption>
+  <caption>
+  Spillerstatistikk
+  </caption>
   <thead>
     <tr>
       <th rowspan="2"></th>
       <?php foreach ($stats->comps as $comp) { ?>
       <?php if ($comp->totalApps > 0) { ?>
-      <th colspan="2" scope="col" class="comp"><a href="<?php echo get_term_link($season->slug, 'season') . $comp->slug . '/'; ?>" title="<?php echo $comp->name; ?>"><?php echo $comp->name; ?></a></th>
-		<?php } else { ?>
-      <th colspan="2" scope="col" class="comp"><?php echo $comp->name; ?></th>
-        <?php } ?>
-        
+      <th colspan="3" scope="col"><a href="<?php echo get_term_link($season->slug, 'season') . $comp->slug . '/'; ?>" title="<?php echo $comp->name; ?>"><?php echo $comp->name; ?></a></th>
+      <?php } else { ?>
+      <th colspan="3" scope="col"><?php echo $comp->name; ?></th>
       <?php } ?>
-      <th colspan="2" scope="col" class="total comp">Total</th>
+      <?php } ?>
+      <th colspan="3" scope="col" >Total</th>
     </tr>
     <tr>
       <?php foreach ($stats->comps as $comp) { ?>
-      <th scope="col" class="apps">Kamper</th>
-      <th scope="col" class="goals">Mål</th>
+      <th scope="col">Kamper</th>
+      <th scope="col">Mål</th>
+      <th scope="col">Kort</th>
       <?php } ?>
-      <th scope="col" class="total apps">Kamper</th>
-      <th scope="col" class="total goals">Mål</th>
+      <th scope="col">Kamper</th>
+      <th scope="col">Mål</th>
+      <th scope="col">Kort</th>
     </tr>
   </thead>
-
   <tbody>
     <?php foreach ($players as $p) { ?>
     <?php $total = get_player_stats($p); ?>
-    <?php if ($total->goals > 0) { $class = 'goalscorer'; } else { $class = ''; } ?>
-    <tr class="<?php echo $class; ?>">
-      <th scope="row"><a href="<?php echo get_permalink($p->ID); ?>" title="<?php echo $p->name; ?>"><span><?php echo $p->initials; ?></span></a></th>
+    <tr class="<?php echo $total->class; ?>">
+      <th scope="row"><a href="<?php echo get_permalink($p->ID); ?>"><?php echo $p->name; ?></a></th>
       <?php foreach ($stats->comps as $comp) { ?>
-	      <?php $comp = get_player_stats($p->comp->{$comp->competition_id}); ?>
-	      <td class="apps"><span><?php echo $comp->apps; ?></span></td>
-	      <?php if ($comp->goals > 0) { ?>
-	      <td class="goals"><span><?php echo $comp->goals; ?></span></td>
-	      <?php } else { ?>
-	      <td class="goals"></td>
-	      <?php } ?>
+      <?php $comp = get_player_stats($p->comp->{$comp->competition_id}); ?>
+      <td class="apps"><?php echo $comp->apps; ?></td>
+      <td class="goals"><?php echo $comp->goals; ?></td>
+      <td class="cards"><?php echo $comp->cards; ?></td>
       <?php } ?>
-      <td class="apps"><span><?php echo $total->apps; ?></span></td>
-      <?php if ($total->goals > 0) { ?>
-      <td class="goals"><span><?php echo $total->goals; ?></span></td>
-      <?php } else { ?>
-	  <td class="goals"></td>
-      <?php } ?>
+      <td class="apps"><?php echo $total->apps; ?></td>
+      <td class="goals"><?php echo $total->goals; ?></td>
+      <td class="cards"><?php echo $total->cards; ?></td>
     </tr>
     <?php } ?>
   </tbody>

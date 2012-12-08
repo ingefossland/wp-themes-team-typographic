@@ -8,14 +8,8 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width; target-densitydpi=160dpi; initial-scale=1; maximum-scale=1" />
-
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link href="<?php bloginfo('template_url'); ?>/css/screen.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="<?php bloginfo('template_url'); ?>/css/print.css" rel="stylesheet" type="text/css" media="print" />
-<!--[if lt IE 9]>
-<link href="<?php bloginfo('template_url'); ?>/css/screen-ie.css" rel="stylesheet" type="text/css" media="screen" />
-<![endif]-->
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php wp_head(); ?>
 </head>
 

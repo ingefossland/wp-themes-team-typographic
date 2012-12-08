@@ -47,31 +47,45 @@ function get_player_stats($player) {
 	} else if (isset($player->totalAppsSub)) {
 		$player->apps = '0<em>+' . $player->totalAppsSub . '</em>';
 	} else {
-		$player->apps = '0<em>+0</em>';
+		$player->apps = '';
 	}
 
 	// goals
-	if (isset($player->totalGoals)) {
-		$player->goals = $player->totalGoals;
+	if (isset($player->totalGoals) && $player->totalGoals > 0) {
+		$player->goals = '<span>' . $player->totalGoals . '</span>';
 	} else {
-		$player->goals = 0;
+		$player->goals = '';
 	}
 	
 	// goal average
 	if ($player->totalApps > 0) {
 		$player->goal_average = round($player->totalGoals / $player->totalApps, 2);
 	} else {
-		$player->goal_average = 0;
+		$player->goal_average = '';
 	}
 
 	// cards
-	if ($player->totalRC) {
-		$player->cards = $player->totalYC . '/' . $player->totalRC;
+	if ($player->totalRC > 0 && $player->totalYC > 0) {
+		$player->cards = '<span class="rc">' . $player->totalRC . '</span> <span class="yc">' . $player->totalRC . '</span>';
+	} else if ($player->totalRC) {
+		$player->cards = '<span class="rc">' . $player->totalRC . '</span>';
 	} else if ($player->totalYC) {
-		$player->cards = $player->totalYC . '/0';
+		$player->cards = '<span class="yc">' . $player->totalYC . '</span>';
 	} else {
-		$player->cards = '0';
+		$player->cards = '';
 	}
+	
+	// class
+	if ($player->goals > 0 && ($player->totalYC > 0 || $player->totalRC > 0)) {
+		$player->class = 'goals cards';
+	} else if ($player->goals > 0) {
+		$player->class = 'goals';
+	} else if  ($player->totalYC > 0 || $player->totalRC > 0) {
+		$player->class = 'cards';
+	} else {
+		$player->class = '';
+	}
+	
 	
 	return $player;
 	
