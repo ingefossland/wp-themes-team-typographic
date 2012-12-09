@@ -21,6 +21,8 @@ $stats = $teamdata->get_stats(array(
     </h1>
   </hgroup>
   <?php include("inc/teamStats.php"); ?>
+  <?php include("inc/playerStats-competition.php"); ?>
+  <?php include("inc/playerStats-competition-goals.php"); ?>
   <?php include("inc/matches-bySeason.php"); ?>
 </section>
 <?php get_sidebar(); ?>

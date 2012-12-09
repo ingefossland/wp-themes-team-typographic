@@ -6,28 +6,39 @@ usort($players, array(&$teamdata, 'sort_players_by_apps'));
 ?>
 
 <table class="playerStats" id="playerStats-competition">
-<caption>Spillerstatistikk</caption>
+  <caption>
+  Spillerstatistikk
+  </caption>
   <thead>
-  	<tr>
+    <tr>
       <th rowspan="2"></th>
-      <th colspan="3"><?php echo $competition->name; ?></th>
+      <th colspan="3" scope="col" ><?php echo $competition->name; ?></th>
     </tr>
-  	<tr>
-      <th scope="col">Kamper</th>
+    <tr>
+      <th scope="col" colspan="2">Kamper</th>
       <th scope="col">Mål</th>
-      <th scope="col">Kort</th>
     </tr>
   </thead>
-  <tbody>
-    <?php foreach ($players as $p) { ?>
-    <?php $total = get_player_stats($p); ?>
-    <?php if ($total->goals > 0) { $class = 'goalscorer'; } else { $class = ''; } ?>
-    <tr class="<?php echo $class; ?>">
-      <th scope="row"><a href="<?php echo get_permalink($p->ID); ?>" title="<?php echo $p->name; ?>"><span><?php echo $p->initials; ?></span></a></th>
+  <?php /* TOTALS */ ?>
+  <?php $total = get_comp_stats($stats->totals); ?>
+  <tfoot class="<?php echo $total->class; ?>">
+    <tr>
+      <th scope="row"><strong>Totalt</strong></th>
       <td class="apps"><?php echo $total->apps; ?></td>
-      <td class="goals"><?php echo $total->goals; ?></td>
       <td class="cards"><?php echo $total->cards; ?></td>
+      <td class="goals"><?php echo $total->goals; ?></td>
     </tr>
-    <?php } ?>
+  </tfoot>
+  <?php /* PLAYERS */ ?>
+  <?php foreach ($players as $p) { ?>
+  <?php $total = get_player_stats($p); ?>
+  <tbody class="<?php echo $total->class; ?>">
+    <tr>
+      <th scope="row"><a href="<?php echo get_permalink($p->ID); ?>"><?php echo $p->name; ?></a></th>
+      <td class="apps"><?php echo $total->apps; ?></td>
+      <td class="cards"><?php echo $total->cards; ?></td>
+      <td class="goals"><?php echo $total->goals; ?></td>
+    </tr>
   </tbody>
+  <?php } ?>
 </table>

@@ -46,7 +46,11 @@
   </tbody>
    <?php } ?>
   <tfoot>
+	<?php if ($competition_id) { ?>
+  <th><strong><?php echo $competition->name; ?></strong></th>
+  	<?php } else { ?>
   <th><strong>Total</strong></th>
+  	<?php } ?>
     <?php $gdf = $stats->totals->totalGF-$stats->totals->totalGA; ?>
     <td><span><?php echo $stats->totals->totalApps; ?></span></td>
     <td><span><?php echo $stats->totals->totalWins; ?></span></td>

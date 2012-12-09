@@ -35,17 +35,69 @@ function get_team_stats($node) {
 
 }
 
+// get comp stats
+
+function get_comp_stats($comp) {
+	
+	// apps
+	if (isset($comp->totalApps)) {
+		$comp->apps = '<span>' . $comp->totalApps . '</span>';
+	} else {
+		$comp->apps = '';
+	}
+
+	// goals for
+	if (isset($comp->totalGF) && $comp->totalGF > 0) {
+		$comp->goals = '<span>' . $comp->totalGF . '</span>';
+	} else {
+		$comp->goals = '';
+	}
+	
+	// goal average
+	if ($comp->totalGoals > 0) {
+		$comp->goal_average = '<span>' . round($comp->totalGF / $comp->totalApps, 2) . '</span>';
+	} else {
+		$comp->goal_average = '';
+	}
+
+	// cards
+	if ($comp->totalRC > 0 && $comp->totalYC > 0) {
+		$comp->cards = '<span class="rc">' . $comp->totalRC . '</span> <span class="yc">' . $comp->totalYC . '</span>';
+	} else if ($comp->totalRC) {
+		$comp->cards = '<span class="rc">' . $comp->totalRC . '</span>';
+	} else if ($comp->totalYC) {
+		$comp->cards = '<span class="yc">' . $comp->totalYC . '</span>';
+	} else {
+		$comp->cards = '';
+	}
+	
+	// class
+	if ($comp->goals && $comp->cards) {
+		$comp->class = 'goals cards';
+	} else if ($comp->goals) {
+		$comp->class = 'goals';
+	} else if ($comp->cards) {
+		$comp->class = 'cards';
+	} else {
+		$comp->class = '';
+	}
+	
+	
+	return $comp;
+	
+}
+
 // get player stats
 
 function get_player_stats($player) {
 	
 	// apps
 	if (isset($player->totalAppsStart) && isset($player->totalAppsSub)) {
-		$player->apps = $player->totalAppsStart . '<em>+' . $player->totalAppsSub . '</em>';
+		$player->apps = '<span>' . $player->totalAppsStart . '<em>+' . $player->totalAppsSub . '</em></span>';
 	} else if (isset($player->totalAppsStart)) {	
-		$player->apps = $player->totalAppsStart . '<em>+0</em>';
+		$player->apps = '<span>' . $player->totalAppsStart . '<em>+0</em></span>';
 	} else if (isset($player->totalAppsSub)) {
-		$player->apps = '0<em>+' . $player->totalAppsSub . '</em>';
+		$player->apps = '<span>0<em>+' . $player->totalAppsSub . '</em></span>';
 	} else {
 		$player->apps = '';
 	}
@@ -58,8 +110,8 @@ function get_player_stats($player) {
 	}
 	
 	// goal average
-	if ($player->totalApps > 0) {
-		$player->goal_average = round($player->totalGoals / $player->totalApps, 2);
+	if ($player->totalGoals > 0) {
+		$player->goal_average = '<span>' . round($player->totalGoals / $player->totalApps, 2) . '</span>';
 	} else {
 		$player->goal_average = '';
 	}
@@ -133,7 +185,6 @@ function get_match_player($player) {
 
 }
 
-
 // get graph
 
 function get_graph($pct) {
@@ -142,6 +193,26 @@ function get_graph($pct) {
     	$graph = '<span class="graph"><span class="pct high" style="height:'.$pct.'%"><em>'.$pct.'%</em></span></span>';
 	} else {
     	$graph = '<span class="graph"><span class="pct low" style="height:'.$pct.'%"><em>'.$pct.'%</em></span></span>';
+	}
+
+	return $graph;
+
+}
+
+// get graph
+
+function get_goalscorer_graph($max, $goals) {
+
+//	$pct = floor($goals / $max * 100, 0);
+	$pct = ($goals / $max) * 100;
+	$pct = str_replace(',', '.', $pct);
+
+	if ($goals > 0) {
+		if ($pct >= 50) {
+	    	$graph = '<strong class="pct high" style="width:'.$pct.'%"><em class="goals-'.$goals.'">'.$goals.'</em></strong>';
+    	} else {
+	    	$graph = '<strong class="pct low" style="width:'.$pct.'%"><em class="goals-'.$goals.'">'.$goals.'</em></strong>';
+    	}
 	}
 
 	return $graph;

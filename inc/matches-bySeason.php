@@ -2,7 +2,7 @@
 
 <section class="resfix">
 
-    <h2>Sesong for sesong</h2>
+    <h2>Kamper</h2>
 
     <?php foreach ($stats->matches as $match) { ?>
 
