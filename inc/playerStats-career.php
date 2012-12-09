@@ -31,6 +31,7 @@
       <td class="apps"><?php echo $total->apps; ?></td>
       <td class="goals"><?php echo $total->goals; ?></td>
     </tr>
+    <?php if ($total->goals) { ?>
     <tr>
       <?php foreach ($stats->comps as $comp) {  ?>
       <?php $comp = get_player_stats($stats->players->{$player_id}->comp->{$comp->competition_id}); ?>
@@ -38,6 +39,7 @@
       <?php } ?>
       <td colspan="2" class="average"><?php echo $total->goal_average; ?></td>
     </tr>
+    <?php } ?>
   </tfoot>
   <?php foreach ($stats->seasons as $season) { ?>
   <?php $total = get_player_stats($stats->players->{$player_id}->season->{$season->season_id}); ?>
