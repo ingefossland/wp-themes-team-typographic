@@ -152,12 +152,17 @@ table.playerStats {
 
 		&.average {
 
-			font-size: 14px;
+			font-size: 12px;
 		
 			span:after {
 				content: ' m/k';
+			}
 
-				@include respond-to('medium') {
+			@include respond-to('medium') {
+
+				font-size: 14px;
+
+				span:after {
 					content: ' mål/kamp';
 				}
 
