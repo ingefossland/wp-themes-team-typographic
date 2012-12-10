@@ -22,7 +22,11 @@
   <?php $total = get_player_stats($stats->players->{$player_id}); ?>
   <tfoot class="<?php echo $total->class; ?>">
     <tr>
+    <?php if ($total->cards) { ?>
       <th rowspan="2" scope="row"><strong>Totalt</strong></th>
+    <?php } else { ?>
+      <th scope="row"><strong>Totalt</strong></th>
+    <?php } ?>
       <?php foreach ($stats->comps as $comp) {  ?>
       <?php $comp = get_player_stats($stats->players->{$player_id}->comp->{$comp->competition_id}); ?>
       <td class="apps"><?php echo $comp->apps; ?></td>

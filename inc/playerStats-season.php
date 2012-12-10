@@ -34,7 +34,11 @@ usort($players, array(&$teamdata, 'sort_players_by_apps'));
   <?php $total = get_comp_stats($stats->totals); ?>
   <tfoot class="<?php echo $total->class; ?>">
     <tr>
+    <?php if ($total->cards) { ?>
+      <th rowspan="2" scope="row"><strong>Totalt</strong></th>
+    <?php } else { ?>
       <th scope="row"><strong>Totalt</strong></th>
+    <?php } ?>
       <?php foreach ($stats->comps as $comp) { ?>
       <?php $comp = get_comp_stats($comp); ?>
       <td class="apps"><?php echo $comp->apps; ?></td>
@@ -45,6 +49,7 @@ usort($players, array(&$teamdata, 'sort_players_by_apps'));
     </tr>
     <?php if ($total->cards) { ?>
     <tr>
+       <th></th>
       <?php foreach ($stats->comps as $comp) {  ?>
       <?php $comp = get_comp_stats($comp); ?>
       <td class="cards" colspan="2"><?php echo $comp->cards; ?></td>
