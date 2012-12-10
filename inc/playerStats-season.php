@@ -49,7 +49,6 @@ usort($players, array(&$teamdata, 'sort_players_by_apps'));
     </tr>
     <?php if ($total->cards) { ?>
     <tr>
-       <th></th>
       <?php foreach ($stats->comps as $comp) {  ?>
       <?php $comp = get_comp_stats($comp); ?>
       <td class="cards" colspan="2"><?php echo $comp->cards; ?></td>
