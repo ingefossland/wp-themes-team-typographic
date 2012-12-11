@@ -1,6 +1,6 @@
 <?php if ($index) { ?>
 
-	<div class="index">
+<div class="index">
 
     <?php foreach ($index as $item) { ?>
 
