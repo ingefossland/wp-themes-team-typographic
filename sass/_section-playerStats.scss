@@ -92,13 +92,25 @@ table.playerStats {
 				background: White;
 				color: White;
 	
-				width: 14px;
-				height: 14px;
-				
-				@include border-radius(7px);
 				overflow: hidden;
+
+				width: 12px;
+				height: 12px;
+				
+				@include border-radius(6px);
+
+				margin: 0 3px 3px 3px;
+
+				@include respond-to('medium') {
 	
-				margin: 0 4px 3px 4px;
+					width: 14px;
+					height: 14px;
+					
+					@include border-radius(7px);
+
+					margin: 0 4px 3px 4px;
+	
+				}
 				
 			}
 
@@ -119,14 +131,26 @@ table.playerStats {
 	
 				background: Black;
 				color: Black;
-	
-				width: 14px;
-				height: 14px;
-				
-				@include border-radius(7px);
+
 				overflow: hidden;
+
+				width: 12px;
+				height: 12px;
+				
+				@include border-radius(6px);
+
+				margin: 0 3px 3px 3px;
+
+				@include respond-to('medium') {
+					
+					width: 14px;
+					height: 14px;
+					
+					@include border-radius(7px);
+
+					margin: 0 4px 3px 4px;
 	
-				margin: 0 4px 3px 4px;
+				}
 				
 			}
 	
@@ -318,13 +342,15 @@ table.playerStats {
 	
 						}
 						
+						//background: #ffe;
+						
 						width: 25%;
+						padding: 10px 0 0 0;
 						font-size: 14px;
 	
 						@include respond-to('medium') {
-	
+							background: none;
 							width: percentage(1/5);
-							padding: 10px 0 0 0;
 
 							font-size: 16px;
 	
@@ -365,13 +391,27 @@ table.playerStats {
 		
 		tfoot {
 			
-			tr th {
-				display: none;
-				
-				@include respond-to('medium') {
-					display: table-cell;
+			tr {
+
+				th {
+					display: none;
+					
+					@include respond-to('medium') {
+						display: table-cell;
+					}
+	
 				}
 
+				td {
+
+					//background: #ffe;
+
+					@include respond-to('medium') {
+						background: none;
+					}
+
+				}
+				
 			}
 			
 		}
@@ -381,27 +421,45 @@ table.playerStats {
 		tbody,
 		tfoot {
 		
-			// widths
-
 			tr {
 				
-				th {
-					width: 100%;
-					padding: 10px 0 0 0;
+				// row heights
+				
+				th,
+				td {
+					border-top: none;
+					padding: 0;
+				}
+				
+				&:first-child td {
 
 					@include respond-to('medium') {
+						border-top: 1px solid #ccc;
+						padding-top: 10px;
+					}
 
+				}
+
+				&:last-child td {
+					padding-bottom: 10px;
+				}
+				
+				// cell widths
+				
+				th {
+					border-top: 1px solid #ccc;
+					padding: 10px 0 0 0;
+					width: 100%;
+
+					@include respond-to('medium') {
 						width: percentage(3/15);
 						padding: 10px 0;
-
 					}					
 
 				}
 				
 				td {
 					width: 25%;
-					border-top: none;
-					padding: 0 0 10px 0;
 
 					// hide goals
 					&.goals {
@@ -415,22 +473,20 @@ table.playerStats {
 					
 					@include respond-to('medium') {
 						width: percentage(1/10);
-						border-top: 1px solid #ccc;
-						padding: 10px 0;
 					}	
 
 				}	
 				
 			}
-			
+
 			// player has goals
 			
 			&.goals {
-				
+			
 				tr td {
 
 					&.apps {
-						height: 35px + 25px;
+						height: 60px;
 						white-space: nowrap;
 						
 						@include respond-to('medium') {
@@ -439,7 +495,7 @@ table.playerStats {
 				
 					}
 
-					// position goals
+					// show and position goals
 					&.goals {
 						display: block;
 						position: relative;
@@ -459,39 +515,33 @@ table.playerStats {
 					}					
 					
 				}
-				
-			}
-			
-			// player has cards
 
-			&.cards {
 
-				// rows
-				tr {
-					
-					// apps + goals
-					&:first-child {
-					
-						td {
-							padding: 10px 0 0 0;
-						}
-					
-					}
-					
-					// cards
-					&:last-child {
-					
-						td {
-							border-top: none;
-							padding: 0 0 10px 0;
-						}
-					
+				// goals and cards
+				&.cards tr td {
+						
+					&.apps {
+						height: 50px;
 					}
 
 				}
-				
-			}		
 
+				// medium
+
+				@include respond-to('medium') {
+
+					&.cards tr td {
+						
+						&.apps {
+							height: auto;
+						}
+
+					}
+
+				}				
+				
+			}
+			
 		}
 
 	}

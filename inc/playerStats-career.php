@@ -22,7 +22,9 @@
   <?php $total = get_player_stats($stats->players->{$player_id}); ?>
   <tfoot class="<?php echo $total->class; ?>">
     <tr>
-    <?php if ($total->cards) { ?>
+    <?php if ($total->cards && $total->goals) { ?>
+      <th rowspan="3" scope="row"><strong>Totalt</strong></th>
+    <?php } else if ($total->cards || $total->goals) { ?>
       <th rowspan="2" scope="row"><strong>Totalt</strong></th>
     <?php } else { ?>
       <th scope="row"><strong>Totalt</strong></th>
@@ -35,6 +37,15 @@
       <td class="apps"><?php echo $total->apps; ?></td>
       <td class="goals"><?php echo $total->goals; ?></td>
     </tr>
+    <?php if ($total->cards) { ?>
+    <tr>
+      <?php foreach ($stats->comps as $comp) {  ?>
+      <?php $comp = get_player_stats($stats->players->{$player_id}->comp->{$comp->competition_id}); ?>
+      <td colspan="2" class="cards"><?php echo $comp->cards; ?></td>
+      <?php } ?>
+      <td colspan="2" class="cards"><?php echo $total->cards; ?></td>
+    </tr>
+    <?php } ?>
     <?php if ($total->goals) { ?>
     <tr>
       <?php foreach ($stats->comps as $comp) {  ?>

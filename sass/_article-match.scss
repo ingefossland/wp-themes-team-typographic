@@ -2,11 +2,19 @@
 
 #match {
 
-	section {
+	#players {
 		
 		h2 {
+			display: block;
+			float: left;
+			width: 100%;
+			
 			font-size: 16px;
-			color: #999;
+			font-weight: bold;
+	
+			@include opacity(0.5);
+	
+			padding: 10px 0;	
 		}
 		
 		ul {
