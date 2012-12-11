@@ -1,3 +1,11 @@
+<?php
+
+//print_r($stats->seasons);
+
+?>
+
+
+
 <table class="playerStats" id="playerStats-career">
   <caption>
   Karriere i Brann

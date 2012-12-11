@@ -20,9 +20,9 @@ $player->summary = '';
 
 $positions = array(
 	1 => 'Keeper',
-	2 => 'Forsvar',
-	3 => 'Midtbane',
-	4 => 'Angrep'
+	2 => 'Forsvarsspiller',
+	3 => 'Midtbanespiller',
+	4 => 'Angrepsspiller'
 );
 
 $player->position = $positions[$player->position_id];
@@ -64,7 +64,7 @@ if ($player->summary && $player->birthdate) {
   <?php the_content(); ?>
   <?php include("inc/playerStats-career.php"); ?>
   <?php include("inc/teamStats.php"); ?>
-  <?php include("inc/matches-bySeason.php"); ?>
+  <?php include("inc/matches-byPlayer.php"); ?>
   <?php endwhile; ?>
 </article>
 <?php get_sidebar(); ?>
