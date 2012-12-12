@@ -34,17 +34,18 @@ table.playerStats {
 	thead,
 	tbody,
 	tfoot {
-
+		display: block;
 		float: left;
 		width: 100%;
 	
 		tr {
-
+			display: block;
 			float: left;
 			width: 100%;
 			
 			th,
 			td {
+				display: block;
 				float: left;
 				width: 100%;
 
@@ -477,6 +478,27 @@ table.playerStats {
 
 				}	
 				
+			}
+
+			// player has cards
+			
+			
+			&.cards {
+			
+				tr td {
+
+					&.apps {
+						height: 25px;
+						white-space: nowrap;
+						
+						@include respond-to('medium') {
+							height: auto;
+						}
+				
+					}
+
+				}
+
 			}
 
 			// player has goals
