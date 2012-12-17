@@ -27,27 +27,29 @@ $positions = array(
 
 $player->position = $positions[$player->position_id];
 
+
+
 // position & nationality
 
-if ($player->position && $player->country_id) {
+if ($player->position) {
 
-	$player->summary = $player->position . ' (' . $player->country_id . ')'; 
+	$player->summary .= '<span class="positition">' . $player->position . '</span> '; 
 
-} else if ($player->position) {
+} 
 
-	$player->summary = $player->position; 
+// nationality
+
+if ($player->country_id) {
+
+	$player->summary .= '<span class="country">(' . $player->country_id . ')</span> '; 
 	
 }
 
 // birthdate?
 
-if ($player->summary && $player->birthdate) {
+if ($player->birthdate) {
 
-	$player->summary .= '<br />Født: ' . strtolower($player->birthdate_no) . ''; 
-
-} else if ($player->birthdate) {
-
-	$player->summary .= 'Født: ' . strtolower($player->birthdate_no) . ''; 
+	$player->summary .= '<span class="birthdate">Født: ' . strtolower($player->birthdate_no) . '</span>'; 
 	
 }
 

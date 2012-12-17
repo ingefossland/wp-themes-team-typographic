@@ -43,7 +43,7 @@ $stats = $teamdata->get_stats(array(
   <?php include("single-match-players.php"); ?>
   <?php //include("inc/team-resfix.php"); ?>
   <?php //the_awayteam_players(); ?>
-  <?php //the_table(); ?>
+  <?php the_table(); ?>
 </article>
 <?php get_sidebar(); ?>
 <?php include("inc/filter-matches.php"); ?>

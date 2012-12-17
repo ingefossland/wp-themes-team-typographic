@@ -1,14 +1,6 @@
-<?php
-
-//print_r($stats->seasons);
-
-?>
-
-
-
 <table class="playerStats" id="playerStats-career">
   <caption>
-  Karriere i Brann
+  Karriere i Brann (<?php echo $player->match_first->season->name; ?>&mdash;<?php echo $player->match_last->season->name; ?>)
   </caption>
   <thead>
     <tr>
