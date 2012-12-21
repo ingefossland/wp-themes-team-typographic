@@ -2,11 +2,65 @@
 
 // Set language to Norwegian
 setlocale(LC_ALL, "no_NO");
+setlocale(LC_ALL, "nb_NO");
 
-// scripts
-wp_enqueue_script('team-toolbar', get_bloginfo('template_url') . '/js/team-toolbar.js', array('jquery'));
-wp_enqueue_script('team-filter', get_bloginfo('template_url') . '/js/team-filter.js', array('jquery'));
-wp_enqueue_script('team-ios', get_bloginfo('template_url') . '/js/team-iOS.js', array('jquery'));
+// Tell WordPress to run twentyten_setup() when the 'after_setup_theme' hook is run.
+add_action('after_setup_theme', 'netlife_setup');
+
+if (!function_exists('netlife_setup')):
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which runs
+ * before the init hook. The init hook is too late for some features, such as indicating
+ * support post thumbnails.
+ *
+ * To override twentyten_setup() in a child theme, add your own twentyten_setup to your child theme's
+ * functions.php file.
+ *
+ * @uses add_theme_support() To add support for post thumbnails and automatic feed links.
+ * @uses register_nav_menus() To add support for navigation menus.
+ * @uses add_custom_background() To add support for a custom background.
+ * @uses add_editor_style() To style the visual editor.
+ * @uses load_theme_textdomain() For translation/localization support.
+ * @uses add_custom_image_header() To add support for a custom header.
+ * @uses register_default_headers() To register the default custom header images provided with the theme.
+ * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
+ *
+ * @since Twenty Ten 1.0
+ */
+function netlife_setup() {
+
+	// scripts
+	wp_enqueue_script('team-layers', get_bloginfo('template_url') . '/js/team-layers.js', array('jquery-ui-tabs'));
+	wp_enqueue_script('team-toolbar', get_bloginfo('template_url') . '/js/team-toolbar.js', array('jquery'));
+	wp_enqueue_script('team-filter', get_bloginfo('template_url') . '/js/team-filter.js', array('jquery'));
+	wp_enqueue_script('team-ios', get_bloginfo('template_url') . '/js/team-iOS.js', array('jquery'));
+
+	// This theme uses post thumbnails
+	add_theme_support('post-thumbnails');
+
+	// Add default posts and comments RSS feed links to head
+	//add_theme_support('automatic-feed-links');
+
+	// We'll be using post thumbnails for custom header images on posts and pages.
+	// We want them to be 940 pixels wide by 198 pixels tall.
+	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
+
+	// set_post_thumbnail_size(300, 240, true);
+	
+	// Add image sizes
+	// add_image_size('c12', 940, 940); // 12 columns
+	// add_image_size('c1', 80, 160); // 1 columns
+
+ 	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => 'Primary navigation',
+		'languages' => 'Languages'
+	));
+
+}
+endif;
 
 /**
  * Makes some changes to the <title> tag, by filtering the output of wp_title().

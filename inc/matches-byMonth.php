@@ -2,8 +2,6 @@
 
 <section class="resfix">
 
-    <h2>Kamper</h2>
-
     <?php foreach ($stats->matches as $match) { ?>
     
 		<?php $month = date('y-m', strtotime($match->match_date)); ?>
@@ -13,7 +11,7 @@
         <?php } ?>
     
     	<?php if ($month != $last_month) { ?>
-			<h3><?php echo ucwords(strftime('%B %Y', strtotime($match->match_date))); ?></h3>
+			<h2><?php echo ucwords(strftime('%B %Y', strtotime($match->match_date))); ?></h2>
 			<ul>
     	<?php } ?>
     

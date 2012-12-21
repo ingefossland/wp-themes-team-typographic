@@ -2,8 +2,6 @@
 
 <section class="resfix">
 
-    <h2>Kamper</h2>
-
     <?php foreach ($stats->matches as $match) { ?>
 
 		<?php if ($season && $season != $match->season) { ?>
@@ -11,7 +9,7 @@
         <?php } ?>
     
     	<?php if ($season != $match->season) { ?>
-			<h3><?php echo $match->season->name; ?></h3>
+			<h2><?php echo $match->season->name; ?></h2>
 			<ul>
     	<?php } ?>
     

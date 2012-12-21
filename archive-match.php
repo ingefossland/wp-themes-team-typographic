@@ -4,20 +4,19 @@ global $post, $teamdata;
 
 // get seasons & competitions
 $seasons = $teamdata->get_seasons();
-$comps = $teamdata->get_competitions();
 
 ?>
 <?php get_header(); ?>
 <section id="index">
   <hgroup id="title">
-    <h1>Statistikk</h1>
+    <h1>Sesonger</h1>
   </hgroup>
   <?php if ($seasons) { ?>
   <nav class="index">
-    <h2>Seasons</h2>
+    <h2>Sesonger</h2>
     <ul>
       <?php foreach ($seasons as $season) { ?>
-      <li><a href="<?php echo $season->link; ?>"><?php echo $season->name; ?></a></li>
+      <li><a href="<?php echo $season->link; ?>"><strong><?php echo $season->name; ?></strong></a></li>
       <?php } ?>
     </ul>
   </nav>

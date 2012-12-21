@@ -20,6 +20,10 @@
 	}
 
 	h3 {
+		display: block;
+		float: left;
+		width: 100%;
+		
 		font-size: 16px;
 		font-weight: bold;
 //		text-transform: uppercase;
@@ -28,12 +32,20 @@
 	}
 
 	ul {
+		display: block;
+		float: left;
+		width: 100%;
+		
 		list-style: none;
 		padding: 0;
 		border-bottom: 1px solid #ccc;
 		margin: 0;
 
 		li {
+			display: block;
+			float: left;
+			width: 100%;
+			
 			border-top: 1px solid #ccc;
 			padding: 10px 0;		
 

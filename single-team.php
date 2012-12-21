@@ -19,17 +19,27 @@ $stats = $teamdata->get_stats(array(
 ?>
 <?php get_header(); ?>
 <article id="team">
-  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
   <hgroup id="title">
     <h1>Brann mot
       <?php the_title(); ?>
     </h1>
   </hgroup>
-  <?php the_content(); ?>
-  <?php endwhile; ?>
-  <?php include("inc/teamStats.php"); ?>
-  <?php include("inc/matches-bySeason.php"); ?>
-  <?php include("inc/playerStats-season.php"); ?>
+  <section id="layers">
+    <ul class="tabs-2">
+      <li><a href="#matches">Kamper</a></li>
+      <li><a href="#players">Spillere</a></li>
+    </ul>
+    <article id="matches">
+      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+      <?php the_content(); ?>
+      <?php endwhile; ?>
+      <?php include("inc/teamStats.php"); ?>
+      <?php include("inc/matches-bySeason.php"); ?>
+    </article>
+    <article id="players">
+      <?php include("inc/playerStats-season.php"); ?>
+    </article>
+  </section>
 </article>
 <?php get_sidebar(); ?>
 <?php include("inc/filter-teams.php"); ?>

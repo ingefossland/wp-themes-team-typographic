@@ -27,6 +27,8 @@ table.playerStats {
 			display: table-caption;
 		}
 
+		display: none !important;
+
 	}
 
 	// groups, rows and columns
@@ -55,6 +57,21 @@ table.playerStats {
 			
 			td {
 				font-size: 14px;
+			}
+			
+		}
+		
+	}
+	
+	// thead
+
+	thead tr {
+
+		&:first-child {
+			
+			th,
+			td {
+				border-top: 0;
 			}
 			
 		}
@@ -600,7 +617,10 @@ table.playerStats {
 				&:nth-child(2) {
 
 					th {
+						border-top: none;
 						width: percentage(1/2);
+
+						font-size: 14px;
 						
 						&:first-child {
 							width: percentage(3/4);
@@ -705,9 +725,60 @@ table.playerStats {
 
 	}
 
-	// competition
+	// goals
 	
 	&#playerStats-goals {
+
+		// head
+		
+		thead {
+			
+			tr {
+
+				// first header
+
+				&:first-child {
+
+					th {
+					
+						&:first-child {
+							display: none;
+	
+							@include respond-to('medium') {
+								display: table-cell;
+							}
+	
+						}
+						
+						width: 100%;
+						padding: 10px 0;
+						font-size: 14px;
+						
+						em {
+							font-size: 12px;
+							font-weight: normal;
+						}
+	
+						@include respond-to('medium') {
+							background: none;
+							width: auto;
+
+							font-size: 16px;
+							
+							em {
+								font-size: 14px;
+							}
+	
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+
 
 		// body
 		

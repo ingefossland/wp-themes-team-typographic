@@ -1,8 +1,8 @@
-<?php if ($index) { ?>
+<?php if ($players) { ?>
 
 <div class="index">
 
-    <?php foreach ($index as $item) { ?>
+    <?php foreach ($players as $item) { ?>
 
 	  <?php $letter = utf8_encode(substr(utf8_decode($item->name_last),0,1));	?>
 

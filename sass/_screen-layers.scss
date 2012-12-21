@@ -1,0 +1,120 @@
+// layers
+
+#layers {
+	position: relative;
+	float: left;
+	width: 100%;
+	
+	// the tabs
+	
+	> ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		float: left;
+		width: 100%;
+		height: auto;
+
+		border-bottom: 1px solid #ccc;
+
+		// 2-5 tabs
+	
+		&.tabs-2 > li {
+			width: percentage(1/2);
+		}
+	
+		&.tabs-3 > li {
+			width: percentage(1/3);
+		}		
+
+		> li {
+			float: left;
+			background: none;			
+
+			width: auto;
+			height: auto;
+
+			> a {
+				float: left;
+				display: block;
+
+				width: 100%;
+				height: auto;
+
+				padding: 20px;
+				white-space: nowrap;
+
+				font-family: 'Droid Sans';
+				font-size: 12px;
+				font-weight: bold;
+				text-transform: uppercase;
+
+				text-decoration: none;
+				text-align: center;
+				
+				&:hover {
+					text-decoration: underline;
+				}
+				
+				outline: none;
+
+			}
+			
+			// selected
+			&.ui-tabs-active {
+			
+				> a {
+
+					background: $background;
+					color: $text;
+	
+					border-top: 1px solid #ccc;
+					border-right: 1px solid #ccc;
+					border-left: 1px solid #ccc;
+					border-bottom: 0;
+					margin-bottom: -1px;
+					
+					padding-top: 19px;
+					padding-bottom: 21px;
+	
+					&:hover {
+						text-decoration: none;
+					}
+				
+				}
+
+				&:first-child > a {
+					border-left: none;
+				}
+
+				&:last-child > a {
+					border-right: none;
+				}
+				
+				
+			}
+			
+
+		}
+		
+	}
+
+	// panels
+	
+	article {
+
+		padding: 0 15px;
+
+		&.ui-tabs-panel {
+			float: left;
+			width: 100%;
+		}
+		
+		&.ui-tabs-hide {
+			display: none;
+		}
+		
+	}
+	
+}

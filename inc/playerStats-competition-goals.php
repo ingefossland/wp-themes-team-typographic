@@ -11,7 +11,12 @@ $max_goals = 0;
   <caption>
   Mål
   </caption>
-  <tbody>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th>Mål</th>
+    </tr>
+  </thead>  <tbody>
     <?php foreach ($players as $p) { ?>
 	<?php if ($p->totalGoals < 1) { continue; } ?>
 	<?php if ($max_goals < 1) { $max_goals = $p->totalGoals; } ?>

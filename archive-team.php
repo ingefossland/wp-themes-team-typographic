@@ -3,7 +3,7 @@
 global $post, $teamdata;
 
 // get teams
-$index = $teamdata->get_teams();
+$index = $teamdata->get_opponents();
 
 ?>
 <?php get_header(); ?>

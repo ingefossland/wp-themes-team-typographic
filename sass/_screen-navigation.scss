@@ -1,6 +1,7 @@
 // MENU
 
-#menu {
+#menu,
+#filter {
     display: none;
     position: absolute;
     position: fixed;
@@ -20,8 +21,6 @@
 	    position: relative;
 		z-index: 200;
 
-		background: $link;
-	
 		padding: 10px;
 		height: 50px;
 		border-bottom: 1px solid rgba(0,0,0,0.25);
@@ -38,7 +37,7 @@
     
     // menu
     
-	ul {
+	> ul {
 		z-index: 100;
 
 		float: left;
@@ -51,27 +50,105 @@
 	    padding: 50px 0 0 0;
 	    
 	    overflow: scroll;
-	    -webkit-overflow-scrolling: touch;      
+	    -webkit-overflow-scrolling: touch;    
 		
-		li {
+		// level 1
+		
+		> li {
 
 			float: left;
 			width: 100%;
-		
-			border-top: 1px solid rgba(255,255,255,0.25);
-			border-bottom: 1px solid rgba(0,0,0,0.25);
 			
+			font-size: 12px;
+			line-height: 25px;
+			text-transform: uppercase;
+			
+			&:last-child {
+				border-bottom: 1px solid rgba(255,255,255,0.25);
+			}
+		
 			a {
 				display: block;
 				float: left;
 				width: 100%;
 
-				padding: 5px 15px;
-				color: rgba(255,255,255,0.75);
+				border-top: 1px solid rgba(255,255,255,0.25);
+				border-bottom: 1px solid rgba(0,0,0,0.25);
+				
+				padding: 6px 15px 4px 15px;
+				color: rgba(255,255,255,0.9);
 				text-decoration: none;
 			}
 			
+			// level 2
+			
+			> ul {
+				position: relative;
+				padding: 0;
+				margin: 0;
+				
+				li {
+					display: none;
+					
+					font-size: 16px;
+					line-height: 25px;
+					text-transform: none;
+		
+					a {
+						padding: 5px 15px;
+						color: rgba(255,255,255,0.75);
+					}
+					
+				}
+				
+			}
+
+			// show latest season
+			
+			&.seasons {
+				
+				> ul li:nth-child(1) {
+					display: block;
+				}
+				
+			}
+			
+			// on
+			
+			&.on {
+				
+				> ul li {
+					display: block;
+				}
+				
+			}
+			
 		}
+		
+	}
+	
+	// filtered
+	
+	&.filter {
+
+		background: $text;
+	    color: White;
+
+	    > ul {
+	    
+	    	> li {
+	    	
+				> ul {
+
+					li {
+						display: block;
+					}
+
+				}
+
+			}
+			
+	    }
 		
 	}
 
@@ -80,46 +157,12 @@
 // FILTER
 
 #filter {
-    display: none;
-    position: absolute;
-    position: fixed;
-    
-    top: 0;
-    height: 100%;
-    z-index: -999999;
-
-    width: 260px;
-
-    background: Black;
-    background: #999;
 	background: $text;
     color: White;
+
+    // menu
     
-    // filter form
-
-	form {
-	    position: relative;
-		z-index: 200;
-
-		background: $text;
-	
-		padding: 10px;
-		height: 50px;
-		border-bottom: 1px solid rgba(0,0,0,0.25);
-		
-		p {
-			margin: 0;
-		}
-		
-		input {
-			
-		}
-		
-	}
-
-	// index
-	
-	ul {
+	> ul {
 		z-index: 100;
 
 		float: left;
@@ -132,35 +175,20 @@
 	    padding: 50px 0 0 0;
 	    
 	    overflow: scroll;
-	    -webkit-overflow-scrolling: touch;      
+	    -webkit-overflow-scrolling: touch;    
 		
-		li {
-			display: block;
+		// level 1
+		
+		> li {
+
 			float: left;
 			width: 100%;
-		
-			border-top: 1px solid rgba(255,255,255,0.25);
-			border-bottom: 1px solid rgba(0,0,0,0.25);
 			
-			a {
-				display: block;
-				float: left;
-				width: 100%;
-
-				padding: 5px 15px;
-				color: rgba(255,255,255,0.75);
-				text-decoration: none;
-			}
+			font-size: 16px;
+			line-height: 25px;
+			text-transform: none;
 			
 		}
-		
 	}
-		
 	
-	// states
-	
-	&.focus {
-		background: $link;
-	}
-
 }

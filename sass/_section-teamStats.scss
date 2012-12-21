@@ -30,6 +30,8 @@ table.teamStats {
 			float: none;
 			display: table-caption;
 		}
+		
+		display: none !important;
 
 	}
 	
@@ -154,6 +156,7 @@ table.teamStats {
 		
 			&:nth-child(1) th,
 			&:nth-child(1) td {
+				border-top: 0;
 				padding: 10px 0 0 0;
 			}
 			

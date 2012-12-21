@@ -6,6 +6,7 @@
 
 // VARIABLES & MIXINS
 
+$background: #eee;
 $text: #444;
 $link: #e40011;
 
@@ -27,6 +28,7 @@ $card_red: #e40011;
 @import "screen-header";
 @import "screen-footer";
 @import "screen-navigation";
+@import "screen-layers";
 
 // TEMPLATES
 

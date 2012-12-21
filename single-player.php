@@ -27,8 +27,6 @@ $positions = array(
 
 $player->position = $positions[$player->position_id];
 
-
-
 // position & nationality
 
 if ($player->position) {
@@ -53,21 +51,52 @@ if ($player->birthdate) {
 	
 }
 
+// first and last season
+
+$seasons = $stats->seasons;
+
+foreach ($seasons as $season) {
+	if (!$first_season) {
+		$first_season = $season;
+	}
+	$last_season = $season;
+}
+
+if ($first_season != $last_season) {
+	$player->career = $first_season->name . '&mdash;' . $last_season->name;
+} else {
+	$player->career = $first_season->name;
+}
+
 ?>
 <?php get_header(); ?>
+
 <article id="player">
-  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
   <hgroup>
     <h1><?php echo $player->name; ?></h1>
     <?php if ($player->summary) { ?>
-	    <h2><?php echo $player->summary; ?></h2>
+    <h2><?php echo $player->summary; ?></h2>
     <?php } ?>
   </hgroup>
-  <?php the_content(); ?>
-  <?php include("inc/playerStats-career.php"); ?>
-  <?php include("inc/teamStats.php"); ?>
-  <?php include("inc/matches-byPlayer.php"); ?>
-  <?php endwhile; ?>
+  <section id="layers">
+  	<ul class="tabs-3">
+    	<li><a href="#biography">Biografi</a></li>
+    	<li><a href="#career">Karriere</a></li>
+    	<li><a href="#matches">Kamper</a></li>
+    </ul>
+    <article id="career">
+      <?php include("inc/playerStats-career.php"); ?>
+    </article>
+    <article id="biography">
+      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+      <?php the_content(); ?>
+      <?php endwhile; ?>
+    </article>
+    <article id="matches">
+      <?php include("inc/teamStats.php"); ?>
+      <?php include("inc/matches-byPlayer.php"); ?>
+    </article>
+  </section>
 </article>
 <?php get_sidebar(); ?>
 <?php include("inc/filter-players.php"); ?>

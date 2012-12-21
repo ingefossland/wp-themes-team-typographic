@@ -30,6 +30,45 @@ $stats = $teamdata->get_stats(array(
 	'order' => 'descending'
 ));
 
+// SUMMARY
+
+$player->summary = '';
+
+// positions
+
+$positions = array(
+	1 => 'Keeper',
+	2 => 'Forsvarsspiller',
+	3 => 'Midtbanespiller',
+	4 => 'Angrepsspiller'
+);
+
+$player->position = $positions[$player->position_id];
+
+// position & nationality
+
+if ($player->position) {
+
+	$player->summary .= '<span class="positition">' . $player->position . '</span> '; 
+
+} 
+
+// nationality
+
+if ($player->country_id) {
+
+	$player->summary .= '<span class="country">(' . $player->country_id . ')</span> '; 
+	
+}
+
+// birthdate?
+
+if ($player->birthdate) {
+
+	$player->summary .= '<span class="birthdate">Født: ' . strtolower($player->birthdate_no) . '</span>'; 
+	
+}
+
 ?>
 <?php get_header(); ?>
 <article id="match">
@@ -43,7 +82,8 @@ $stats = $teamdata->get_stats(array(
   <?php include("single-match-players.php"); ?>
   <?php //include("inc/team-resfix.php"); ?>
   <?php //the_awayteam_players(); ?>
-  <?php the_table(); ?>
+  <?php //the_table(); ?>
+	</section>
 </article>
 <?php get_sidebar(); ?>
 <?php include("inc/filter-matches.php"); ?>
