@@ -25,7 +25,7 @@ $grounds = $teamdata->get_grounds();
     <li class="players"><a href="<?php bloginfo('url'); ?>/players/"><strong>Spillere</strong></a>
 	    <ul>
 	      <?php foreach ($players as $player) { ?>
-	      <li><a href="<?php echo $player->link; ?>"><?php echo $player->name; ?></a></li>
+	      <li><a href="<?php echo $player->link; ?>"><?php echo $player->name_first; ?> <strong><?php echo $player->name_last; ?></strong></a></li>
 	      <?php } ?>
 	    </ul>
     </li>

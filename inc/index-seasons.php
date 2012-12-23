@@ -1,12 +1,10 @@
 <?php if ($seasons) { ?>
 <nav class="index" id="index-seasons">
+<h2><?php echo $seasons[count($seasons)-1]->name; ?>&mdash;<?php echo $seasons[0]->name; ?></h2>
+	<ul>
   <?php foreach ($seasons as $season) { ?>
-  <h2><?php echo $season->name; ?></h2>
-  <ul>
-    <li><a href="<?php echo $season->link; ?>#matches"><strong>Kamper</strong></a></li>
-    <li><a href="<?php echo $season->link; ?>#players"><strong>Spillere</strong></a></li>
-    <li><a href="<?php echo $season->link; ?>#goals"><strong>Mål</strong></a></li>
-  </ul>
+  <li><a href="<?php echo $season->link; ?>"><strong><?php echo $season->name; ?></strong></a></li>
   <?php } ?>
+	</ul>
 </nav>
 <?php } ?>

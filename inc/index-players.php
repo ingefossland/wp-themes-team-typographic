@@ -1,6 +1,6 @@
 <?php if ($players) { ?>
 
-<div class="index">
+<div class="index" id="index-players">
 
     <?php foreach ($players as $item) { ?>
 

@@ -79,18 +79,25 @@ if ($first_season != $last_season) {
     <?php } ?>
   </hgroup>
   <section id="layers">
+  	<?php if ($post->post_content) { ?>
   	<ul class="tabs-3">
     	<li><a href="#biography">Biografi</a></li>
     	<li><a href="#career">Karriere</a></li>
     	<li><a href="#matches">Kamper</a></li>
     </ul>
-    <article id="career">
-      <?php include("inc/playerStats-career.php"); ?>
-    </article>
+    <?php } else { ?>
+  	<ul class="tabs-2">
+    	<li><a href="#career">Karriere</a></li>
+    	<li><a href="#matches">Kamper</a></li>
+    </ul>
+    <?php } ?>
     <article id="biography">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
       <?php the_content(); ?>
       <?php endwhile; ?>
+    </article>
+    <article id="career">
+      <?php include("inc/playerStats-career.php"); ?>
     </article>
     <article id="matches">
       <?php include("inc/teamStats.php"); ?>
