@@ -106,5 +106,5 @@ if ($first_season != $last_season) {
   </section>
 </article>
 <?php get_sidebar(); ?>
-<?php include("inc/filter-players.php"); ?>
+<?php //include("inc/filter-players.php"); ?>
 <?php get_footer(); ?>

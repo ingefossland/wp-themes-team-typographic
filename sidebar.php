@@ -36,7 +36,7 @@ $grounds = $teamdata->get_grounds();
 	      <?php } ?>
 	    </ul>
     </li>
-    <li class="grounds"><a href="<?php bloginfo('url'); ?>/grounds/"><strong>Bortebaner</strong></a>
+    <li class="grounds"><a href="<?php bloginfo('url'); ?>/grounds/"><strong>På bortebane</strong></a>
 	    <ul>
 	      <?php foreach ($grounds as $ground) { ?>
 	      <li><a href="<?php echo $ground->link; ?>"><?php echo $ground->name; ?></a></li>
